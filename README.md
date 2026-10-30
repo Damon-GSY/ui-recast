@@ -19,6 +19,8 @@ The skill preserves caller-owned business state and user-requested product adapt
 
 ## Real cases
 
+> **Model used:** The reconstruction cases shown here were produced with `gpt6-astra`. Other models have not been tested.
+
 Reference on the left; reconstruction on the right. These stills show captured states; full motion comparisons are available in the case lab.
 
 ### Thinking Loader

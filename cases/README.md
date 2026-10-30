@@ -1,5 +1,7 @@
 # Runnable cases
 
+> **Model used:** These reconstruction cases were produced with `gpt6-astra`. Other models have not been tested.
+
 Run `npm ci && npm run dev -- --port 4187` inside `ui-lab`. Append each route below to `http://127.0.0.1:4187`. Reusable source and example state are separate; reference and reconstruction recordings live in `ui-lab/public/evidence/`.
 
 | Case | Route | Component source |
