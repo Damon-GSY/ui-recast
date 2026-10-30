@@ -174,4 +174,4 @@ See the [integration notes](docs/menufold/source-delivery.md) for caller respons
 - [AffectUI review](docs/affectui-review/README.md) retains delivered group findings; final acceptance of the entire additional batch remains unfinished.
 - The exported lab passed an independent build and rendering checks for 46 routes, with no page errors or local resource 404s. See [the recorded result](docs/verification/standalone.json).
 - Native recordings are 25fps. They do not establish millisecond or pixel-perfect equivalence. Product adaptations and remaining font, icon, and curve differences are documented per case.
-- Reference previews, brands, and public-source assets retain their respective rights. Provenance is recorded in case analyses. No repository-wide open-source license has been assigned.
+- The repository's own code, skill instructions, and documentation are licensed under the [MIT License](LICENSE). Reference previews, brands, and public-source assets retain their respective rights; provenance is recorded in case analyses.
