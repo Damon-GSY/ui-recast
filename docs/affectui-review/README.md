@@ -5,8 +5,8 @@
 | 分组 | 组件 | 记录 |
 | --- | --- | --- |
 | 加载与图结构 | Thinking Loader、Agent Graph | [loaders](loaders.md) |
-| 基础操作 | Segmented Control、OTP Input、Button、Reading Tabs | [controls](controls.md) |
-| 状态与权限 | Usage Meter、Autonomy Dial、Approval Card | [status](status.md) |
+| 基础操作 | Segmented Control、OTP Input、Button、Reading Tabs | 分组复查尚未交付 |
+| 状态与权限 | Usage Meter、Autonomy Dial、Approval Card | 分组复查尚未交付 |
 | 外壳与运行 | App Shell Flat、App Shell Inset、Agent Run | [shells](shells.md) |
 | 选择与配置 | Combobox、Model Picker、Integration Settings | [forms](forms.md) |
 | Agent 内容 | Agent Inbox、Agent Tree、Agent Plan、Tool Call Card | [agents](agents.md) |
