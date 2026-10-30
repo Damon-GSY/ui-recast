@@ -1,5 +1,7 @@
 # Fluid Notch — GPT-6.1 Sol independent trial
 
+> **Tested model:** `gpt-6.1-sol` (GPT-6.1 Sol), reasoning effort `high`. Primary evaluation: light theme, 340px, full three-question lifecycle. Dark mode has representative state comparisons, not a complete dark-lifecycle acceptance.
+
 Standalone React/TypeScript/CSS reconstruction of the paid Aceternity Pro Fluid Notch from its public rendered preview. The visible Code gate and purchase controls are documented in [PROVENANCE.md](PROVENANCE.md). No restricted implementation was accessed.
 
 ```sh

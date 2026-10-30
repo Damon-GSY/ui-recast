@@ -25,6 +25,18 @@ Compare default, hover, selected, focus, disabled, loading, and result states wh
 
 Compare standalone rendering with the host page. Gallery paragraph/link selectors, inherited colors, transparent containers, and theme rules must not override component roles. Put fixes in the reusable source. Refresh recordings and distributed copies after palette changes.
 
+## Dark mode and theme changes
+
+Compare reference and reconstruction within the same theme and state before comparing the two themes. Use the actual canvas and matching focus/input history. Inspect the standalone component and its host, including portalled popups and tooltips, so a dark page cannot leave a light menu or override component colors.
+
+Check the details that often disappear in dark mode: secondary/disabled text, thin icon strokes, progress/check icons, focus rings, separators, transparent images and loading/result indicators. Inspect borders, inner highlights and shadows as separate depth cues. A black shadow may disappear on a dark canvas while a pale edge remains visible. Match the reference rather than inventing a stronger glow to compensate.
+
+Inspect grain, blend modes, masks and glow alpha in actual compositing. A `multiply` texture or light sweep that works on white may vanish or flare on dark; theme-specific `screen` blending or opacity must be observed rather than assumed. Preserve the reference's accent and status relationships instead of globally reversing colors. Record a reference contrast issue separately from any requested accessibility adaptation.
+
+For supported theme changes, check intermediate foreground/background combinations for flashes, washed-out text or temporarily invisible icons. Preserve the reference's immediate switch or property-specific timing; do not add a blanket `transition: all`. Check whether state, open overlays, focus and ongoing loops continue as observed. Test system-preference changes only when the component actually supports them.
+
+Delivery must name the verified themes and states, whether each has a complete recording, and any theme-switch checks. Distinguish representative dark screenshots from a fully compared dark lifecycle; never carry light-mode acceptance over to dark mode.
+
 ## Pop and expansion continuity
 
 Set time zero at the first visible change. Compare onset, mid-travel, overshoot, recovery, and settling. Measure collapse separately rather than assuming reversed expansion. Track anchors, size, radius, clipping, and shadow alongside independent icon/text timing. During simultaneous foreground/background transitions, check intermediate contrast.

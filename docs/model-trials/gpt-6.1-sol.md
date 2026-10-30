@@ -48,3 +48,9 @@ The parent viewed actual original/local question-one screenshots and the consecu
 The original showcase collection remains attributed to `gpt6-astra`. Only this additional paid Fluid Notch trial was completed with GPT-6.1 Sol. Different prior tasks, adaptations and trial conditions prevent a controlled model ranking. Other models remain untested. Remaining visual differences and media sampling limits are recorded in the model's analysis.
 
 The model's final handoff reports 9/9 lifecycle checks on each side and six keyboard/reduced-motion checks. See [verification details](../../cases/model-trials/gpt-6.1-sol/fluid-notch/VERIFICATION.md) for the observed states, native-frame comparison and remaining startup, dust and timing differences. The parent independently checked the installation/build and seven runtime paths listed above.
+
+## Theme coverage
+
+The primary complete recording and lifecycle evaluation cover **light theme at 340px**. Dark theme, width, background grain and dust controls received representative state comparisons. A dark-mode focus-ring difference is documented in the trial verification because the two captures used different input histories. These checks do not establish full dark-lifecycle fidelity or every theme-switch transition.
+
+The skill now explicitly requires per-theme capture, role palettes, compositing and supported theme-switch analysis. This documentation update does not retroactively expand the trial's verified scope or modify its frozen implementation.

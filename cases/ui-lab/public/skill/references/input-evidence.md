@@ -28,6 +28,16 @@ If a decoder cannot read the container, such as WebM in some macOS environments,
 4. Save action request and return times, then identify actual rendered changes separately. Use the correct crop coordinate system. Keep the complete component, popups, and light effects visible at both ends; add margins near viewport edges.
 5. With screenshot-only APIs, preserve capture times, call the result a screenshot sequence, and report its actual sampling rate. If browser interaction is unavailable, implement visible structure and leave dynamic verification pending.
 
+## Light and dark theme capture
+
+Identify what the reference's theme control actually changes: site chrome, preview canvas, component tokens, or all three. A black component on a white canvas is not evidence of dark-mode support. Distinguish explicit component themes from `prefers-color-scheme`; verify the rendered result instead of inferring it from a class name or toggle position.
+
+For each in-scope theme, use the same content, dimensions, selection and focus history. Record the complete primary interaction chain and the states it exposes. Save separate theme-labelled recordings, screenshots and rendered measurements. A dark default-state screenshot does not validate dark loading, completion or exit. When only one theme is exposed, document that boundary; label an added theme as a local design choice.
+
+Extract a role palette per theme: canvas, raised/recessed surfaces, primary/secondary/disabled text, borders, icons, focus, accents and status colors. Separately record alpha, gradients, glow/shadow layers, masks, texture and blend modes on their real backgrounds. Note theme-specific image/logo variants and whether transparent assets reveal the canvas. Do not derive dark values by inverting the light palette.
+
+If the reference supports live switching, capture light→dark and dark→light from the same state, including an open popup or active animation when reachable. Observe whether it preserves state, focus and motion phase, switches immediately, or transitions specific properties. Keep theme switching measurements separate from the uninterrupted recordings so they do not contaminate motion comparison.
+
 ## Four visual tracks
 
 | Track | Observe |

@@ -15,6 +15,8 @@ A self-contained coding-agent skill that turns screenshots, videos, and live URL
 3. **Rebuild and compare.** Align rendered phase starts, inspect real intermediate frames, and fix concrete omissions.
 4. **Deliver the evidence.** Provide source, an interactive example, recordings, verified scope, and remaining differences.
 
+Light and dark themes are analyzed separately: role palettes, icon visibility, composited light/texture, and supported theme changes. See the [theme comparison guidance](skills/ui-recast/references/verification-delivery.md#dark-mode-and-theme-changes).
+
 The skill preserves caller-owned business state and user-requested product adaptations. Choose CSS, Motion, GSAP, or existing project controls according to the reference and stack.
 
 ## Real cases
