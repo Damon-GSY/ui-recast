@@ -103,7 +103,7 @@ Standalone installation, build, and interaction checks passed. Remaining timing 
 
 The workflow starts from the requested output platform and existing project: web frameworks, SwiftUI, UIKit, AppKit, or another UI stack. Capture tools, state interfaces, animation mechanisms and runtime verification follow that choice. A web reference can be reconstructed in native Swift when requested.
 
-The shipped component cases are React/TypeScript web implementations. Native SwiftUI/UIKit/AppKit reconstruction has not yet been validated by a native case in this repository. The included `video-frames.swift` is an optional macOS extraction utility, separate from the component implementation language.
+The shipped component cases are React/TypeScript web implementations. Native SwiftUI/UIKit/AppKit reconstruction has not yet been validated by a native case in this repository. The optional `video_frames.py` extraction helper uses Python 3.9+ standard library and FFmpeg, independently of the component implementation language.
 
 ## Install
 
@@ -128,6 +128,16 @@ Preserve my specified business state and interaction semantics.
 ```
 
 Screenshots and videos are valid inputs too. With a single frame, timing and hidden interactions remain unverified rather than being presented as observed behavior.
+
+## Extract video frames
+
+Use Python 3.9+ and a full FFmpeg installation. The script needs no Python packages:
+
+```sh
+python3 skills/ui-recast/scripts/video_frames.py input.webm output-frames 12
+```
+
+Use `python` instead of `python3` if that is the Python 3 command on your host. Pass `--ffmpeg /path/to/ffmpeg` or set `FFMPEG` when needed. The helper writes native PNG frames and actual decoder timestamps; it does not interpolate or duplicate frames to meet the requested sampling rate.
 
 ## Run the case lab
 

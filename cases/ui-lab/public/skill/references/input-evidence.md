@@ -10,13 +10,16 @@ For a reconstruction without source access, inspect the visible output first. Fo
 
 Inspect the full image before close-ups. Leave room for shadows, halos, and popup anchors. Label marketing images separately from actual browser output. One frame leaves timing, curves, and hidden behavior unknown.
 
-Preserve original video timing and frame rate. Watch the sequence, locate change windows, then extract real intermediate frames or timestamped sheets. The included Swift script is an optional **macOS video-frame extraction utility**, not a SwiftUI component or a requirement to generate Swift code. Use it on macOS when AVFoundation can decode the recording:
+Preserve original video timing and frame rate. Watch the sequence, locate change windows, then extract real intermediate frames or timestamped sheets. The included Python helper is independent of the component implementation language. It uses Python 3.9+ standard library and a full FFmpeg installation; no Python packages are required.
 
 ```sh
-swift <skill-dir>/scripts/video-frames.swift <input.mp4> <output-dir> 12
+python3 <skill-dir>/scripts/video_frames.py <input.webm> <output-dir> 12
+# If FFmpeg is not on PATH, pass --ffmpeg /path/to/ffmpeg (or set FFMPEG).
 ```
 
-It records requested and actual frame times. On other hosts, or with unsupported formats, use an available FFmpeg or browser decoder. The capture-tool language is independent of the implementation language. Higher export rates, duplicate frames, or interpolation add no evidence.
+Use a new output directory. The script writes PNGs and `frames.json`. `actualMs` comes from the decoder's presentation timestamp, with container start shifted to zero; `sampleBucketStartMs` is the requested sampling bucket's start, not an observed animation onset. Time buckets are anchored to the first decoded frame; it selects the first native frame in each occupied bucket. Raising the requested rate above the source rate does not generate extra or interpolated frames. The helper supports formats decoded by the installed FFmpeg, including typical MP4 and WebM recordings. See the official [select](https://ffmpeg.org/ffmpeg-filters.html#select_002c-aselect) and [showinfo](https://ffmpeg.org/ffmpeg-filters.html#showinfo) documentation for the underlying filters.
+
+Higher export rates, duplicate frames, or interpolation add no evidence. A browser-bundled minimal FFmpeg may omit the required filters; use a full build with `select`, `showinfo`, and PNG support.
 
 If a decoder cannot read the container, such as WebM in some macOS environments, use browser decoding and `requestVideoFrameCallback` to record `mediaTime`. Preserve requested seek times separately from actual decoded frame times. A sheet requested every 100ms is not proof of exact 100ms sampling.
 

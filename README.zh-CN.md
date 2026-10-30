@@ -104,7 +104,7 @@ Skill 现已要求分别分析明暗主题的角色色板、图标可见性、�
 
 先根据用户要求和现有工程确定输出平台，再选择对应的采集工具、状态接口、控件、动效与运行验证方式。可以面向 Web、SwiftUI、UIKit、AppKit 或其他 UI 框架；网页参考也可以按要求重建为原生 Swift 组件。
 
-目前仓库附带的组件案例是 React/TypeScript Web 实现，不能直接作为 SwiftUI 代码使用。SwiftUI/UIKit/AppKit 尚未通过原生案例实测。`video-frames.swift` 是可选的 macOS 视频抽帧工具，与组件使用哪种语言无关。
+目前仓库附带的组件案例是 React/TypeScript Web 实现，不能直接作为 SwiftUI 代码使用。SwiftUI/UIKit/AppKit 尚未通过原生案例实测。`video_frames.py` 是可选的 Python + FFmpeg 抽帧工具，与组件使用哪种语言无关。
 
 ## 安装与使用
 
@@ -126,6 +126,16 @@ cp -R skills/ui-recast ~/.codex/skills/
 ```
 
 也可以提供截图或视频。单帧无法证明隐藏交互和动画时序；skill 会将观察与推断分别记录。
+
+## 视频抽帧
+
+使用 Python 3.9+ 标准库和完整 FFmpeg，无须安装 Python 第三方包：
+
+```sh
+python3 skills/ui-recast/scripts/video_frames.py input.webm output-frames 12
+```
+
+如果系统的 Python 3 命令是 `python`，替换命令名即可。FFmpeg 不在 PATH 时，可用 `--ffmpeg /path/to/ffmpeg` 或 `FFMPEG` 环境变量指定。输出为原生 PNG 帧和实际解码时间戳；提高采样率不会通过插帧或重复帧制造额外证据。
 
 ## 运行案例实验室
 
