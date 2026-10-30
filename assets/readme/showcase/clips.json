@@ -1,0 +1,186 @@
+{
+  "thinking-loader": {
+    "sources": [
+      "cases/ui-lab/public/evidence/thinking-loader/motion-study/reference/clean/lifecycle.webm",
+      "cases/ui-lab/public/evidence/thinking-loader/motion-study/replica/clean/lifecycle.webm"
+    ],
+    "segments": [
+      {
+        "starts": [
+          1,
+          1
+        ],
+        "duration": 13
+      }
+    ],
+    "panel": [
+      456,
+      122
+    ]
+  },
+  "agent-graph": {
+    "sources": [
+      "cases/ui-lab/public/evidence/agent-graph/motion/reference/lifecycle.webm",
+      "cases/ui-lab/public/evidence/agent-graph/motion/replica/lifecycle.webm"
+    ],
+    "segments": [
+      {
+        "starts": [
+          3,
+          3
+        ],
+        "duration": 12
+      }
+    ],
+    "panel": [
+      480,
+      351
+    ]
+  },
+  "fluid-notch": {
+    "sources": [
+      "cases/ui-lab/public/evidence/batch/fluid-notch/reference/lifecycle.webm",
+      "cases/ui-lab/public/evidence/batch/fluid-notch/replica/lifecycle.webm"
+    ],
+    "crops": [
+      [
+        220,
+        85,
+        660,
+        425
+      ],
+      [
+        220,
+        85,
+        660,
+        425
+      ]
+    ],
+    "segments": [
+      {
+        "starts": [
+          0.88,
+          0.16
+        ],
+        "duration": 0.88,
+        "hold": 0.64
+      },
+      {
+        "starts": [
+          2.16,
+          0.96
+        ],
+        "duration": 0.88,
+        "hold": 0.64
+      }
+    ],
+    "panel": [
+      440,
+      340
+    ]
+  },
+  "stacked-empty-state": {
+    "sources": [
+      "cases/ui-lab/public/evidence/batch/stacked-empty-state/reference/lifecycle.webm",
+      "cases/ui-lab/public/evidence/batch/stacked-empty-state/replica/lifecycle.webm"
+    ],
+    "crops": [
+      [
+        175,
+        190,
+        925,
+        825
+      ],
+      [
+        220,
+        233,
+        880,
+        658
+      ]
+    ],
+    "segments": [
+      {
+        "starts": [
+          7.8,
+          1.1
+        ],
+        "duration": 2
+      }
+    ],
+    "panel": [
+      460,
+      390
+    ]
+  },
+  "combobox": {
+    "sources": [
+      "cases/ui-lab/public/evidence/batch/combobox/reference/lifecycle.webm",
+      "cases/ui-lab/public/evidence/batch/combobox/replica/lifecycle.webm"
+    ],
+    "segments": [
+      {
+        "starts": [
+          0.3,
+          0.3
+        ],
+        "duration": 9.2
+      }
+    ],
+    "panel": [
+      460,
+      440
+    ]
+  },
+  "agent-run": {
+    "sources": [
+      "cases/ui-lab/public/evidence/batch/agent-run/reference/lifecycle.webm",
+      "cases/ui-lab/public/evidence/batch/agent-run/replica/lifecycle.webm"
+    ],
+    "segments": [
+      {
+        "starts": [
+          1.4,
+          1.2
+        ],
+        "duration": 12
+      }
+    ],
+    "panel": [
+      640,
+      400
+    ]
+  },
+  "gpt-6.1-fluid-notch": {
+    "sources": [
+      "cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reference/lifecycle.webm",
+      "cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm"
+    ],
+    "crops": [
+      [
+        270,
+        185,
+        690,
+        515
+      ],
+      [
+        270,
+        185,
+        690,
+        515
+      ]
+    ],
+    "segments": [
+      {
+        "starts": [
+          7.2,
+          2.2
+        ],
+        "duration": 9.2
+      }
+    ],
+    "panel": [
+      440,
+      346
+    ]
+  }
+}

@@ -4,7 +4,7 @@
 
 A self-contained coding-agent skill that turns screenshots, videos, and live URLs into editable UI components—with complete interaction capture and comparison of color, icons, light effects, and subtle transitions.
 
-[Install](#install) · [Use the skill](#use-the-skill) · [Browse cases](cases/README.md) · [Workflow](skills/ui-recast/SKILL.md) · [简体中文](README.zh-CN.md)
+[Install](#install) · [Use the skill](#use-the-skill) · [Case showcase](#case-showcase) · [All cases](cases/README.md) · [Workflow](skills/ui-recast/SKILL.md) · [简体中文](README.zh-CN.md)
 
 ![A real reconstruction case: Bento cards with neutral gradients, scoped styles, and interactive content](assets/readme/bento-grid.png)
 
@@ -19,19 +19,19 @@ Light and dark themes are analyzed separately: role palettes, icon visibility, c
 
 The skill preserves caller-owned business state and user-requested product adaptations. Choose CSS, Motion, GSAP, or existing project controls according to the reference and stack.
 
-## Real cases
+## Case showcase
 
 > **Model used:** The original showcased collection was produced with `gpt6-astra`. An additional independent `gpt-6.1-sol` trial has completed for the paid Fluid Notch component; see the [single-case result](docs/model-trials/gpt-6.1-sol.md). Other models remain untested.
 
-Reference on the left; reconstruction on the right. These stills show captured states; full motion comparisons are available in the case lab.
+Reference on the left; reconstruction on the right. Each pair is **one automatically looping GIF**, so both sides play together. These are cropped, phase-aligned excerpts at original speed; full recordings remain linked below. The Fluid Notch excerpt joins opening and closing windows with short reading holds.
 
 ### Thinking Loader
 
 Stationary rays, text sweep, phase handoffs, completion check.
 
-| Reference | Reconstruction |
-| --- | --- |
-| <img src="assets/readme/comparisons/thinking-loader-reference.png" width="420" alt="Thinking Loader reference capture"> | <img src="assets/readme/comparisons/thinking-loader-reconstruction.png" width="420" alt="Thinking Loader reconstruction capture"> |
+![thinking loader — reference and reconstruction playing together](assets/readme/showcase/thinking-loader.gif)
+
+[Full reference recording](cases/ui-lab/public/evidence/thinking-loader/motion-study/reference/clean/lifecycle.webm) · [Full reconstruction recording](cases/ui-lab/public/evidence/thinking-loader/motion-study/replica/clean/lifecycle.webm)
 
 [Source](cases/ui-lab/src/components/thinking-loader.tsx) · [Review](docs/affectui-review/loaders.md)
 
@@ -39,9 +39,9 @@ Stationary rays, text sweep, phase handoffs, completion check.
 
 Staggered nodes, breathing rings, status sweeps, call pulses.
 
-| Reference | Reconstruction |
-| --- | --- |
-| <img src="assets/readme/comparisons/agent-graph-reference.png" width="420" alt="Agent Graph reference capture"> | <img src="assets/readme/comparisons/agent-graph-reconstruction.png" width="420" alt="Agent Graph reconstruction capture"> |
+![agent graph — reference and reconstruction playing together](assets/readme/showcase/agent-graph.gif)
+
+[Full reference recording](cases/ui-lab/public/evidence/agent-graph/motion/reference/lifecycle.webm) · [Full reconstruction recording](cases/ui-lab/public/evidence/agent-graph/motion/replica/lifecycle.webm)
 
 [Source](cases/ui-lab/src/components/agent-graph.tsx) · [Review](docs/affectui-review/loaders.md)
 
@@ -49,9 +49,9 @@ Staggered nodes, breathing rings, status sweeps, call pulses.
 
 Shell morphing, icon handoffs, texture, expansion and collapse.
 
-| Reference | Reconstruction |
-| --- | --- |
-| <img src="assets/readme/comparisons/fluid-notch-reference.png" width="420" alt="Fluid Notch reference capture"> | <img src="assets/readme/comparisons/fluid-notch-reconstruction.png" width="420" alt="Fluid Notch reconstruction capture"> |
+![fluid notch — reference and reconstruction playing together](assets/readme/showcase/fluid-notch.gif)
+
+[Full reference recording](cases/ui-lab/public/evidence/batch/fluid-notch/reference/lifecycle.webm) · [Full reconstruction recording](cases/ui-lab/public/evidence/batch/fluid-notch/replica/lifecycle.webm)
 
 [Source](cases/ui-lab/src/components/fluid-notch.tsx) · [Review](docs/menufold-review/fluid.md)
 
@@ -61,9 +61,9 @@ Layered cards, light/shadow, hover, a single primary action.
 
 The reconstruction is the MenuFold adaptation with native icons and one primary action.
 
-| Reference | Reconstruction |
-| --- | --- |
-| <img src="assets/readme/comparisons/stacked-empty-state-reference.png" width="420" alt="Stacked Empty State reference capture"> | <img src="assets/readme/comparisons/stacked-empty-state-reconstruction.png" width="420" alt="Stacked Empty State reconstruction capture"> |
+![stacked empty state — reference and reconstruction playing together](assets/readme/showcase/stacked-empty-state.gif)
+
+[Full reference recording](cases/ui-lab/public/evidence/batch/stacked-empty-state/reference/lifecycle.webm) · [Full reconstruction recording](cases/ui-lab/public/evidence/batch/stacked-empty-state/replica/lifecycle.webm)
 
 [Source](cases/ui-lab/src/components/stacked-empty-state.tsx) · [Review](docs/menufold-color/stack.md)
 
@@ -71,9 +71,9 @@ The reconstruction is the MenuFold adaptation with native icons and one primary 
 
 Independent chip expansion/pop, focus ring, armed deletion.
 
-| Reference | Reconstruction |
-| --- | --- |
-| <img src="assets/readme/comparisons/combobox-reference.png" width="420" alt="Combobox reference capture"> | <img src="assets/readme/comparisons/combobox-reconstruction.png" width="420" alt="Combobox reconstruction capture"> |
+![combobox — reference and reconstruction playing together](assets/readme/showcase/combobox.gif)
+
+[Full reference recording](cases/ui-lab/public/evidence/batch/combobox/reference/lifecycle.webm) · [Full reconstruction recording](cases/ui-lab/public/evidence/batch/combobox/replica/lifecycle.webm)
 
 [Source](cases/ui-lab/src/components/combobox.tsx) · [Review](docs/affectui-review/forms.md)
 
@@ -81,9 +81,9 @@ Independent chip expansion/pop, focus ring, armed deletion.
 
 Application shell, tool execution, status pulse, reading pane.
 
-| Reference | Reconstruction |
-| --- | --- |
-| <img src="assets/readme/comparisons/agent-run-reference.png" width="420" alt="Agent Run reference capture"> | <img src="assets/readme/comparisons/agent-run-reconstruction.png" width="420" alt="Agent Run reconstruction capture"> |
+![agent run — reference and reconstruction playing together](assets/readme/showcase/agent-run.gif)
+
+[Full reference recording](cases/ui-lab/public/evidence/batch/agent-run/reference/lifecycle.webm) · [Full reconstruction recording](cases/ui-lab/public/evidence/batch/agent-run/replica/lifecycle.webm)
 
 [Source](cases/ui-lab/src/components/agent-run.tsx) · [Review](docs/affectui-review/shells.md)
 
@@ -93,9 +93,9 @@ Application shell, tool execution, status pulse, reading pane.
 
 A fresh agent using `gpt-6.1-sol` (`high` reasoning) reconstructed **Aceternity UI Fluid Notch**, whose Code access requires All-Access. It received the English skill and public URL, with no prior implementation or case analysis. Source, full recordings, intermediate-frame comparisons, and remaining differences are included in the [trial](cases/model-trials/gpt-6.1-sol/fluid-notch/).
 
-| Reference | GPT-6.1 Sol reconstruction |
-| --- | --- |
-| <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reference.png" width="420" alt="Paid Fluid Notch public preview, question one"> | <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reconstruction.png" width="420" alt="Independent GPT-6.1 Sol reconstruction, question one"> |
+![gpt 6.1 fluid notch — reference and reconstruction playing together](assets/readme/showcase/gpt-6.1-fluid-notch.gif)
+
+[Full reference recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reference/lifecycle.webm) · [Full reconstruction recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm)
 
 Fresh standalone installation/build and seven parent runtime checks passed. Static geometry and core interaction are close; motion remains fitted with visible intermediate-frame differences. This single trial is **not** a full-suite rerun or a controlled ranking against Astra. [Review and run instructions](docs/model-trials/gpt-6.1-sol.md).
 

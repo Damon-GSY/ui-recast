@@ -2,25 +2,25 @@
 
 从 **截图、视频或 URL** 重建可运行的 UI 组件，把颜色、图标、光效和细微过渡一起对照。
 
-[安装 Skill](#安装与使用) · [查看案例](cases/README.md) · [读取工作流程](skills/ui-recast/SKILL.md) · [运行实验室](#运行案例实验室)
+[安装 Skill](#安装与使用) · [案例展示](#案例展示) · [全部案例](cases/README.md) · [读取工作流程](skills/ui-recast/SKILL.md) · [运行实验室](#运行案例实验室)
 
 ![真实复刻案例：白色 Bento 卡片、中性灰渐变与可操作内容区](assets/readme/bento-grid.png)
 
 这个 skill 将参考采集、分轨分析、源码实现和真实对照串成一条流程。交付包含可编辑组件、独立用例、录屏与已验证范围，适合有明确参考目标的组件复刻。
 
-## 案例先看这里
+## 案例展示
 
 > **使用模型：**这里展示的复刻案例使用 `gpt6-astra` 完成，另外已完成 `gpt-6.1-sol` 的 Fluid Notch 付费 Pro 单项测试，见[结果](docs/model-trials/gpt-6.1-sol.md)；其他模型仍未测试。
 
-左侧为参考，右侧为复刻。这里直接展示采集到的状态画面，完整动效可在案例实验室中对照。
+左侧为参考，右侧为复刻。每组对照合成在**同一张自动循环 GIF** 中，两侧一起播放。动图取自原速录屏并对齐相关阶段；下方保留完整录像。Fluid Notch 摘取展开、收回两个窗口，中间留短暂停顿方便观察。
 
 ### Thinking Loader
 
 八条静止射线、文字扫光、阶段交接与完成勾标。
 
-| 参考 | 复刻 |
-| --- | --- |
-| <img src="assets/readme/comparisons/thinking-loader-reference.png" width="420" alt="Thinking Loader reference capture"> | <img src="assets/readme/comparisons/thinking-loader-reconstruction.png" width="420" alt="Thinking Loader reconstruction capture"> |
+![thinking loader — reference and reconstruction playing together](assets/readme/showcase/thinking-loader.gif)
+
+[完整原版录像](cases/ui-lab/public/evidence/thinking-loader/motion-study/reference/clean/lifecycle.webm) · [完整复刻录像](cases/ui-lab/public/evidence/thinking-loader/motion-study/replica/clean/lifecycle.webm)
 
 [源码](cases/ui-lab/src/components/thinking-loader.tsx) · [复查](docs/affectui-review/loaders.md)
 
@@ -28,9 +28,9 @@
 
 节点错峰入场、呼吸光环、等待/错误光扫与调用轨迹。
 
-| 参考 | 复刻 |
-| --- | --- |
-| <img src="assets/readme/comparisons/agent-graph-reference.png" width="420" alt="Agent Graph reference capture"> | <img src="assets/readme/comparisons/agent-graph-reconstruction.png" width="420" alt="Agent Graph reconstruction capture"> |
+![agent graph — reference and reconstruction playing together](assets/readme/showcase/agent-graph.gif)
+
+[完整原版录像](cases/ui-lab/public/evidence/agent-graph/motion/reference/lifecycle.webm) · [完整复刻录像](cases/ui-lab/public/evidence/agent-graph/motion/replica/lifecycle.webm)
 
 [源码](cases/ui-lab/src/components/agent-graph.tsx) · [复查](docs/affectui-review/loaders.md)
 
@@ -38,9 +38,9 @@
 
 外壳变形、图标交接、纹理与展开/收回的中间态。
 
-| 参考 | 复刻 |
-| --- | --- |
-| <img src="assets/readme/comparisons/fluid-notch-reference.png" width="420" alt="Fluid Notch reference capture"> | <img src="assets/readme/comparisons/fluid-notch-reconstruction.png" width="420" alt="Fluid Notch reconstruction capture"> |
+![fluid notch — reference and reconstruction playing together](assets/readme/showcase/fluid-notch.gif)
+
+[完整原版录像](cases/ui-lab/public/evidence/batch/fluid-notch/reference/lifecycle.webm) · [完整复刻录像](cases/ui-lab/public/evidence/batch/fluid-notch/replica/lifecycle.webm)
 
 [源码](cases/ui-lab/src/components/fluid-notch.tsx) · [动效复查](docs/menufold-review/fluid.md)
 
@@ -50,9 +50,9 @@
 
 右侧为 MenuFold 适配版，采用原生图标并保留一个主要操作。
 
-| 参考 | 复刻 |
-| --- | --- |
-| <img src="assets/readme/comparisons/stacked-empty-state-reference.png" width="420" alt="叠层空状态 reference capture"> | <img src="assets/readme/comparisons/stacked-empty-state-reconstruction.png" width="420" alt="叠层空状态 reconstruction capture"> |
+![stacked empty state — reference and reconstruction playing together](assets/readme/showcase/stacked-empty-state.gif)
+
+[完整原版录像](cases/ui-lab/public/evidence/batch/stacked-empty-state/reference/lifecycle.webm) · [完整复刻录像](cases/ui-lab/public/evidence/batch/stacked-empty-state/replica/lifecycle.webm)
 
 [源码](cases/ui-lab/src/components/stacked-empty-state.tsx) · [配色复查](docs/menufold-color/stack.md)
 
@@ -60,9 +60,9 @@
 
 标签外壳展开与内容 pop 分轨，焦点光环及退格选中。
 
-| 参考 | 复刻 |
-| --- | --- |
-| <img src="assets/readme/comparisons/combobox-reference.png" width="420" alt="Combobox reference capture"> | <img src="assets/readme/comparisons/combobox-reconstruction.png" width="420" alt="Combobox reconstruction capture"> |
+![combobox — reference and reconstruction playing together](assets/readme/showcase/combobox.gif)
+
+[完整原版录像](cases/ui-lab/public/evidence/batch/combobox/reference/lifecycle.webm) · [完整复刻录像](cases/ui-lab/public/evidence/batch/combobox/replica/lifecycle.webm)
 
 [源码](cases/ui-lab/src/components/combobox.tsx) · [复查](docs/affectui-review/forms.md)
 
@@ -70,9 +70,9 @@
 
 任务外壳、工具过程、状态脉冲与内容阅读区。
 
-| 参考 | 复刻 |
-| --- | --- |
-| <img src="assets/readme/comparisons/agent-run-reference.png" width="420" alt="Agent Run reference capture"> | <img src="assets/readme/comparisons/agent-run-reconstruction.png" width="420" alt="Agent Run reconstruction capture"> |
+![agent run — reference and reconstruction playing together](assets/readme/showcase/agent-run.gif)
+
+[完整原版录像](cases/ui-lab/public/evidence/batch/agent-run/reference/lifecycle.webm) · [完整复刻录像](cases/ui-lab/public/evidence/batch/agent-run/replica/lifecycle.webm)
 
 [源码](cases/ui-lab/src/components/agent-run.tsx) · [复查](docs/affectui-review/shells.md)
 
@@ -92,9 +92,9 @@ Skill 的指导内容自包含。动效引擎和基础控件由项目与参考�
 
 使用 `gpt-6.1-sol`、`high` 推理档位的新代理，仅给英文 skill 和原版 URL，独立重建 **Aceternity UI Fluid Notch**。原版公开预览可操作，Code 需要 All-Access；试跑未读取付费实现，也未读取已有复刻源码。
 
-| 公开预览 | GPT-6.1 Sol 独立复刻 |
-| --- | --- |
-| <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reference.png" width="420" alt="Fluid Notch 第一题原版公开预览"> | <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reconstruction.png" width="420" alt="GPT-6.1 Sol 独立复刻的第一题"> |
+![gpt 6.1 fluid notch — reference and reconstruction playing together](assets/readme/showcase/gpt-6.1-fluid-notch.gif)
+
+[完整原版录像](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reference/lifecycle.webm) · [完整复刻录像](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm)
 
 独立安装、构建和7项父代理运行检查通过。静态尺寸与核心交互接近，动效参数仍有拟合和可见中间帧差异；这不代表全库验证，也不是与 Astra 的受控排名。[源码、录屏与结论](docs/model-trials/gpt-6.1-sol.md)。
 

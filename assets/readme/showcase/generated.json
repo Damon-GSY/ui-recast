@@ -1,0 +1,79 @@
+[
+  {
+    "name": "thinking-loader",
+    "size": [
+      936,
+      174
+    ],
+    "frames": 147,
+    "durationMs": 13040,
+    "bytes": 536849,
+    "loop": 0
+  },
+  {
+    "name": "agent-graph",
+    "size": [
+      984,
+      403
+    ],
+    "frames": 150,
+    "durationMs": 12000,
+    "bytes": 2289980,
+    "loop": 0
+  },
+  {
+    "name": "fluid-notch",
+    "size": [
+      904,
+      392
+    ],
+    "frames": 22,
+    "durationMs": 3040,
+    "bytes": 1247759,
+    "loop": 0
+  },
+  {
+    "name": "stacked-empty-state",
+    "size": [
+      944,
+      442
+    ],
+    "frames": 23,
+    "durationMs": 2000,
+    "bytes": 279588,
+    "loop": 0
+  },
+  {
+    "name": "combobox",
+    "size": [
+      944,
+      492
+    ],
+    "frames": 113,
+    "durationMs": 9200,
+    "bytes": 886488,
+    "loop": 0
+  },
+  {
+    "name": "agent-run",
+    "size": [
+      1304,
+      452
+    ],
+    "frames": 150,
+    "durationMs": 12000,
+    "bytes": 1714940,
+    "loop": 0
+  },
+  {
+    "name": "gpt-6.1-fluid-notch",
+    "size": [
+      904,
+      398
+    ],
+    "frames": 108,
+    "durationMs": 9200,
+    "bytes": 3630715,
+    "loop": 0
+  }
+]
