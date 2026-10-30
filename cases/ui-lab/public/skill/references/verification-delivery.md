@@ -1,42 +1,42 @@
-# 对照与交付
+# Comparison and delivery
 
-## 对照条件
+## Match the conditions
 
-固定主题、字体、内容、视口与组件尺寸，同时对齐滚动位置、选中项和焦点。两侧使用同一尺度和静止锚点；背景包装不能改变组件布局。完整录像保留，并提供慢放/逐帧与必要的等比例局部放大。确认播放器实际读取本轮媒体，避免静态目录中的旧副本遮盖新证据。
+Fix theme, fonts, content, viewport, component size, scroll position, selection, and focus. Use the same scale and stationary anchors; preview wrappers must not change component layout. Preserve full recordings, with slow/frame playback and proportionate close-ups where useful. Confirm the player reads the latest media rather than an old static copy.
 
-先按实际渲染变化或transition/animation事件对齐阶段起点，再比较同一时间尺度下的中间态、阶段间隔和轨道重叠。动作timestamp只表示调度；相位差不能直接认作曲线差异。采样不足按[采集说明](input-evidence.md#采样不足时)补证。
+Align phase starts using actual rendered changes or transition/animation events. Compare intermediate states, phase gaps, and overlapping tracks on the same time scale. Action timestamps describe scheduling; phase offsets alone do not prove different curves. Follow the [sampling guidance](input-evidence.md#insufficient-sampling) when evidence is sparse.
 
-双录像播放器应允许两侧独立定位起点，再按相对时间同步，并保留完整回放入口。直接同步绝对播放秒数可能在比较不同阶段；调对齐点只消除触发偏差，不能拉伸时间来掩盖速度差。步进按原媒体采样解释，不能把每次 seek 当作新帧。
+Paired players should support independent starting positions, relative synchronization, and complete playback. Absolute-time synchronization can compare different phases. Offset alignment removes trigger skew; never stretch time to hide speed differences. Interpret stepping against the media's native samples, not as a new frame for every seek.
 
-## 检查什么
+## Inspect actual output
 
-- **静态与资源**：几何、换行、图标、圆角、边框、阴影各层、层级和当前状态。
-- **动态**：沿完整动作链对照四条轨道，尤其小加载器、常驻/运动光层、循环接缝、短过渡、完成与退出；正常速度看节奏，慢放看真实中间帧。
-- **操作**：值与回调、键盘路径、焦点返回、重复触发、取消和组件实际支持的中途打断。
-- **容器**：目标支持的窄宽度是否按参考换行/滚动，弹层与内容有无裁掉。未对照原版的响应式方案单列。
+- **Static structure and assets:** geometry, wrapping, icons, radii, border/shadow layers, stacking, and current state.
+- **Motion:** all four tracks through the complete action chain, including tiny loaders, persistent/moving light layers, loop seams, short transitions, completion, and exit. Watch normal speed for rhythm, slow playback for real intermediate states.
+- **Interaction:** values/callbacks, keyboard paths, focus return, repeated triggers, cancellation, and supported interruptions.
+- **Containers:** reference-supported wrapping/scrolling at narrow widths; clipped popups/content. Label responsive behavior that has no reference comparison.
 
-让模型实际查看原版与复刻画面，记录具体差异与对应修正。像素差异可定位几何偏差，单一分数不能判定动效一致。保留校准前基线；修正后复验受影响项，已确认部分不反复重做。
+Actually view both outputs and connect concrete differences to fixes. Pixel differences can locate geometry errors; one score cannot establish motion fidelity. Preserve the pre-edit baseline. Recheck affected behavior after changes without repeatedly redoing settled checks.
 
-## 色彩与合成
+## Color and compositing
 
-先锁定参考的明暗主题与实际预览，记录页面背景、组件表面、主/次文字、边框、图标、强调色和实际存在的状态色。使用渲染后的颜色补证；截图取样避开字体抗锯齿边缘，视频压缩后的色值只作为近似。参考没有展示的业务状态明确标为本地选择。
+Lock the real preview and theme. Record canvas, surfaces, primary/secondary text, borders, icons, accents, and observed status colors. Supplement images with rendered colors. Avoid antialiased text edges when sampling screenshots; compressed video values are approximate. Label business states absent from the reference as local choices.
 
-逐状态比较默认、hover、选中、焦点、禁用、加载和结果。颜色与透明度分开记录，再看它们叠在真实背景后的结果；渐变的起止色、遮罩、阴影各层和光效不能用一个平均色替代。恢复中性色不等于抹掉参考的绿色按钮、蓝色操作或黑色面板。
+Compare default, hover, selected, focus, disabled, loading, and result states where supported. Record color separately from opacity, then inspect compositing on the actual background. Preserve gradient endpoints, masks, shadow layers, and light effects rather than substituting an average color. Restoring neutral surfaces must retain a reference's green button, blue action, or black panel.
 
-对照组件单独渲染与装入宿主页后的颜色。图库的通用段落/链接规则、继承色、透明容器和明暗模式不能覆盖组件角色色；样式修复应落在独立源码中。修复配色后更新录像和分发副本，避免拿旧颜色的录像证明新实现。
+Compare standalone rendering with the host page. Gallery paragraph/link selectors, inherited colors, transparent containers, and theme rules must not override component roles. Put fixes in the reusable source. Refresh recordings and distributed copies after palette changes.
 
-## 弹出与展开的连续性
+## Pop and expansion continuity
 
-以首个可见变化为零点，比较起步、中段、过冲峰值、回落和最终稳定；收回另测，不假定是展开倒放。记录移动锚点、宽高、圆角、裁剪与阴影，同时查看图标、文字是否按各自时序进出场。前景和背景同时变色时，检查中途对比度，避免两条平滑过渡叠成看不清的文字。
+Set time zero at the first visible change. Compare onset, mid-travel, overshoot, recovery, and settling. Measure collapse separately rather than assuming reversed expansion. Track anchors, size, radius, clipping, and shadow alongside independent icon/text timing. During simultaneous foreground/background transitions, check intermediate contrast.
 
-若参考保持文字与描边尺寸，不能用整个面板的非等比缩放代替共享几何过渡。外壳变形与内部内容应分层；结束时切回自然尺寸不得再跳一次。旧内容退出、新内容进入、容器变化之间的空帧或重叠必须有画面依据；业务状态已推进时，退出文字/内容应保留自己的快照，进度图标等独立轨道继续更新，避免重开时重播已完成图标。
+If the reference preserves text and stroke sizes, do not substitute nonuniform scaling of the entire panel for shared geometry. Separate the morphing shell from its content. Returning to natural dimensions must not cause an extra jump. Gaps or overlap between outgoing content, incoming content, and container changes require visual evidence. Preserve outgoing content snapshots when business state advances; let independent progress tracks keep updating so reopening does not replay completed icons.
 
-快速反向、悬停移出再进入、内容切换时，从当前呈现值接续。共享背景跨项目移动时检查叠层后的实际亮度，不能只看单层 opacity；列表新增同时观察旧行让位。检查首次入场的 stagger/delay 是否错误地重复用于 hover、点击或反向动画；保留原本没有回弹的轨道，不给所有属性套同一个 spring。
+Resume from current rendered values on reversal, pointer leave/reentry, or content changes. For shared moving backgrounds, inspect composite brightness across overlapping layers. For inserted list items, inspect existing rows yielding space. Ensure entrance stagger/delay is not accidentally reused for hover, click, or reversal. Preserve tracks without overshoot rather than applying one spring universally.
 
-多组件逐项记录采集、实现、验证和余差。完成一个变体不代表其他变体；全清单交付不以代表样例替代。构建、静态检查、安装预演和真实运行分别报告。
+Record capture, implementation, verification, and remaining differences per component. One variant does not validate others; representative samples do not complete an explicit batch. Report builds, static checks, installation previews, and real runtime verification separately.
 
-## 可编辑源码
+## Editable source
 
-交付组件、CSS、必要资源和可运行用例。使用shadcn registry时按[官方schema](https://ui.shadcn.com/docs/registry/registry-item-json)生成真实文件正文、目标路径与实际依赖，保证相对导入和客户端边界可用。
+Deliver components, CSS, necessary assets, and runnable examples. For shadcn registries, follow the [official schema](https://ui.shadcn.com/docs/registry/registry-item-json): include actual file bodies, target paths, and required dependencies. Preserve relative imports and client boundaries.
 
-在独立消费者对实际registry URL安装、构建并操作关键行为，验证分发文件与当前源码一致；同工程复制或旧快照安装不能替代。源码更新后重新生成分发产物。交付说明列明已验证范围、资源来源及剩余视觉/行为差异。
+Install from the actual registry URL in an independent consumer, then build and exercise key behavior. Compare delivered files with current source. Same-project copies or old installed snapshots do not substitute. Regenerate distribution after source changes. State verified scope, asset provenance, and remaining visual/behavioral differences.

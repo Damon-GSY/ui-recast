@@ -1,40 +1,42 @@
 ---
-name: reverse-ui-component
-description: 从 UI 组件截图、视频或 URL 重建可运行源码；采集完整交互过程，分析图标、光效与细微过渡，再与参考逐状态对照。用于有明确参考目标的组件复刻。
+name: ui-recast
+description: Rebuild UI components from screenshots, videos, or live URLs into editable, runnable source. Use for reference-driven reconstruction with full interaction capture and comparison of colors, icons, light effects, and subtle transitions.
 ---
 
-# Reverse UI Component
+# UI Recast
 
-交付可编辑组件、可操作演示与原版对照。以下流程自包含；库文档仅用于选择实现机制。
+Rebuild UI from visual evidence. Deliver editable components, interactive examples, and reference comparisons. This workflow is self-contained; library documentation helps select mechanisms, while the observed target determines the result.
 
-## 1. 锁定目标
+## 1. Define the target
 
-确认组件区域、变体、主题、视口及项目技术栈。读取现有代码与依赖；无项目约定时使用 React + TypeScript。保存本轮组件名单，按用户排除项收窄范围；一个组件的完成不代表其他组件或变体完成。
+Identify the component region, variants, theme, viewport, and project stack. Inspect the existing code and dependencies; use React and TypeScript when the project has no preference. Record the component list and honor explicit exclusions. Completing one component or variant does not complete the others.
 
-把用户明确选择的结构、业务改动与待修的视觉差异分开记录。未要求的跳变、内容拉伸或缺失轨道，不能用“适配”代替修复。
+Separate user-requested product adaptations from visual defects. Unrequested jumps, stretched content, or missing animation tracks require fixes rather than an “adaptation” label.
 
-截图只证明当前画面；视频证明已录到的过程；URL可操作时先补齐行为证据。仅有截图时实现可见状态，并标明推断交互。来源公开可用且用户要求复用源码时，保留来源与许可；无源码复刻试验则按[采集边界](references/input-evidence.md#来源与边界)执行。
+A screenshot proves one visible state; a video proves only the recorded sequence. When a URL is interactive, capture the missing behavior first. With screenshot-only input, implement visible states and identify inferred interactions. For public source reuse, preserve provenance and licensing. For a reconstruction without source access, follow the [capture boundaries](references/input-evidence.md#sources-and-boundaries).
 
-## 2. 先采集完整过程
+## 2. Capture the complete interaction
 
-按[输入与采集](references/input-evidence.md)定位预览、建立可重复初始状态，再连续录制目标实际具有的过程：触发前、入场、完整循环、阶段切换、完成或退出、再次触发。交互组件记录主动作及反向/取消；录制时长由实际过程决定。
+Use [input and capture](references/input-evidence.md) to find the real preview and establish a repeatable initial state. Record the target's actual lifecycle continuously: before triggering, entrance, full loops, phase changes, completion or exit, and another trigger. Include reverse actions and cancellation where supported; let the behavior determine recording length.
 
-先看整段，再查看带时间的真实中间帧与必要局部。把图标、光效、文字、布局四条轨道写入短规格；记录触发器、属性、时序、曲线及打断后的行为。分清图像观察、渲染测量和实现推断。证据不足的短过渡先补采，参数无法确认时标为拟合。
+Review the whole sequence before inspecting real intermediate frames and relevant close-ups. Write a short specification for four tracks: icons, light effects, text, and layout. Record triggers, properties, timing, curves, and interruption behavior. Distinguish visual observations, rendered measurements, and implementation hypotheses. Capture missing short transitions before tuning; label unconfirmed parameters as fitted.
 
-## 3. 按规格实现
+## 3. Implement from the evidence
 
-先从参考提取背景、表面、文字、边框与强调/状态色的角色关系，匹配静态几何、字体、图标资源和层级，再连接状态与动效。配色改动须有用户指定或参考依据，不能把自选品牌色当成默认适配。沿用项目基础控件与交互语义；CSS/WAAPI适合简单变化，Motion适合React状态、布局与弹簧，GSAP适合复杂连续编排。需要机制参考时查[效果索引](references/effects-catalog.md)，目标画面决定参数。
+Extract the color roles first: canvas, surfaces, text, borders, accents, and status colors. Match static geometry, typography, icon assets, and layering before connecting state and motion. Palette changes need user direction or reference evidence; a self-chosen brand palette is not a default adaptation.
 
-业务数据与状态由调用方持有，演示响应单独放在用例中。保留键盘、焦点、禁用、错误和减少动态偏好。新目标打断旧动画时从当前画面接续；一个属性由一套动画控制。组件源码、样式和资源独立于演示页面。
+Use the project's base controls and interaction semantics. CSS or WAAPI suits simple changes; Motion suits React state, layout, and springs; GSAP suits complex sequences. Consult the [mechanism index](references/effects-catalog.md) only for relevant implementation ideas. Derive parameters from the target.
 
-## 4. 用真实结果对照
+Keep business data and state with the caller; place simulated responses in examples. Preserve keyboard navigation, focus, disabled/error states, and reduced motion. Interrupt animations from the current rendered value. Give each animated property one owner. Keep component source, styles, and assets independent of the study page.
 
-以同一主题、尺寸、内容和动作链录制复刻。按[对照与交付](references/verification-delivery.md)把原版与复刻并排查看：正常速度看节奏，慢放/连续帧看图标、光效和细微transition，按渲染变化对齐相位。修复具体遗漏后重验受影响的过程；构建通过、终态相同都不能证明动效一致。
+## 4. Compare actual output
 
-弹出、展开与收回至少比较开始、行程中段、过冲峰值和稳定态；分别看外壳与内部图文。先保存修改前基线，再用实际画面确认连续性，而非仅确认按钮能打开、关闭。
+Record the reconstruction with the same theme, dimensions, content, and action chain. Follow [comparison and delivery](references/verification-delivery.md): watch at normal speed for rhythm, then inspect slow playback and real frames for icon, light, and transition details. Align phases by rendered changes. Fix concrete omissions and recheck affected sequences; a passing build or matching endpoint does not establish motion fidelity.
 
-## 5. 交付与多组件执行
+For pop, expansion, and collapse, compare onset, mid-travel, overshoot, and settling. Inspect the shell and inner text/icons separately. Save the baseline before edits and verify continuity through actual output, beyond checking whether a control opens and closes.
 
-交付源码、运行入口、录屏/关键帧及已验证范围，明确剩余差异。要求源码分发时生成真实文件正文与依赖，并在独立消费者安装、构建、渲染。当前范围无已知差异才称1:1；试验跑通与视觉完全一致分开报告。
+## 5. Deliver and coordinate
 
-批量任务按组件分配独立文件与证据目录，可并行采集和实现，共享入口、依赖、分发由一处集成。每项保留状态与余差；已验证部分复用，仅在改动或新失败时复测。录屏期间隔离其他页面解码、密集测量和热更新干扰。
+Deliver source, a runnable entry point, recordings or frames, verified scope, and remaining differences. When source distribution is requested, provide actual file bodies and dependencies, then install, build, and render them in an independent consumer. Claim 1:1 only when the stated scope has no known differences. A working trial and full visual fidelity are different results.
+
+For batches, assign disjoint source and evidence paths. Capture and implementation may run in parallel; centralize shared entry points, dependencies, and distribution. Record each item's status and remaining differences. Reuse established evidence and checks unless edits or new failures warrant retesting. Isolate recording from other video decoding, dense measurements, and hot reloads.

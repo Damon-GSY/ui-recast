@@ -1,8 +1,8 @@
-# 可运行案例
+# Runnable cases
 
-在 `ui-lab` 执行 `npm ci && npm run dev -- --port 4187`。下表路径附在 `http://127.0.0.1:4187` 后打开；源码与演示状态分别保存。原版与复刻录像位于 `ui-lab/public/evidence/`。
+Run `npm ci && npm run dev -- --port 4187` inside `ui-lab`. Append each route below to `http://127.0.0.1:4187`. Reusable source and example state are separate; reference and reconstruction recordings live in `ui-lab/public/evidence/`.
 
-| 案例 | 运行路径 | 组件源码 |
+| Case | Route | Component source |
 | --- | --- | --- |
 | Segmented Control | `/` | [TSX](ui-lab/src/components/segmented-control.tsx) |
 | OTP Input | `/otp-input` | [TSX](ui-lab/src/components/otp-input.tsx) |
@@ -27,8 +27,8 @@
 | Expandable Cards | `/batch/expandable-cards` | [TSX](ui-lab/src/components/expandable-cards.tsx) |
 | Bento Grid | `/batch/bento-grid` | [TSX](ui-lab/src/components/bento-grid.tsx) |
 | Stacked Empty State | `/batch/stacked-empty-state` | [TSX](ui-lab/src/components/stacked-empty-state.tsx) |
-| Task Detail | `/batch/agent-run-integration` | [组合用例](ui-lab/src/batch/agent-run-integration/Study.tsx) |
-| Task Workbench | `/batch/task-workbench` | [组合用例](ui-lab/src/batch/task-workbench/Study.tsx) |
+| Task Detail | `/batch/agent-run-integration` | [Composition](ui-lab/src/batch/agent-run-integration/Study.tsx) |
+| Task Workbench | `/batch/task-workbench` | [Composition](ui-lab/src/batch/task-workbench/Study.tsx) |
 | App Shell Inset | `/batch/app-shell-inset` | [TSX](ui-lab/src/components/app-shell-inset.tsx) |
 | Questionnaire | `/batch/questionnaire` | [TSX](ui-lab/src/components/questionnaire.tsx) |
 | Tool Call Card | `/batch/tool-call-card` | [TSX](ui-lab/src/components/tool-call-card.tsx) |
@@ -51,4 +51,4 @@
 | Member List 1 | `/batch/block-member-list1` | [TSX](ui-lab/src/components/block-member-list1.tsx) |
 | Timeline 1 | `/batch/block-timeline1` | [TSX](ui-lab/src/components/block-timeline1.tsx) |
 
-Task Detail 与 Task Workbench 是组合用例，不重复计入44个组件源码条目。部分案例采用公开源码适配，其余为按可见参考独立实现；具体来源与余差见实验室的单项分析。
+Task Detail and Task Workbench are compositions and are not counted again among the 44 source entries. Cases include public-source adaptations and independent visual reconstructions. See the per-case analyses for provenance and remaining differences.

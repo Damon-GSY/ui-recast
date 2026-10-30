@@ -1,0 +1,48 @@
+# Input and capture
+
+## Sources and boundaries
+
+Record the URL or input file, component region, variant, theme, viewport, crop, action sequence, and timing. Preserve original material with component/state names. Distinguish reused icon assets, reused source, and independent implementation.
+
+For a reconstruction without source access, inspect the visible output first. Supplement it with visible DOM, computed styles, rendered animation tracks, and public API descriptions. Record public Pro restrictions; an anonymous HEAD request to a known registry can establish access status without reading its body. Do not inspect original component source, bundles, or React internals. Inaccessible states remain unverified.
+
+## Screenshot and video input
+
+Inspect the full image before close-ups. Leave room for shadows, halos, and popup anchors. Label marketing images separately from actual browser output. One frame leaves timing, curves, and hidden behavior unknown.
+
+Preserve original video timing and frame rate. Watch the sequence, locate change windows, then extract real intermediate frames or timestamped sheets. On macOS, use the included helper:
+
+```sh
+swift <skill-dir>/scripts/video-frames.swift <input.mp4> <output-dir> 12
+```
+
+It records requested and actual frame times. Existing FFmpeg is also suitable. Higher export rates, duplicate frames, or interpolation add no evidence.
+
+If a decoder cannot read the container, such as WebM in some macOS environments, use browser decoding and `requestVideoFrameCallback` to record `mediaTime`. Preserve requested seek times separately from actual decoded frame times. A sheet requested every 100ms is not proof of exact 100ms sampling.
+
+## Recording a live URL
+
+1. Use an authorized browser tool. Use independent Playwright when permitted; do not reuse a personal browser profile. Existing authorization carries forward.
+2. Locate the real preview and state, observe autoplay, then reset manually. Wait for fonts. Confirm the state visually: hidden text in the DOM does not prove that state appeared.
+3. Record the complete action chain continuously: entrance, loops, phase handoffs, exit/completion, and retrigger. Cover at least one full cycle of each looping track. Exercise reversal, cancellation, and changing targets where supported. Capture static components by state.
+4. Save action request and return times, then identify actual rendered changes separately. Use the correct crop coordinate system. Keep the complete component, popups, and light effects visible at both ends; add margins near viewport edges.
+5. With screenshot-only APIs, preserve capture times, call the result a screenshot sequence, and report its actual sampling rate. If browser interaction is unavailable, implement visible structure and leave dynamic verification pending.
+
+## Four visual tracks
+
+| Track | Observe |
+| --- | --- |
+| Icons | Geometry, stroke, color, subelement motion, state replacement, completion morphs, and small loaders in lists/popups. Use consecutive frames to distinguish whole-icon rotation, sequential ray opacity, and static shapes. Check visibility on the actual background. |
+| Light | Separate persistent halos from state-triggered layers. Record gradients, masks, bounds, paths, tails, cycles, and handoffs. Distinguish expanding shadow radius from element scaling. Preserve the relationship between base geometry and light layers. |
+| Text | Old/new overlap, independent translation, opacity, blur, delays, and duration. Distinguish numeric interpolation from digit rolling. |
+| Layout | Size, position, clipping, stationary anchors, easing/overshoot, content/container sequencing, popups, and exiting nodes. |
+
+Attach frames/times or rendered measurements to each observed track. Measure subtle transitions by property rather than assigning one duration or spring to everything.
+
+## Insufficient sampling
+
+Low native frame rates cannot establish short-transition peaks or curves. Recapture the relevant window or measure rendered property trajectories before choosing parameters. Nominal FPS does not guarantee continuously updated frames.
+
+If video skips while direct observation is continuous, separate dense measurement from recording, pause unrelated decoding, prevent hot reloads, and recapture the affected window. Do not interleave element screenshots that scroll or resize the page during recording; extract them afterward. Preserve the target's real speed and business timing.
+
+For parallel Vite previews, use separate cache directories and resolve a single React instance per preview. Shared dependency prebundling can break the main page or contaminate captures. Isolated preview servers should still import the actual deliverable source.

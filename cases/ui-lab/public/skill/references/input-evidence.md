@@ -1,46 +1,48 @@
-# 输入与采集
+# Input and capture
 
-## 来源与边界
+## Sources and boundaries
 
-每项记录URL/输入文件、组件区域、变体与主题、视口、裁剪范围、动作顺序及时间。保存原始素材，命名到组件与状态。图标资产复用、源码复用、独立实现分别说明。
+Record the URL or input file, component region, variant, theme, viewport, crop, action sequence, and timing. Preserve original material with component/state names. Distinguish reused icon assets, reused source, and independent implementation.
 
-测试无源码复刻时，先看真实画面，再用可见DOM、computed style、渲染动画轨迹及公开接口说明补证。保存公开页面的Pro限制；已知registry可用匿名HEAD记录状态，无需读取正文。不读取原组件源码、打包脚本或React内部状态。无法访问的状态保持未验证。
+For a reconstruction without source access, inspect the visible output first. Supplement it with visible DOM, computed styles, rendered animation tracks, and public API descriptions. Record public Pro restrictions; an anonymous HEAD request to a known registry can establish access status without reading its body. Do not inspect original component source, bundles, or React internals. Inaccessible states remain unverified.
 
-## 截图与视频输入
+## Screenshot and video input
 
-先看全图，再看局部；保留足够边距识别阴影、光晕与弹层锚点。营销图单独标明，不当作实际浏览器状态。只有单帧时，时序、曲线与隐藏交互属于未知。
+Inspect the full image before close-ups. Leave room for shadows, halos, and popup anchors. Label marketing images separately from actual browser output. One frame leaves timing, curves, and hidden behavior unknown.
 
-视频保留原始时间与帧率。先通看过程，定位变化窗口，再提取真实中间帧或带时间标签的拼图。macOS可用本目录自带脚本：
+Preserve original video timing and frame rate. Watch the sequence, locate change windows, then extract real intermediate frames or timestamped sheets. On macOS, use the included helper:
 
 ```sh
 swift <skill-dir>/scripts/video-frames.swift <input.mp4> <output-dir> 12
 ```
 
-输出包含请求时间与实际帧时间；也可使用已有FFmpeg。提高导出帧率、重复帧或插帧不会增加证据。
+It records requested and actual frame times. Existing FFmpeg is also suitable. Higher export rates, duplicate frames, or interpolation add no evidence.
 
-解码器不支持当前容器（如部分 macOS 环境的 WebM）时，可用浏览器视频解码与 `requestVideoFrameCallback` 记录 `mediaTime`。请求 seek 时间与实际解码帧时间分别保存；不能把按 100ms 请求的拼图称作精确 100ms 轨迹。
+If a decoder cannot read the container, such as WebM in some macOS environments, use browser decoding and `requestVideoFrameCallback` to record `mediaTime`. Preserve requested seek times separately from actual decoded frame times. A sheet requested every 100ms is not proof of exact 100ms sampling.
 
-## URL的完整录制
+## Recording a live URL
 
-1. 使用已获授权的浏览器工具；环境允许时可用独立Playwright，不复用个人浏览器配置。已有授权持续有效。
-2. 定位真实预览与目标状态，观察自动轮播，再手动重置。等字体加载，用可见画面确认状态；隐藏文案出现在DOM中不表示该状态已出现。
-3. 连续录制主动作链，包括入场、完整循环、阶段交接、退出/完成和再次触发。循环轨道各覆盖至少一轮；反向、取消、中途改目标在实际支持时操作。静态组件按状态采集。
-4. 保存动作请求/完成时间，并另取实际渲染变化定位过渡。裁剪使用正确坐标系，头尾均保留完整组件、弹层与光效；贴近视口边缘时补留白。
-5. 只有截图API时保留每帧采样时间，称为截图序列录制并报告真实采样率。浏览器不可操作时可先做静态拟合，动态部分保持待采集。
+1. Use an authorized browser tool. Use independent Playwright when permitted; do not reuse a personal browser profile. Existing authorization carries forward.
+2. Locate the real preview and state, observe autoplay, then reset manually. Wait for fonts. Confirm the state visually: hidden text in the DOM does not prove that state appeared.
+3. Record the complete action chain continuously: entrance, loops, phase handoffs, exit/completion, and retrigger. Cover at least one full cycle of each looping track. Exercise reversal, cancellation, and changing targets where supported. Capture static components by state.
+4. Save action request and return times, then identify actual rendered changes separately. Use the correct crop coordinate system. Keep the complete component, popups, and light effects visible at both ends; add margins near viewport edges.
+5. With screenshot-only APIs, preserve capture times, call the result a screenshot sequence, and report its actual sampling rate. If browser interaction is unavailable, implement visible structure and leave dynamic verification pending.
 
-## 四条视觉轨道
+## Four visual tracks
 
-| 轨道 | 需要观察的内容 |
+| Track | Observe |
 | --- | --- |
-| 图标 | 几何、描边、颜色、子元素运动、状态替换与完成变形；含列表/弹层中的小加载器。用连续帧区分整图旋转、逐条明暗和静止图形，检查其背景上是否可辨。 |
-| 光效 | 常驻背景光晕与状态触发层分别记录；渐变、遮罩、覆盖区域、路径、尾迹、周期及阶段交接。区分阴影半径扩散与元素缩放，保留底层图形和光层关系。 |
-| 文字 | 新旧内容是否重叠；各自的位移、透明度、模糊、延迟与时长；数字插值与逐位滚动分别判断。 |
-| 布局 | 宽高、位置、裁剪、静止锚点、缓动/过冲；内容切换与容器变形的先后，弹层与退出节点的完整生命周期。 |
+| Icons | Geometry, stroke, color, subelement motion, state replacement, completion morphs, and small loaders in lists/popups. Use consecutive frames to distinguish whole-icon rotation, sequential ray opacity, and static shapes. Check visibility on the actual background. |
+| Light | Separate persistent halos from state-triggered layers. Record gradients, masks, bounds, paths, tails, cycles, and handoffs. Distinguish expanding shadow radius from element scaling. Preserve the relationship between base geometry and light layers. |
+| Text | Old/new overlap, independent translation, opacity, blur, delays, and duration. Distinguish numeric interpolation from digit rolling. |
+| Layout | Size, position, clipping, stationary anchors, easing/overshoot, content/container sequencing, popups, and exiting nodes. |
 
-每条实际存在的轨道附对应帧/时间或渲染测量。细微transition分别测属性，不能把所有变化统一套一个时长或弹簧。
+Attach frames/times or rendered measurements to each observed track. Measure subtle transitions by property rather than assigning one duration or spring to everything.
 
-## 采样不足时
+## Insufficient sampling
 
-原生低fps不足以确定短过渡的峰值和曲线；补录关键窗口或测实际属性轨迹，再定参数。标称帧率不保证画面持续更新。若视频跳帧而直接观察连续，分开密集测量与录屏，暂停无关视频解码、避免录制时热更新，再复录该窗口。录制期间不要穿插会滚动页面或调整视口的元素截图；截图从录像另取。保持目标原速度与业务时序。
+Low native frame rates cannot establish short-transition peaks or curves. Recapture the relevant window or measure rendered property trajectories before choosing parameters. Nominal FPS does not guarantee continuously updated frames.
 
-并行使用独立Vite预览时，为每个预览设置独立缓存目录，并统一解析React实例；否则依赖预构建可能互相覆盖，导致主页面失效或录到异常画面。隔离录制服务不等于复制业务逻辑，仍导入待交付源码。
+If video skips while direct observation is continuous, separate dense measurement from recording, pause unrelated decoding, prevent hot reloads, and recapture the affected window. Do not interleave element screenshots that scroll or resize the page during recording; extract them afterward. Preserve the target's real speed and business timing.
+
+For parallel Vite previews, use separate cache directories and resolve a single React instance per preview. Shared dependency prebundling can break the main page or contaminate captures. Isolated preview servers should still import the actual deliverable source.

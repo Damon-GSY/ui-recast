@@ -1,60 +1,62 @@
-# Reverse UI Component
+# UI Recast
 
-从 **截图、视频或 URL** 重建可运行的 UI 组件，把颜色、图标、光效和细微过渡一起对照。
+**Rebuild UI from visual evidence.**
 
-[安装 Skill](#安装与使用) · [查看案例](cases/README.md) · [读取工作流程](skills/reverse-ui-component/SKILL.md) · [运行实验室](#运行案例实验室)
+A self-contained coding-agent skill that turns screenshots, videos, and live URLs into editable UI components—with complete interaction capture and comparison of color, icons, light effects, and subtle transitions.
 
-![真实复刻案例：白色 Bento 卡片、中性灰渐变与可操作内容区](assets/readme/bento-grid.png)
+[Install](#install) · [Use the skill](#use-the-skill) · [Browse cases](cases/README.md) · [Workflow](skills/ui-recast/SKILL.md) · [简体中文](README.zh-CN.md)
 
-这个 skill 将参考采集、分轨分析、源码实现和真实对照串成一条流程。交付包含可编辑组件、独立用例、录屏与已验证范围，适合有明确参考目标的组件复刻。
+![A real reconstruction case: Bento cards with neutral gradients, scoped styles, and interactive content](assets/readme/bento-grid.png)
 
-## 案例先看这里
+## From reference to reusable source
 
-| 案例 | 重点 | 源码与记录 |
+1. **Capture the whole interaction.** Include entrance, loops, phase changes, completion, exit, and retrigger.
+2. **Separate the visual tracks.** Inspect icons, light, text, and layout; extract the reference's actual color roles.
+3. **Rebuild and compare.** Align rendered phase starts, inspect real intermediate frames, and fix concrete omissions.
+4. **Deliver the evidence.** Provide source, an interactive example, recordings, verified scope, and remaining differences.
+
+The skill preserves caller-owned business state and user-requested product adaptations. Choose CSS, Motion, GSAP, or existing project controls according to the reference and stack.
+
+## Real cases
+
+| Case | What it exercises | Source and findings |
 | --- | --- | --- |
-| **Thinking Loader** | 八条静止射线、文字扫光、阶段交接与完成勾标 | [源码](cases/ui-lab/src/components/thinking-loader.tsx) · [复查](docs/affectui-review/loaders.md) |
-| **Agent Graph** | 节点错峰入场、呼吸光环、等待/错误光扫与调用轨迹 | [源码](cases/ui-lab/src/components/agent-graph.tsx) · [复查](docs/affectui-review/loaders.md) |
-| **Fluid Notch** | 外壳变形、图标交接、纹理与展开/收回的中间态 | [源码](cases/ui-lab/src/components/fluid-notch.tsx) · [动效复查](docs/menufold-review/fluid.md) |
-| **叠层空状态** | 卡片叠层、光影、悬停与单一主要操作 | [源码](cases/ui-lab/src/components/stacked-empty-state.tsx) · [配色复查](docs/menufold-color/stack.md) |
-| **Combobox** | 标签外壳展开与内容 pop 分轨，焦点光环及退格选中 | [源码](cases/ui-lab/src/components/combobox.tsx) · [复查](docs/affectui-review/forms.md) |
-| **Agent Run** | 任务外壳、工具过程、状态脉冲与内容阅读区 | [源码](cases/ui-lab/src/components/agent-run.tsx) · [复查](docs/affectui-review/shells.md) |
+| Thinking Loader | Stationary rays, text sweep, phase handoffs, completion check | [Source](cases/ui-lab/src/components/thinking-loader.tsx) · [Review](docs/affectui-review/loaders.md) |
+| Agent Graph | Staggered nodes, breathing rings, status sweeps, call pulses | [Source](cases/ui-lab/src/components/agent-graph.tsx) · [Review](docs/affectui-review/loaders.md) |
+| Fluid Notch | Shell morphing, icon handoffs, texture, expansion and collapse | [Source](cases/ui-lab/src/components/fluid-notch.tsx) · [Review](docs/menufold-review/fluid.md) |
+| Stacked Empty State | Layered cards, light/shadow, hover, a single primary action | [Source](cases/ui-lab/src/components/stacked-empty-state.tsx) · [Review](docs/menufold-color/stack.md) |
+| Combobox | Independent chip expansion/pop, focus ring, armed deletion | [Source](cases/ui-lab/src/components/combobox.tsx) · [Review](docs/affectui-review/forms.md) |
+| Agent Run | Application shell, tool execution, status pulse, reading pane | [Source](cases/ui-lab/src/components/agent-run.tsx) · [Review](docs/affectui-review/shells.md) |
 
-[完整案例目录 →](cases/README.md) 包含当前实验室的 **44 个源码条目**，其中 MenuFold 为 **15 个组件**。部分为公开源码适配，部分按公开渲染结果独立实现；各项来源和边界见单项分析。
+[The case catalog](cases/README.md) contains **44 component entries and 2 composition examples**, including **15 MenuFold components**. Cases include independent visual reconstructions and attributed public-source adaptations. Detailed review notes currently retain their original language.
 
-## Skill 怎样工作
+## Install
 
-1. **锁定目标**：确定区域、主题、变体、视口和技术栈，记录用户明确的产品改动。
-2. **完整采集**：录下触发前、入场、循环、阶段切换、完成/退出和再次触发。
-3. **按轨道分析**：分别观察图标、光效、文字、布局；颜色按背景、表面、文字、边框与状态角色取证。
-4. **实现与对照**：相同条件下录制复刻，按实际渲染起点对齐；检查起步、中段、过冲和稳定态。
-5. **交付源码**：提供组件、样式、用例、媒体与余差；需要分发时再做独立安装和运行验证。
-
-Skill 的指导内容自包含。动效引擎和基础控件由项目与参考决定，可采用 CSS、Motion 或 GSAP。
-
-## 安装与使用
-
-先克隆这个私有仓库，需要有仓库访问权限：
+This repository is private; clone it using an account with access:
 
 ```sh
-gh repo clone Damon-GSY/reverse-ui-component
-cd reverse-ui-component
+gh repo clone Damon-GSY/ui-recast
+cd ui-recast
 mkdir -p ~/.codex/skills
-cp -R skills/reverse-ui-component ~/.codex/skills/
+cp -R skills/ui-recast ~/.codex/skills/
 ```
 
-在 Codex 中调用：
+The skill lives in [`skills/ui-recast/`](skills/ui-recast/SKILL.md). Its instructions and references are in English and require no other skill.
+
+## Use the skill
 
 ```text
-使用 $reverse-ui-component 复刻这个组件：<参考 URL>
-先采集完整交互，分析颜色、图标、光效和 transition，
-再交付可运行源码与原版/复刻对照。保留我指定的业务状态与交互语义。
+Use $ui-recast to rebuild this component: <reference URL>
+Capture the complete interaction first. Compare colors, icons, light effects,
+and subtle transitions, then deliver runnable source and reference comparisons.
+Preserve my specified business state and interaction semantics.
 ```
 
-也可以提供截图或视频。单帧无法证明隐藏交互和动画时序；skill 会将观察与推断分别记录。
+Screenshots and videos are valid inputs too. With a single frame, timing and hidden interactions remain unverified rather than being presented as observed behavior.
 
-## 运行案例实验室
+## Run the case lab
 
-需要 Node.js 22.12+（或支持当前 Vite 的更新版本）。
+Requires Node.js 22.12+ or a newer version supported by the included Vite release.
 
 ```sh
 cd cases/ui-lab
@@ -62,30 +64,29 @@ npm ci
 npm run dev -- --port 4187
 ```
 
-打开 `http://127.0.0.1:4187/batch`，选择实时演示或双录像对照。MenuFold 集合入口为 `/batch?collection=menufold`；Thinking Loader 与 Agent Graph 分别位于 `/thinking-loader`、`/agent-graph`。
+Open `http://127.0.0.1:4187/batch`. Switch between live examples and paired recordings. The MenuFold collection is at `/batch?collection=menufold`; earlier examples include `/thinking-loader` and `/agent-graph`.
 
 ```sh
 npm run build
 npm run preview -- --port 4192
 ```
 
-可复用源码位于 `cases/ui-lab/src/components/`，演示状态与样本位于 `src/batch/` 或 `src/studies/`。业务动作由调用方提供；演示成功、计时或模拟状态不代表后端接入。
+Reusable source is in `cases/ui-lab/src/components/`. Fixtures and example state live in `src/batch/` or `src/studies/`. Business actions remain the caller's responsibility.
 
-## 取用组件
+## Reuse a component
 
-复制同名 TSX 和 CSS，按依赖安装 React 与 Motion。组合依赖保存在 `cases/ui-lab/public/r/<name>.json` 中；实验室运行后也可通过真实 registry 安装：
+Copy its TSX, CSS, and required relative dependencies. The included registry files list actual source bodies and dependencies. While the lab is running:
 
 ```sh
 npx shadcn@4.23.0 add http://127.0.0.1:4187/r/fluid-notch.json
 ```
 
-参数和宿主责任见 [MenuFold 源码接入说明](docs/menufold/source-delivery.md)。`DetailAccordion` 同时依赖 `auto-height.tsx` 和 `auto-height.css`。
+See the [integration notes](docs/menufold/source-delivery.md) for caller responsibilities. `DetailAccordion` also requires `auto-height.tsx` and `auto-height.css`.
 
-## 证据与边界
+## Evidence and limits
 
-- [MenuFold 动效复查](docs/menufold-review/README.md)与[配色复查](docs/menufold-color/README.md)：包含修复、真实安装和相关行为验证。
-- [AffectUI 分组复查](docs/affectui-review/README.md)：保留本轮实际发现和分组结果，整批最终验收尚未完成。
-- 录像与关键帧用于判断当前已采集范围；原生视频为 25fps，不能据此宣称逐毫秒或逐像素一致。
-- 部分案例保留明确的产品适配，字体、图标或曲线仍可能有已记录差异；不作统一 1:1 承诺。
-- 原站预览、品牌资源与公开源码的权利归各自权利人；具体来源见单项分析。本仓库尚未设定统一开源许可。
-
+- [MenuFold motion review](docs/menufold-review/README.md) and [color review](docs/menufold-color/README.md) record fixes, installation checks, and verified behaviors.
+- [AffectUI review](docs/affectui-review/README.md) retains delivered group findings; final acceptance of the entire additional batch remains unfinished.
+- The exported lab passed an independent build and rendering checks for 46 routes, with no page errors or local resource 404s. See [the recorded result](docs/verification/standalone.json).
+- Native recordings are 25fps. They do not establish millisecond or pixel-perfect equivalence. Product adaptations and remaining font, icon, and curve differences are documented per case.
+- Reference previews, brands, and public-source assets retain their respective rights. Provenance is recorded in case analyses. No repository-wide open-source license has been assigned.

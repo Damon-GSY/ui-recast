@@ -1,4 +1,4 @@
 interface:
-  display_name: "UI 组件逆向"
-  short_description: "从截图、视频或 URL 复刻 UI 组件源码，分析状态与动效并逐帧对照"
-  default_prompt: "使用 $reverse-ui-component 将给定 UI 组件复刻为可运行源码，并提供原版与复刻的状态和动效对照。"
+  display_name: "UI Recast"
+  short_description: "Rebuild UI from screenshots, video, or live URLs"
+  default_prompt: "Use $ui-recast to rebuild this UI component as runnable source, capture its complete interaction, and compare colors, icons, light effects, and transitions against the reference."
