@@ -17,7 +17,7 @@ A self-contained coding-agent skill that turns screenshots, videos, and live URL
 
 Light and dark themes are analyzed separately: role palettes, icon visibility, composited light/texture, and supported theme changes. See the [theme comparison guidance](skills/ui-recast/references/verification-delivery.md#dark-mode-and-theme-changes).
 
-The skill preserves caller-owned business state and user-requested product adaptations. Choose CSS, Motion, GSAP, or existing project controls according to the reference and stack.
+The skill preserves caller-owned business state and user-requested product adaptations. Choose the project's web or native UI and animation mechanisms according to the reference and output platform.
 
 ## Case showcase
 
@@ -98,6 +98,12 @@ Three questions, progress updates, completion, reset, and interruptible expansio
 [Full reference recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reference/lifecycle.webm) · [Full reconstruction recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm)
 
 Standalone installation, build, and interaction checks passed. Remaining timing differences are documented in the [source and review](docs/model-trials/gpt-6.1-sol.md).
+
+## Target platforms
+
+The workflow starts from the requested output platform and existing project: web frameworks, SwiftUI, UIKit, AppKit, or another UI stack. Capture tools, state interfaces, animation mechanisms and runtime verification follow that choice. A web reference can be reconstructed in native Swift when requested.
+
+The shipped component cases are React/TypeScript web implementations. Native SwiftUI/UIKit/AppKit reconstruction has not yet been validated by a native case in this repository. The included `video-frames.swift` is an optional macOS extraction utility, separate from the component implementation language.
 
 ## Install
 

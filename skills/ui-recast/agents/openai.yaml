@@ -1,4 +1,4 @@
 interface:
   display_name: "UI Recast"
   short_description: "Rebuild UI from screenshots, video, or live URLs"
-  default_prompt: "Use $ui-recast to rebuild this UI component as runnable source, capture its complete interaction, and compare colors, icons, light effects, and transitions against the reference."
+  default_prompt: "Use $ui-recast to rebuild this UI component as runnable source in the project's target platform and UI framework, capture its complete interaction, and compare colors, icons, light effects, and transitions against the reference."

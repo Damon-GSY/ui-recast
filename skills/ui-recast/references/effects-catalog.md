@@ -2,6 +2,19 @@
 
 Start with the observed behavior. These are implementation references, not target parameters or mandatory dependencies. Derive color, geometry, amplitude, and rhythm from recordings and measurements. Read only relevant official documentation.
 
+## Select mechanisms for the output platform
+
+| Target | Mechanisms and constraints | Official references |
+| --- | --- | --- |
+| Web | DOM controls, CSS/WAAPI, or the project's animation framework; Motion references below apply to compatible React projects | [Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API), [Motion](https://motion.dev/docs/react) |
+| SwiftUI | Native views, explicit state/bindings, value-driven animations and view transitions; separate morphing shells from unscaled text/icons | [SwiftUI animations](https://developer.apple.com/documentation/swiftui/animations) |
+| UIKit | Native views, layout and interaction; property animators for interruptible view-property changes, with layer animation where the effect requires it | [UIViewPropertyAnimator](https://developer.apple.com/documentation/uikit/uiviewpropertyanimator) |
+| AppKit | Native views/windows, AppKit animation contexts and layer-backed effects where appropriate; preserve macOS focus/window behavior | [NSAnimationContext](https://developer.apple.com/documentation/appkit/nsanimationcontext) |
+
+Respect the project's deployment target and available SDK APIs. SF Symbols or another native icon library are candidates, not automatic geometric matches for the reference. Check assets, rendering modes, stroke weight, font metrics, logical units and clipping in the target renderer. Spring coefficients and blur/shadow values must be fitted to rendered output rather than copied numerically between engines. For other stacks, use their existing native equivalents instead of introducing a web dependency.
+
+## Web examples by observed behavior
+
 | Observed behavior | Mechanism to consider | References |
 | --- | --- | --- |
 | Moving selection or panel switch | Measure position/size, retain continuous identity, unmount after exit | [Animate UI Tabs](https://animate-ui.com/docs/primitives/radix-ui/tabs), [Motion layout](https://motion.dev/docs/react-layout-animations) |
@@ -14,4 +27,4 @@ Start with the observed behavior. These are implementation references, not targe
 | Scroll reveal or reading trail | Distinguish timed playback after entry from scroll-progress control; bind the right scroll container | [Scroll Reveal](https://reactbits.dev/text-animations/scroll-reveal), [Tracing Beam](https://ui.aceternity.com/components/tracing-beam) |
 | Continuous pixel light field | Establish whether Canvas/WebGL is needed, then drive field parameters with time/pointer | [Aurora](https://reactbits.dev/backgrounds/aurora) |
 
-CSS/WAAPI often suffices for finite keyframes and two-state changes. Consider [Motion](https://motion.dev/docs/react) for React state, layout, gestures, and springs, or [GSAP timelines](https://gsap.com/docs/v3/GSAP/Timeline/) for complex sequences. Preserve DOM semantics for ordinary controls; use SVG for path-based light effects. Verify current documentation and dependencies before use. A similar example does not prove the target uses the same implementation.
+For web targets, CSS/WAAPI often suffices for finite keyframes and two-state changes. Consider [Motion](https://motion.dev/docs/react) for React state, layout, gestures, and springs, or [GSAP timelines](https://gsap.com/docs/v3/GSAP/Timeline/) for complex sequences. Preserve DOM semantics for ordinary controls; use SVG for path-based light effects. Verify current documentation and dependencies before use. A similar example does not prove the target uses the same implementation.

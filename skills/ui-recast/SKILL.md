@@ -1,6 +1,6 @@
 ---
 name: ui-recast
-description: Rebuild UI components from screenshots, videos, or live URLs into editable, runnable source. Use for reference-driven reconstruction with full interaction capture and comparison of colors, icons, light effects, and subtle transitions across light and dark themes.
+description: Rebuild UI components from screenshots, videos, or live URLs into editable, runnable source for web or native platforms. Use for reference-driven reconstruction with full interaction capture and comparison of colors, icons, light effects, and subtle transitions across light and dark themes.
 ---
 
 # UI Recast
@@ -9,7 +9,9 @@ Rebuild UI from visual evidence. Deliver editable components, interactive exampl
 
 ## 1. Define the target
 
-Identify the component region, variants, theme, viewport, and project stack. Inspect the existing code and dependencies; use React and TypeScript when the project has no preference. When the reference exposes light and dark themes, inspect both unless the user explicitly limits the scope. Record theme coverage alongside the component list and honor explicit exclusions. Completing one component or variant does not complete the others.
+Identify the component region, variants, theme, viewport or window size, target platform, language, UI framework, and deployment target. Inspect the existing project and honor its stack. Infer the output from the user request and workspace; if the platform is still unknown and would change the deliverable, clarify it before implementation. The reference platform does not determine the output platform: a web reference can be rebuilt as a native SwiftUI component. Record cross-platform behavior choices explicitly.
+
+When the reference exposes light and dark themes, inspect both unless the user explicitly limits the scope. Record theme coverage alongside the component list and honor explicit exclusions. Completing one component or variant does not complete the others.
 
 Separate user-requested product adaptations from visual defects. Unrequested jumps, stretched content, or missing animation tracks require fixes rather than an “adaptation” label.
 
@@ -25,9 +27,9 @@ Capture each in-scope theme against its real canvas; distinguish a dark componen
 
 Extract the color roles first: canvas, surfaces, text, borders, accents, and status colors. Match static geometry, typography, icon assets, and layering before connecting state and motion. Palette changes need user direction or reference evidence; a self-chosen brand palette is not a default adaptation.
 
-Use the project's base controls and interaction semantics. CSS or WAAPI suits simple changes; Motion suits React state, layout, and springs; GSAP suits complex sequences. Consult the [mechanism index](references/effects-catalog.md) only for relevant implementation ideas. Derive parameters from the target.
+Use the target framework's controls, state ownership, layout, accessibility, and animation mechanisms. Select web tools such as CSS/WAAPI, Motion or GSAP only for compatible web stacks; use native view and animation APIs for SwiftUI, UIKit or AppKit. Consult the [platform and mechanism index](references/effects-catalog.md) as needed. Reconstruct the observed behavior in the target framework rather than translating JSX or CSS literally; a native request calls for native source, not an unrequested web wrapper. Fit motion trajectories rather than assuming identical spring parameters across engines.
 
-Keep business data and state with the caller; place simulated responses in examples. Preserve keyboard navigation, focus, disabled/error states, and reduced motion. Interrupt animations from the current rendered value. Give each animated property one owner. Keep component source, styles, and assets independent of the study page.
+Keep business data and state with the caller using the target framework's bindings, callbacks or equivalent interfaces; place simulated responses in examples. Preserve keyboard navigation, focus, disabled/error states, and reduced motion. Interrupt animations from the current rendered value. Give each animated property one owner. Keep reusable views/components, styling, and assets independent of the example host.
 
 ## 4. Compare actual output
 
@@ -37,6 +39,6 @@ For pop, expansion, and collapse, compare onset, mid-travel, overshoot, and sett
 
 ## 5. Deliver and coordinate
 
-Deliver source, a runnable entry point, recordings or frames, verified scope, and remaining differences. When source distribution is requested, provide actual file bodies and dependencies, then install, build, and render them in an independent consumer. Claim 1:1 only when the stated scope has no known differences. A working trial and full visual fidelity are different results.
+Deliver source, a runnable entry point in the selected stack, recordings or frames, verified platform/theme scope, and remaining differences. Build and exercise the actual browser app, simulator target or native app; a preview alone does not prove runtime behavior. When source distribution is requested, provide actual file bodies and dependencies, then install, build, and render them in an independent consumer. Claim 1:1 only when the stated scope has no known differences. A working trial and full visual fidelity are different results.
 
 For batches, assign disjoint source and evidence paths. Capture and implementation may run in parallel; centralize shared entry points, dependencies, and distribution. Record each item's status and remaining differences. Reuse established evidence and checks unless edits or new failures warrant retesting. Isolate recording from other video decoding, dense measurements, and hot reloads.

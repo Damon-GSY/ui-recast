@@ -1,5 +1,7 @@
 # Runnable cases
 
+The included implementations target React/TypeScript on the web. The skill also provides platform-specific guidance for native output; native SwiftUI/UIKit/AppKit cases have not yet been validated here.
+
 > **Models used:** `gpt6-astra` for the original collection; `gpt-6.1-sol` (`high`) for the Fluid Notch multi-step flow. Other models have not been tested.
 
 Run `npm ci && npm run dev -- --port 4187` inside `ui-lab`. Append each route below to `http://127.0.0.1:4187`. Reusable source and example state are separate; reference and reconstruction recordings live in `ui-lab/public/evidence/`.

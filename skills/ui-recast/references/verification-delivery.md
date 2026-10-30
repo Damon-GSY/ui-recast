@@ -23,17 +23,17 @@ Lock the real preview and theme. Record canvas, surfaces, primary/secondary text
 
 Compare default, hover, selected, focus, disabled, loading, and result states where supported. Record color separately from opacity, then inspect compositing on the actual background. Preserve gradient endpoints, masks, shadow layers, and light effects rather than substituting an average color. Restoring neutral surfaces must retain a reference's green button, blue action, or black panel.
 
-Compare standalone rendering with the host page. Gallery paragraph/link selectors, inherited colors, transparent containers, and theme rules must not override component roles. Put fixes in the reusable source. Refresh recordings and distributed copies after palette changes.
+Compare standalone rendering with the actual host. On the web, inspect gallery selectors, inherited colors and theme rules; in native apps, inspect inherited appearance, tint, materials and asset rendering. Transparent containers and host styling must not override component roles. Put fixes in the reusable source. Refresh recordings and distributed copies after palette changes.
 
 ## Dark mode and theme changes
 
-Compare reference and reconstruction within the same theme and state before comparing the two themes. Use the actual canvas and matching focus/input history. Inspect the standalone component and its host, including portalled popups and tooltips, so a dark page cannot leave a light menu or override component colors.
+Compare reference and reconstruction within the same theme and state before comparing the two themes. Use the actual canvas and matching focus/input history. Inspect the standalone component and its host, including popups, tooltips, popovers and sheets in separate rendering/appearance contexts, so a dark page cannot leave a light menu or override component colors.
 
 Check the details that often disappear in dark mode: secondary/disabled text, thin icon strokes, progress/check icons, focus rings, separators, transparent images and loading/result indicators. Inspect borders, inner highlights and shadows as separate depth cues. A black shadow may disappear on a dark canvas while a pale edge remains visible. Match the reference rather than inventing a stronger glow to compensate.
 
 Inspect grain, blend modes, masks and glow alpha in actual compositing. A `multiply` texture or light sweep that works on white may vanish or flare on dark; theme-specific `screen` blending or opacity must be observed rather than assumed. Preserve the reference's accent and status relationships instead of globally reversing colors. Record a reference contrast issue separately from any requested accessibility adaptation.
 
-For supported theme changes, check intermediate foreground/background combinations for flashes, washed-out text or temporarily invisible icons. Preserve the reference's immediate switch or property-specific timing; do not add a blanket `transition: all`. Check whether state, open overlays, focus and ongoing loops continue as observed. Test system-preference changes only when the component actually supports them.
+For supported theme changes, check intermediate foreground/background combinations for flashes, washed-out text or temporarily invisible icons. Preserve the reference's immediate switch or property-specific timing; do not add a blanket `transition: all`. Check whether state, open overlays, focus and ongoing loops continue as observed. Test system-preference changes only when the component actually supports them. For native output, verify the real appearance/environment and asset variants in the app or simulator, rather than treating a dark preview canvas as sufficient.
 
 Delivery must name the verified themes and states, whether each has a complete recording, and any theme-switch checks. Distinguish representative dark screenshots from a fully compared dark lifecycle; never carry light-mode acceptance over to dark mode.
 
@@ -49,6 +49,8 @@ Record capture, implementation, verification, and remaining differences per comp
 
 ## Editable source
 
-Deliver components, CSS, necessary assets, and runnable examples. For shadcn registries, follow the [official schema](https://ui.shadcn.com/docs/registry/registry-item-json): include actual file bodies, target paths, and required dependencies. Preserve relative imports and client boundaries.
+Deliver reusable source in the selected stack, necessary styles/resources, and a runnable example host. For native Swift output, include the view/component files, required assets/fonts and integration instructions for the existing Swift package or Xcode target; state the deployment target and caller-owned interfaces. Compile and run that target, then verify the same action chain. SwiftUI previews or successful Swift syntax checks alone do not establish behavior.
+
+For web components distributed through shadcn registries, follow the [official schema](https://ui.shadcn.com/docs/registry/registry-item-json): include actual file bodies, target paths, and required dependencies. Preserve relative imports and client boundaries.
 
 Install from the actual registry URL in an independent consumer, then build and exercise key behavior. Compare delivered files with current source. Same-project copies or old installed snapshots do not substitute. Regenerate distribution after source changes. State verified scope, asset provenance, and remaining visual/behavioral differences.

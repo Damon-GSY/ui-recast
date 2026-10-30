@@ -4,19 +4,19 @@
 
 Record the URL or input file, component region, variant, theme, viewport, crop, action sequence, and timing. Preserve original material with component/state names. Distinguish reused icon assets, reused source, and independent implementation.
 
-For a reconstruction without source access, inspect the visible output first. Supplement it with visible DOM, computed styles, rendered animation tracks, and public API descriptions. Record public Pro restrictions; an anonymous HEAD request to a known registry can establish access status without reading its body. Do not inspect original component source, bundles, or React internals. Inaccessible states remain unverified.
+For a reconstruction without source access, inspect the visible output first. For web references, supplement it with visible DOM, computed styles, rendered animation tracks, and public API descriptions. For native references, use visible accessibility information, window/view geometry and screen recordings. Keep rendered evidence separate from assumptions about the underlying framework. Record public Pro restrictions; an anonymous HEAD request to a known registry can establish access status without reading its body. Do not inspect original implementation source, bundles or private framework state. Inaccessible states remain unverified.
 
 ## Screenshot and video input
 
 Inspect the full image before close-ups. Leave room for shadows, halos, and popup anchors. Label marketing images separately from actual browser output. One frame leaves timing, curves, and hidden behavior unknown.
 
-Preserve original video timing and frame rate. Watch the sequence, locate change windows, then extract real intermediate frames or timestamped sheets. On macOS, use the included helper:
+Preserve original video timing and frame rate. Watch the sequence, locate change windows, then extract real intermediate frames or timestamped sheets. The included Swift script is an optional **macOS video-frame extraction utility**, not a SwiftUI component or a requirement to generate Swift code. Use it on macOS when AVFoundation can decode the recording:
 
 ```sh
 swift <skill-dir>/scripts/video-frames.swift <input.mp4> <output-dir> 12
 ```
 
-It records requested and actual frame times. Existing FFmpeg is also suitable. Higher export rates, duplicate frames, or interpolation add no evidence.
+It records requested and actual frame times. On other hosts, or with unsupported formats, use an available FFmpeg or browser decoder. The capture-tool language is independent of the implementation language. Higher export rates, duplicate frames, or interpolation add no evidence.
 
 If a decoder cannot read the container, such as WebM in some macOS environments, use browser decoding and `requestVideoFrameCallback` to record `mediaTime`. Preserve requested seek times separately from actual decoded frame times. A sheet requested every 100ms is not proof of exact 100ms sampling.
 
@@ -28,9 +28,15 @@ If a decoder cannot read the container, such as WebM in some macOS environments,
 4. Save action request and return times, then identify actual rendered changes separately. Use the correct crop coordinate system. Keep the complete component, popups, and light effects visible at both ends; add margins near viewport edges.
 5. With screenshot-only APIs, preserve capture times, call the result a screenshot sequence, and report its actual sampling rate. If browser interaction is unavailable, implement visible structure and leave dynamic verification pending.
 
+## Capturing native references and cross-platform targets
+
+Use an authorized native-app, simulator, device or screen-recording tool for native references; browser automation is the web path. Record OS/runtime, device or window size, display scale, and input method. Distinguish screen pixels from logical points or CSS pixels when aligning crops and geometry. Capture the real supported touch, pointer and keyboard paths, including focus, hover and window behavior where relevant.
+
+When rebuilding into a different platform, preserve the reference's visible state/motion specification, then choose target-native interactions. Record decisions such as hover-only details becoming a touch action; do not silently count those adaptations as exact behavioral matches. Capture the native result itself, not a web rendering standing in for it.
+
 ## Light and dark theme capture
 
-Identify what the reference's theme control actually changes: site chrome, preview canvas, component tokens, or all three. A black component on a white canvas is not evidence of dark-mode support. Distinguish explicit component themes from `prefers-color-scheme`; verify the rendered result instead of inferring it from a class name or toggle position.
+Identify what the reference's theme control actually changes: site chrome, preview canvas, component tokens, or all three. A black component on a white canvas is not evidence of dark-mode support. Distinguish explicit component themes, host/app/window appearance and system preferences (`prefers-color-scheme` on the web); verify the rendered result instead of inferring it from a class name or toggle position.
 
 For each in-scope theme, use the same content, dimensions, selection and focus history. Record the complete primary interaction chain and the states it exposes. Save separate theme-labelled recordings, screenshots and rendered measurements. A dark default-state screenshot does not validate dark loading, completion or exit. When only one theme is exposed, document that boundary; label an added theme as a local design choice.
 
