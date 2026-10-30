@@ -10,14 +10,69 @@
 
 ## 案例先看这里
 
-| 案例 | 重点 | 源码与记录 |
-| --- | --- | --- |
-| **Thinking Loader** | 八条静止射线、文字扫光、阶段交接与完成勾标 | [源码](cases/ui-lab/src/components/thinking-loader.tsx) · [复查](docs/affectui-review/loaders.md) |
-| **Agent Graph** | 节点错峰入场、呼吸光环、等待/错误光扫与调用轨迹 | [源码](cases/ui-lab/src/components/agent-graph.tsx) · [复查](docs/affectui-review/loaders.md) |
-| **Fluid Notch** | 外壳变形、图标交接、纹理与展开/收回的中间态 | [源码](cases/ui-lab/src/components/fluid-notch.tsx) · [动效复查](docs/menufold-review/fluid.md) |
-| **叠层空状态** | 卡片叠层、光影、悬停与单一主要操作 | [源码](cases/ui-lab/src/components/stacked-empty-state.tsx) · [配色复查](docs/menufold-color/stack.md) |
-| **Combobox** | 标签外壳展开与内容 pop 分轨，焦点光环及退格选中 | [源码](cases/ui-lab/src/components/combobox.tsx) · [复查](docs/affectui-review/forms.md) |
-| **Agent Run** | 任务外壳、工具过程、状态脉冲与内容阅读区 | [源码](cases/ui-lab/src/components/agent-run.tsx) · [复查](docs/affectui-review/shells.md) |
+左侧为参考，右侧为复刻。这里直接展示采集到的状态画面，完整动效可在案例实验室中对照。
+
+### Thinking Loader
+
+八条静止射线、文字扫光、阶段交接与完成勾标。
+
+| 参考 | 复刻 |
+| --- | --- |
+| <img src="assets/readme/comparisons/thinking-loader-reference.png" width="420" alt="Thinking Loader reference capture"> | <img src="assets/readme/comparisons/thinking-loader-reconstruction.png" width="420" alt="Thinking Loader reconstruction capture"> |
+
+[源码](cases/ui-lab/src/components/thinking-loader.tsx) · [复查](docs/affectui-review/loaders.md)
+
+### Agent Graph
+
+节点错峰入场、呼吸光环、等待/错误光扫与调用轨迹。
+
+| 参考 | 复刻 |
+| --- | --- |
+| <img src="assets/readme/comparisons/agent-graph-reference.png" width="420" alt="Agent Graph reference capture"> | <img src="assets/readme/comparisons/agent-graph-reconstruction.png" width="420" alt="Agent Graph reconstruction capture"> |
+
+[源码](cases/ui-lab/src/components/agent-graph.tsx) · [复查](docs/affectui-review/loaders.md)
+
+### Fluid Notch
+
+外壳变形、图标交接、纹理与展开/收回的中间态。
+
+| 参考 | 复刻 |
+| --- | --- |
+| <img src="assets/readme/comparisons/fluid-notch-reference.png" width="420" alt="Fluid Notch reference capture"> | <img src="assets/readme/comparisons/fluid-notch-reconstruction.png" width="420" alt="Fluid Notch reconstruction capture"> |
+
+[源码](cases/ui-lab/src/components/fluid-notch.tsx) · [动效复查](docs/menufold-review/fluid.md)
+
+### 叠层空状态
+
+卡片叠层、光影、悬停与单一主要操作。
+
+右侧为 MenuFold 适配版，采用原生图标并保留一个主要操作。
+
+| 参考 | 复刻 |
+| --- | --- |
+| <img src="assets/readme/comparisons/stacked-empty-state-reference.png" width="420" alt="叠层空状态 reference capture"> | <img src="assets/readme/comparisons/stacked-empty-state-reconstruction.png" width="420" alt="叠层空状态 reconstruction capture"> |
+
+[源码](cases/ui-lab/src/components/stacked-empty-state.tsx) · [配色复查](docs/menufold-color/stack.md)
+
+### Combobox
+
+标签外壳展开与内容 pop 分轨，焦点光环及退格选中。
+
+| 参考 | 复刻 |
+| --- | --- |
+| <img src="assets/readme/comparisons/combobox-reference.png" width="420" alt="Combobox reference capture"> | <img src="assets/readme/comparisons/combobox-reconstruction.png" width="420" alt="Combobox reconstruction capture"> |
+
+[源码](cases/ui-lab/src/components/combobox.tsx) · [复查](docs/affectui-review/forms.md)
+
+### Agent Run
+
+任务外壳、工具过程、状态脉冲与内容阅读区。
+
+| 参考 | 复刻 |
+| --- | --- |
+| <img src="assets/readme/comparisons/agent-run-reference.png" width="420" alt="Agent Run reference capture"> | <img src="assets/readme/comparisons/agent-run-reconstruction.png" width="420" alt="Agent Run reconstruction capture"> |
+
+[源码](cases/ui-lab/src/components/agent-run.tsx) · [复查](docs/affectui-review/shells.md)
 
 [完整案例目录 →](cases/README.md) 包含当前实验室的 **44 个源码条目**，其中 MenuFold 为 **15 个组件**。部分为公开源码适配，部分按公开渲染结果独立实现；各项来源和边界见单项分析。
 

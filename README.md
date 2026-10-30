@@ -19,14 +19,69 @@ The skill preserves caller-owned business state and user-requested product adapt
 
 ## Real cases
 
-| Case | What it exercises | Source and findings |
-| --- | --- | --- |
-| Thinking Loader | Stationary rays, text sweep, phase handoffs, completion check | [Source](cases/ui-lab/src/components/thinking-loader.tsx) · [Review](docs/affectui-review/loaders.md) |
-| Agent Graph | Staggered nodes, breathing rings, status sweeps, call pulses | [Source](cases/ui-lab/src/components/agent-graph.tsx) · [Review](docs/affectui-review/loaders.md) |
-| Fluid Notch | Shell morphing, icon handoffs, texture, expansion and collapse | [Source](cases/ui-lab/src/components/fluid-notch.tsx) · [Review](docs/menufold-review/fluid.md) |
-| Stacked Empty State | Layered cards, light/shadow, hover, a single primary action | [Source](cases/ui-lab/src/components/stacked-empty-state.tsx) · [Review](docs/menufold-color/stack.md) |
-| Combobox | Independent chip expansion/pop, focus ring, armed deletion | [Source](cases/ui-lab/src/components/combobox.tsx) · [Review](docs/affectui-review/forms.md) |
-| Agent Run | Application shell, tool execution, status pulse, reading pane | [Source](cases/ui-lab/src/components/agent-run.tsx) · [Review](docs/affectui-review/shells.md) |
+Reference on the left; reconstruction on the right. These stills show captured states; full motion comparisons are available in the case lab.
+
+### Thinking Loader
+
+Stationary rays, text sweep, phase handoffs, completion check.
+
+| Reference | Reconstruction |
+| --- | --- |
+| <img src="assets/readme/comparisons/thinking-loader-reference.png" width="420" alt="Thinking Loader reference capture"> | <img src="assets/readme/comparisons/thinking-loader-reconstruction.png" width="420" alt="Thinking Loader reconstruction capture"> |
+
+[Source](cases/ui-lab/src/components/thinking-loader.tsx) · [Review](docs/affectui-review/loaders.md)
+
+### Agent Graph
+
+Staggered nodes, breathing rings, status sweeps, call pulses.
+
+| Reference | Reconstruction |
+| --- | --- |
+| <img src="assets/readme/comparisons/agent-graph-reference.png" width="420" alt="Agent Graph reference capture"> | <img src="assets/readme/comparisons/agent-graph-reconstruction.png" width="420" alt="Agent Graph reconstruction capture"> |
+
+[Source](cases/ui-lab/src/components/agent-graph.tsx) · [Review](docs/affectui-review/loaders.md)
+
+### Fluid Notch
+
+Shell morphing, icon handoffs, texture, expansion and collapse.
+
+| Reference | Reconstruction |
+| --- | --- |
+| <img src="assets/readme/comparisons/fluid-notch-reference.png" width="420" alt="Fluid Notch reference capture"> | <img src="assets/readme/comparisons/fluid-notch-reconstruction.png" width="420" alt="Fluid Notch reconstruction capture"> |
+
+[Source](cases/ui-lab/src/components/fluid-notch.tsx) · [Review](docs/menufold-review/fluid.md)
+
+### Stacked Empty State
+
+Layered cards, light/shadow, hover, a single primary action.
+
+The reconstruction is the MenuFold adaptation with native icons and one primary action.
+
+| Reference | Reconstruction |
+| --- | --- |
+| <img src="assets/readme/comparisons/stacked-empty-state-reference.png" width="420" alt="Stacked Empty State reference capture"> | <img src="assets/readme/comparisons/stacked-empty-state-reconstruction.png" width="420" alt="Stacked Empty State reconstruction capture"> |
+
+[Source](cases/ui-lab/src/components/stacked-empty-state.tsx) · [Review](docs/menufold-color/stack.md)
+
+### Combobox
+
+Independent chip expansion/pop, focus ring, armed deletion.
+
+| Reference | Reconstruction |
+| --- | --- |
+| <img src="assets/readme/comparisons/combobox-reference.png" width="420" alt="Combobox reference capture"> | <img src="assets/readme/comparisons/combobox-reconstruction.png" width="420" alt="Combobox reconstruction capture"> |
+
+[Source](cases/ui-lab/src/components/combobox.tsx) · [Review](docs/affectui-review/forms.md)
+
+### Agent Run
+
+Application shell, tool execution, status pulse, reading pane.
+
+| Reference | Reconstruction |
+| --- | --- |
+| <img src="assets/readme/comparisons/agent-run-reference.png" width="420" alt="Agent Run reference capture"> | <img src="assets/readme/comparisons/agent-run-reconstruction.png" width="420" alt="Agent Run reconstruction capture"> |
+
+[Source](cases/ui-lab/src/components/agent-run.tsx) · [Review](docs/affectui-review/shells.md)
 
 [The case catalog](cases/README.md) contains **44 component entries and 2 composition examples**, including **15 MenuFold components**. Cases include independent visual reconstructions and attributed public-source adaptations. Detailed review notes currently retain their original language.
 
