@@ -1,0 +1,87 @@
+{
+  "url": "https://ui.aceternity.com/live-preview/fluid-notch",
+  "viewport": {
+    "width": 960,
+    "height": 720
+  },
+  "epoch": 1793350034269,
+  "timing": "wall milliseconds from page creation; media alignment must use visible changes",
+  "actions": [
+    {
+      "name": "open question 1",
+      "requestMs": 5397,
+      "returnMs": 5435
+    },
+    {
+      "name": "Escape consumes question 1 and closes",
+      "requestMs": 6636,
+      "returnMs": 6640
+    },
+    {
+      "name": "retrigger question 2",
+      "requestMs": 7842,
+      "returnMs": 7863
+    },
+    {
+      "name": "Add Priya",
+      "requestMs": 9063,
+      "returnMs": 9098
+    },
+    {
+      "name": "open question 3",
+      "requestMs": 10299,
+      "returnMs": 10315
+    },
+    {
+      "name": "Turn on; final completion",
+      "requestMs": 11516,
+      "returnMs": 11549
+    },
+    {
+      "name": "open all caught up",
+      "requestMs": 13351,
+      "returnMs": 13363
+    },
+    {
+      "name": "Start over",
+      "requestMs": 14563,
+      "returnMs": 14597
+    },
+    {
+      "name": "open then interrupt",
+      "requestMs": 15797,
+      "returnMs": 15815
+    },
+    {
+      "name": "Escape during expansion",
+      "requestMs": 15915,
+      "returnMs": 15918
+    },
+    {
+      "name": "reopen during collapse",
+      "requestMs": 16030,
+      "returnMs": 16032
+    },
+    {
+      "name": "interruption observed state",
+      "atMs": 17433,
+      "hidden": "true",
+      "text": "Launch assistant\n2 of 3\nAdd Priya to the review?\n\nShe wrote the pricing copy and can answer questions on it fast.\n\nPriya Shah · Pricing\nNot now\nAdd Priya"
+    },
+    {
+      "name": "final retrigger",
+      "requestMs": 17435,
+      "returnMs": 17445
+    },
+    {
+      "name": "outside click (does not dismiss)",
+      "requestMs": 18946,
+      "returnMs": 18948
+    },
+    {
+      "name": "Escape close",
+      "requestMs": 20048,
+      "returnMs": 20051
+    }
+  ]
+}

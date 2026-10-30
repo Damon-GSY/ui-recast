@@ -1,0 +1,168 @@
+{
+  "target": "reference",
+  "url": "https://ui.aceternity.com/live-preview/fluid-notch",
+  "viewport": {
+    "width": 960,
+    "height": 720
+  },
+  "epoch": 1793350554870,
+  "timing": "Wall ms from page creation. Visible video changes determine phase onset; no time stretching.",
+  "actions": [
+    {
+      "name": "open question 1; hold through dust completion",
+      "requestMs": 7629,
+      "returnMs": 7671
+    },
+    {
+      "name": "Escape consumes question 1 and closes",
+      "requestMs": 10675,
+      "returnMs": 10678
+    },
+    {
+      "name": "retrigger question 2",
+      "requestMs": 11783,
+      "returnMs": 11803
+    },
+    {
+      "name": "Add Priya",
+      "requestMs": 12904,
+      "returnMs": 12935
+    },
+    {
+      "name": "open question 3",
+      "requestMs": 14038,
+      "returnMs": 14051
+    },
+    {
+      "name": "Turn on; complete",
+      "requestMs": 15152,
+      "returnMs": 15185
+    },
+    {
+      "name": "open all caught up",
+      "requestMs": 16789,
+      "returnMs": 16799
+    },
+    {
+      "name": "Start over",
+      "requestMs": 17900,
+      "returnMs": 17935
+    },
+    {
+      "name": "open then interrupt",
+      "requestMs": 19039,
+      "returnMs": 19050
+    },
+    {
+      "name": "Escape during expansion",
+      "requestMs": 19151,
+      "returnMs": 19154
+    },
+    {
+      "name": "early center click while pill is still displaced",
+      "requestMs": 19265,
+      "returnMs": 19270
+    },
+    {
+      "name": "retrigger after settling",
+      "requestMs": 19974,
+      "returnMs": 19984
+    },
+    {
+      "name": "outside click (no dismissal)",
+      "requestMs": 21085,
+      "returnMs": 21087
+    },
+    {
+      "name": "Escape starts collapse",
+      "requestMs": 21790,
+      "returnMs": 21792
+    },
+    {
+      "name": "reopen during settling collapse",
+      "requestMs": 22032,
+      "returnMs": 22036
+    },
+    {
+      "name": "Turn on after reversal",
+      "requestMs": 23541,
+      "returnMs": 23569
+    },
+    {
+      "name": "open completion again",
+      "requestMs": 25071,
+      "returnMs": 25085
+    },
+    {
+      "name": "restart again",
+      "requestMs": 26185,
+      "returnMs": 26221
+    }
+  ],
+  "checks": [
+    {
+      "name": "question 1 visible",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "false",
+      "atMs": 10675,
+      "pass": true
+    },
+    {
+      "name": "Escape advances",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "true",
+      "atMs": 11783,
+      "pass": true
+    },
+    {
+      "name": "positive answer advances",
+      "actualLabel": "Launch assistant: 1 to review",
+      "actualHidden": "true",
+      "atMs": 14038,
+      "pass": true
+    },
+    {
+      "name": "complete",
+      "actualLabel": "Launch assistant: all caught up",
+      "actualHidden": "true",
+      "atMs": 16789,
+      "pass": true
+    },
+    {
+      "name": "restart restores 3",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "true",
+      "atMs": 19039,
+      "pass": true
+    },
+    {
+      "name": "early center click ignored",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "true",
+      "atMs": 19974,
+      "pass": true
+    },
+    {
+      "name": "outside click preserves question",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "false",
+      "atMs": 21790,
+      "pass": true
+    },
+    {
+      "name": "late interruption reopens next question",
+      "actualLabel": "Launch assistant: 1 to review",
+      "actualHidden": "false",
+      "atMs": 23540,
+      "pass": true
+    },
+    {
+      "name": "final reset",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "true",
+      "atMs": 27655,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

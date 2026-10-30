@@ -1,0 +1,40 @@
+.fn-host { --fn-surface: #0a0a0a; position: relative; width: 100%; height: 40px; color: white; font-family: inherit; }
+.fn-host[data-theme="dark"] { --fn-surface: #171717; }
+.fn-host *, .fn-host *::before, .fn-host *::after { box-sizing: border-box; }
+.fn-anchor { position: absolute; left: 50%; top: 0; isolation: isolate; }
+.fn-shell { position: relative; isolation: isolate; overflow: hidden; width: 100%; height: 100%; border-radius: inherit; background: var(--fn-surface); box-shadow: 0 0 0 1px #ffffff1a; }
+.fn-grain { position: absolute; inset: 0; pointer-events: none; background: url('/assets/grain.svg') 0 0 / 160px 160px; }
+.fn-shadow { position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; }
+.fn-shadow-idle { box-shadow: 0 8px 20px -8px rgb(0 0 0 / .4); }
+.fn-shadow-open { box-shadow: 0 24px 48px -16px rgb(0 0 0 / .45), 0 6px 16px -4px rgb(0 0 0 / .15); }
+.fn-pill-position { position: absolute; inset: 0 0 auto; display: flex; justify-content: center; }
+.fn-trigger { display: flex; flex-shrink: 0; width: max-content; height: 40px; align-items: center; gap: 10px; padding: 0 8px 0 14px; border: 0; border-radius: 999px; background: transparent; color: #fff; font: inherit; font-size: 14px; line-height: 20px; cursor: pointer; outline: none; }
+.fn-trigger:focus-visible { box-shadow: inset 0 0 0 2px #ffffff80; }
+.fn-label { font-weight: 500; white-space: nowrap; }
+.fn-progress { color: white; width: 18px; height: 18px; flex-shrink: 0; transform: rotate(-90deg); }
+.fn-count { min-width: 24px; height: 24px; padding: 0 6px; display: flex; align-items: center; justify-content: center; font-size: 12px; line-height: 16px; font-weight: 500; font-variant-numeric: tabular-nums; color: #ffffffb3; border-radius: 999px; background: #ffffff1a; }
+.fn-avatars { display: inline-flex; align-items: center; flex-shrink: 0; }
+.fn-avatars img, .fn-more { width: var(--avatar-size); height: var(--avatar-size); flex-shrink: 0; border-radius: 50%; background: #262626; object-fit: cover; box-shadow: 0 0 0 2px var(--fn-surface); }
+.fn-avatars > :not(:first-child) { margin-left: calc(var(--avatar-size) * -.3); }
+.fn-more { display: flex; align-items: center; justify-content: center; color: #ffffffb3; font-size: 10px; line-height: 15px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.fn-dialog-position { position: absolute; top: 0; left: 50%; transform: translateX(-50%); }
+.fn-dialog { padding: 8px; }
+.fn-header { display: flex; height: 36px; align-items: center; gap: 8px; padding: 0 8px 0 10px; font-size: 12px; line-height: 16px; color: #ffffff73; }
+.fn-header-label { color: #ffffffb3; font-weight: 500; }
+.fn-step { margin-left: auto; font-variant-numeric: tabular-nums; }
+.fn-body { padding: 4px 10px 16px; }
+.fn-body h3 { margin: 0; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: -.4px; color: white; text-wrap: pretty; }
+.fn-body p { margin: 4px 0 0; font-size: 14px; line-height: 20px; font-weight: 400; color: #ffffff80; text-wrap: pretty; }
+.fn-context { margin-top: 14px; display: flex; align-items: center; gap: 10px; }
+.fn-context > span:last-child { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px; line-height: 16px; color: #ffffff80; }
+.fn-actions { display: grid; gap: 6px; }
+.fn-action { height: 40px; padding: 0 12px; border: 0; border-radius: 18px; background: #ffffff12; color: #ffffffcc; font: inherit; font-size: 14px; line-height: 20px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; outline: none; }
+.fn-action:hover { background: #ffffff1f; color: white; }
+.fn-action:focus-visible { box-shadow: 0 0 0 2px #ffffff66; }
+.fn-action-primary { background: white; color: #0a0a0a; }
+.fn-action-primary:hover { background: #e5e5e5; color: #0a0a0a; }
+.fn-action-primary:focus-visible { box-shadow: 0 0 0 2px #0a0a0a, 0 0 0 4px #ffffff99; }
+.fn-action:disabled { opacity: .4; cursor: default; }
+.fn-dust { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
+.fn-dust span { position: absolute; border-radius: 50%; background: #17171780; }
+.fn-host[data-theme="dark"] .fn-dust span { background: #ffffff66; }

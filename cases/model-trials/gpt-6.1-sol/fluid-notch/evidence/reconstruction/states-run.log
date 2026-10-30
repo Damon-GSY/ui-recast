@@ -1,0 +1,63 @@
+{
+  target: 'reconstruction',
+  results: [
+    {
+      name: 'question-1',
+      rect: [Object],
+      text: 'Launch assistant\n' +
+        '1 of 3\n' +
+        'Move the launch to Thursday?\n' +
+        '\n' +
+        'Two reviewers are out on Wednesday. Thursday keeps the whole team on the release call.\n' +
+        '\n' +
+        'Tomas and Nina are out Wednesday\n' +
+        'Keep Wednesday\n' +
+        'Move it',
+      focus: 'Move it'
+    },
+    {
+      name: 'question-2',
+      rect: [Object],
+      text: 'Launch assistant\n' +
+        '2 of 3\n' +
+        'Add Priya to the review?\n' +
+        '\n' +
+        'She wrote the pricing copy and can answer questions on it fast.\n' +
+        '\n' +
+        'Priya Shah · Pricing\n' +
+        'Not now\n' +
+        'Add Priya',
+      focus: 'Add Priya'
+    },
+    {
+      name: 'question-3',
+      rect: [Object],
+      text: 'Launch assistant\n' +
+        '3 of 3\n' +
+        'Tell you when QA signs off?\n' +
+        '\n' +
+        "I'll watch the release checklist and post in #launch the moment it turns green.\n" +
+        '\n' +
+        '+1\n' +
+        'QA · 4 people\n' +
+        'Not now\n' +
+        'Turn on',
+      focus: 'Turn on'
+    },
+    {
+      name: 'completion',
+      rect: [Object],
+      text: 'Launch assistant\n' +
+        "You're all caught up\n" +
+        '\n' +
+        'Nothing else needs you before the launch.\n' +
+        '\n' +
+        '+2\n' +
+        'Priya, Tomas and 3 more\n' +
+        'Start over',
+      focus: 'Start over'
+    },
+    { name: 'narrow', rect: [Object] },
+    { name: 'mode-wide', rect: [Object] }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  target: 'reference',
+  duration: 27.8,
+  openOnset: 7.6,
+  closeOnset: 10.6,
+  nativeSamples: 716
+}
+{
+  target: 'reconstruction',
+  duration: 22.8,
+  openOnset: 2.64,
+  closeOnset: 5.64,
+  nativeSamples: 592
+}

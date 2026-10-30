@@ -1,0 +1,70 @@
+{
+  "target": "reconstruction",
+  "videoPath": "/Users/damon/Documents/ChatGPT/reverse-ui-component/cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm",
+  "checks": [
+    {
+      "name": "question 1 visible",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "false",
+      "atMs": 5651,
+      "pass": true
+    },
+    {
+      "name": "Escape advances",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "true",
+      "atMs": 6761,
+      "pass": true
+    },
+    {
+      "name": "positive answer advances",
+      "actualLabel": "Launch assistant: 1 to review",
+      "actualHidden": "true",
+      "atMs": 9013,
+      "pass": true
+    },
+    {
+      "name": "complete",
+      "actualLabel": "Launch assistant: all caught up",
+      "actualHidden": "true",
+      "atMs": 11761,
+      "pass": true
+    },
+    {
+      "name": "restart restores 3",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "true",
+      "atMs": 14022,
+      "pass": true
+    },
+    {
+      "name": "early center click ignored",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "true",
+      "atMs": 14960,
+      "pass": true
+    },
+    {
+      "name": "outside click preserves question",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "false",
+      "atMs": 16776,
+      "pass": true
+    },
+    {
+      "name": "late interruption reopens next question",
+      "actualLabel": "Launch assistant: 1 to review",
+      "actualHidden": "false",
+      "atMs": 18529,
+      "pass": true
+    },
+    {
+      "name": "final reset",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "true",
+      "atMs": 22546,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

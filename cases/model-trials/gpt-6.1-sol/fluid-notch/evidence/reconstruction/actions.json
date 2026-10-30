@@ -1,0 +1,168 @@
+{
+  "target": "reconstruction",
+  "url": "http://127.0.0.1:4231/?capture",
+  "viewport": {
+    "width": 960,
+    "height": 720
+  },
+  "epoch": 1793350982352,
+  "timing": "Wall ms from page creation. Visible video changes determine phase onset; no time stretching.",
+  "actions": [
+    {
+      "name": "open question 1; hold through dust completion",
+      "requestMs": 2601,
+      "returnMs": 2646
+    },
+    {
+      "name": "Escape consumes question 1 and closes",
+      "requestMs": 5651,
+      "returnMs": 5656
+    },
+    {
+      "name": "retrigger question 2",
+      "requestMs": 6761,
+      "returnMs": 6772
+    },
+    {
+      "name": "Add Priya",
+      "requestMs": 7874,
+      "returnMs": 7908
+    },
+    {
+      "name": "open question 3",
+      "requestMs": 9013,
+      "returnMs": 9024
+    },
+    {
+      "name": "Turn on; complete",
+      "requestMs": 10125,
+      "returnMs": 10158
+    },
+    {
+      "name": "open all caught up",
+      "requestMs": 11761,
+      "returnMs": 11773
+    },
+    {
+      "name": "Start over",
+      "requestMs": 12873,
+      "returnMs": 12911
+    },
+    {
+      "name": "open then interrupt",
+      "requestMs": 14022,
+      "returnMs": 14039
+    },
+    {
+      "name": "Escape during expansion",
+      "requestMs": 14140,
+      "returnMs": 14144
+    },
+    {
+      "name": "early center click while pill is still displaced",
+      "requestMs": 14254,
+      "returnMs": 14255
+    },
+    {
+      "name": "retrigger after settling",
+      "requestMs": 14960,
+      "returnMs": 14972
+    },
+    {
+      "name": "outside click (no dismissal)",
+      "requestMs": 16073,
+      "returnMs": 16074
+    },
+    {
+      "name": "Escape starts collapse",
+      "requestMs": 16776,
+      "returnMs": 16779
+    },
+    {
+      "name": "reopen during settling collapse",
+      "requestMs": 17021,
+      "returnMs": 17024
+    },
+    {
+      "name": "Turn on after reversal",
+      "requestMs": 18531,
+      "returnMs": 18591
+    },
+    {
+      "name": "open completion again",
+      "requestMs": 20092,
+      "returnMs": 20106
+    },
+    {
+      "name": "restart again",
+      "requestMs": 21207,
+      "returnMs": 21242
+    }
+  ],
+  "checks": [
+    {
+      "name": "question 1 visible",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "false",
+      "atMs": 5651,
+      "pass": true
+    },
+    {
+      "name": "Escape advances",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "true",
+      "atMs": 6761,
+      "pass": true
+    },
+    {
+      "name": "positive answer advances",
+      "actualLabel": "Launch assistant: 1 to review",
+      "actualHidden": "true",
+      "atMs": 9013,
+      "pass": true
+    },
+    {
+      "name": "complete",
+      "actualLabel": "Launch assistant: all caught up",
+      "actualHidden": "true",
+      "atMs": 11761,
+      "pass": true
+    },
+    {
+      "name": "restart restores 3",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "true",
+      "atMs": 14022,
+      "pass": true
+    },
+    {
+      "name": "early center click ignored",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "true",
+      "atMs": 14960,
+      "pass": true
+    },
+    {
+      "name": "outside click preserves question",
+      "actualLabel": "Launch assistant: 2 to review",
+      "actualHidden": "false",
+      "atMs": 16776,
+      "pass": true
+    },
+    {
+      "name": "late interruption reopens next question",
+      "actualLabel": "Launch assistant: 1 to review",
+      "actualHidden": "false",
+      "atMs": 18529,
+      "pass": true
+    },
+    {
+      "name": "final reset",
+      "actualLabel": "Launch assistant: 3 to review",
+      "actualHidden": "true",
+      "atMs": 22546,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

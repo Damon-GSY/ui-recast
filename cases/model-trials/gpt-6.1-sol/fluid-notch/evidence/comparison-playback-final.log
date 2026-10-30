@@ -1,0 +1,11 @@
+{
+  target: 'reconstruction',
+  duration: 22.76,
+  openOnset: 2.6,
+  closeOnset: 5.6,
+  nativeSamples: 654
+}
+page.evaluate: Target page, context or browser has been closed
+    at /Users/damon/Documents/ChatGPT/reverse-ui-component/cases/model-trials/gpt-6.1-sol/fluid-notch/scripts/media-review.cjs:39:27 {
+  log: []
+}

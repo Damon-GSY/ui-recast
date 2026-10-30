@@ -1,0 +1,128 @@
+[
+  {
+    "target": "reference",
+    "offset": 0,
+    "requested": 7.6,
+    "selectedNativeMediaTime": 7.6,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.04,
+    "requested": 7.64,
+    "selectedNativeMediaTime": 7.64,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.08,
+    "requested": 7.68,
+    "selectedNativeMediaTime": 7.68,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.12,
+    "requested": 7.72,
+    "selectedNativeMediaTime": 7.72,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.2,
+    "requested": 7.8,
+    "selectedNativeMediaTime": 7.8,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.28,
+    "requested": 7.88,
+    "selectedNativeMediaTime": 7.88,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.36,
+    "requested": 7.96,
+    "selectedNativeMediaTime": 7.96,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.48,
+    "requested": 8.08,
+    "selectedNativeMediaTime": 8.08,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reference",
+    "offset": 0.64,
+    "requested": 8.24,
+    "selectedNativeMediaTime": 8.24,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0,
+    "requested": 2.6,
+    "selectedNativeMediaTime": 2.6,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.04,
+    "requested": 2.64,
+    "selectedNativeMediaTime": 2.64,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.08,
+    "requested": 2.68,
+    "selectedNativeMediaTime": 2.68,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.12,
+    "requested": 2.72,
+    "selectedNativeMediaTime": 2.72,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.2,
+    "requested": 2.8000000000000003,
+    "selectedNativeMediaTime": 2.8,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.28,
+    "requested": 2.88,
+    "selectedNativeMediaTime": 2.88,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.36,
+    "requested": 2.96,
+    "selectedNativeMediaTime": 2.96,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.48,
+    "requested": 3.08,
+    "selectedNativeMediaTime": 3.08,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  },
+  {
+    "target": "reconstruction",
+    "offset": 0.64,
+    "requested": 3.24,
+    "selectedNativeMediaTime": 3.24,
+    "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "results": [
+    "Keyboard Enter opens and focuses primary action; reduced-motion geometry settles immediately",
+    "Reduced motion removes dust",
+    "Keyboard answer advances caller state and restores trigger focus",
+    "Closed content is inert",
+    "Escape advances and restores focus",
+    "Frozen-source SVG ring has white stroke"
+  ],
+  "circles": {
+    "color": "rgb(255, 255, 255)",
+    "stroke": "rgb(255, 255, 255)",
+    "dash": "0.6666666666666666 1"
+  }
+}

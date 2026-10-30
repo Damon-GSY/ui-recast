@@ -1,0 +1,14 @@
+{
+  "expand": {
+    "stiffness": 270,
+    "damping": 26,
+    "offsetMs": 56,
+    "rmseNormalized": 0.0031232769721922953
+  },
+  "collapse-q2": {
+    "stiffness": 280,
+    "damping": 27,
+    "offsetMs": 34,
+    "rmseNormalized": 0.0019712133835069366
+  }
+}

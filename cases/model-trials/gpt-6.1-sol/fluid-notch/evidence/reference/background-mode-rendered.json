@@ -1,0 +1,155 @@
+[
+  {
+    "tag": "BUTTON",
+    "cls": "flex h-10 cursor-pointer items-center gap-2.5 rounded-full pr-2 pl-3.5 text-sm text-white outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-inset",
+    "style": null,
+    "bg": "rgba(0, 0, 0, 0)",
+    "bgImage": "none",
+    "rect": {
+      "x": 339.28125,
+      "y": 622,
+      "width": 281.453125,
+      "height": 40,
+      "top": 622,
+      "right": 620.734375,
+      "bottom": 662,
+      "left": 339.28125
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "w-max shrink-0",
+    "style": "opacity: 1; filter: blur(0px); transform: none;",
+    "bg": "rgba(0, 0, 0, 0)",
+    "bgImage": "none",
+    "rect": {
+      "x": 339.28125,
+      "y": 622,
+      "width": 281.453125,
+      "height": 40,
+      "top": 622,
+      "right": 620.734375,
+      "bottom": 662,
+      "left": 339.28125
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "absolute inset-x-0 top-0 flex justify-center",
+    "style": null,
+    "bg": "rgba(0, 0, 0, 0)",
+    "bgImage": "none",
+    "rect": {
+      "x": 339.5,
+      "y": 622,
+      "width": 281,
+      "height": 40,
+      "top": 622,
+      "right": 620.5,
+      "bottom": 662,
+      "left": 339.5
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "relative isolate overflow-hidden bg-neutral-950 ring-1 ring-white/10 dark:bg-neutral-900",
+    "style": "width: 281px; height: 40px; border-radius: 20px;",
+    "bg": "oklch(0.145 0 0)",
+    "bgImage": "none",
+    "rect": {
+      "x": 339.5,
+      "y": 622,
+      "width": 281,
+      "height": 40,
+      "top": 622,
+      "right": 620.5,
+      "bottom": 662,
+      "left": 339.5
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "absolute inset-x-0 top-0 z-10 flex justify-center",
+    "style": "transform: none;",
+    "bg": "rgba(0, 0, 0, 0)",
+    "bgImage": "none",
+    "rect": {
+      "x": 33,
+      "y": 622,
+      "width": 894,
+      "height": 40,
+      "top": 622,
+      "right": 927,
+      "bottom": 662,
+      "left": 33
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "relative flex justify-center w-full",
+    "style": "height: 40px;",
+    "bg": "rgba(0, 0, 0, 0)",
+    "bgImage": "none",
+    "rect": {
+      "x": 33,
+      "y": 622,
+      "width": 894,
+      "height": 40,
+      "top": 622,
+      "right": 927,
+      "bottom": 662,
+      "left": 33
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "absolute inset-0 flex items-center",
+    "style": null,
+    "bg": "rgba(0, 0, 0, 0)",
+    "bgImage": "none",
+    "rect": {
+      "x": 33,
+      "y": 387,
+      "width": 894,
+      "height": 510,
+      "top": 387,
+      "right": 927,
+      "bottom": 897,
+      "left": 33
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "absolute inset-0 overflow-hidden bg-white dark:bg-neutral-950",
+    "style": null,
+    "bg": "rgb(255, 255, 255)",
+    "bgImage": "none",
+    "rect": {
+      "x": 33,
+      "y": 387,
+      "width": 894,
+      "height": 510,
+      "top": 387,
+      "right": 927,
+      "bottom": 897,
+      "left": 33
+    }
+  },
+  {
+    "tag": "DIV",
+    "cls": "relative flex items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-white p-8 dark:border-neutral-800 dark:bg-neutral-900 h-[32rem]",
+    "style": null,
+    "bg": "rgb(255, 255, 255)",
+    "bgImage": "none",
+    "rect": {
+      "x": 32,
+      "y": 386,
+      "width": 896,
+      "height": 512,
+      "top": 386,
+      "right": 928,
+      "bottom": 898,
+      "left": 32
+    }
+  }
+]

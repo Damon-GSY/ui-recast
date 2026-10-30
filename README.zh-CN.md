@@ -10,7 +10,7 @@
 
 ## 案例先看这里
 
-> **使用模型：**这里展示的复刻案例使用 `gpt6-astra` 完成，其他模型尚未测试。
+> **使用模型：**这里展示的复刻案例使用 `gpt6-astra` 完成，另外已完成 `gpt-6.1-sol` 的 Fluid Notch 付费 Pro 单项测试，见[结果](docs/model-trials/gpt-6.1-sol.md)；其他模型仍未测试。
 
 左侧为参考，右侧为复刻。这里直接展示采集到的状态画面，完整动效可在案例实验室中对照。
 
@@ -87,6 +87,16 @@
 5. **交付源码**：提供组件、样式、用例、媒体与余差；需要分发时再做独立安装和运行验证。
 
 Skill 的指导内容自包含。动效引擎和基础控件由项目与参考决定，可采用 CSS、Motion 或 GSAP。
+
+## GPT-6.1 Sol：付费 Pro 单项试跑
+
+使用 `gpt-6.1-sol`、`high` 推理档位的新代理，仅给英文 skill 和原版 URL，独立重建 **Aceternity UI Fluid Notch**。原版公开预览可操作，Code 需要 All-Access；试跑未读取付费实现，也未读取已有复刻源码。
+
+| 公开预览 | GPT-6.1 Sol 独立复刻 |
+| --- | --- |
+| <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reference.png" width="420" alt="Fluid Notch 第一题原版公开预览"> | <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reconstruction.png" width="420" alt="GPT-6.1 Sol 独立复刻的第一题"> |
+
+独立安装、构建和7项父代理运行检查通过。静态尺寸与核心交互接近，动效参数仍有拟合和可见中间帧差异；这不代表全库验证，也不是与 Astra 的受控排名。[源码、录屏与结论](docs/model-trials/gpt-6.1-sol.md)。
 
 ## 安装与使用
 

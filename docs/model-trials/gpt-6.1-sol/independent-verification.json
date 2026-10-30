@@ -1,0 +1,16 @@
+{
+  "model": "gpt-6.1-sol",
+  "freshInstall": true,
+  "productionBuild": true,
+  "sourceUnchanged": true,
+  "checks": [
+    "Move the launch to Thursday? -> caller advances and closes",
+    "Add Priya to the review? -> caller advances and closes",
+    "Tell you when QA signs off? -> caller advances and closes",
+    "completion and restart",
+    "keyboard and focus return",
+    "390px no horizontal overflow",
+    "reduced-motion close"
+  ],
+  "errors": []
+}

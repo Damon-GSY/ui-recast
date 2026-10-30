@@ -1,6 +1,6 @@
 # Runnable cases
 
-> **Model used:** These reconstruction cases were produced with `gpt6-astra`. Other models have not been tested.
+> **Model used:** These reconstruction cases were produced with `gpt6-astra`. A separate `gpt-6.1-sol` paid Fluid Notch trial is [complete](../docs/model-trials/gpt-6.1-sol.md). Only this additional component was tested with GPT-6.1 Sol; other models remain untested.
 
 Run `npm ci && npm run dev -- --port 4187` inside `ui-lab`. Append each route below to `http://127.0.0.1:4187`. Reusable source and example state are separate; reference and reconstruction recordings live in `ui-lab/public/evidence/`.
 
@@ -54,3 +54,7 @@ Run `npm ci && npm run dev -- --port 4187` inside `ui-lab`. Append each route be
 | Timeline 1 | `/batch/block-timeline1` | [TSX](ui-lab/src/components/block-timeline1.tsx) |
 
 Task Detail and Task Workbench are compositions and are not counted again among the 44 source entries. Cases include public-source adaptations and independent visual reconstructions. See the per-case analyses for provenance and remaining differences.
+
+## Independent model trial
+
+[GPT-6.1 Sol · paid Fluid Notch](model-trials/gpt-6.1-sol/fluid-notch/README.md) is a separate fresh reconstruction using the English skill and public preview only. It includes its own source, full recordings, intermediate-frame comparisons and limitations. It does not change the model attribution or count of the original 44-component showcase.

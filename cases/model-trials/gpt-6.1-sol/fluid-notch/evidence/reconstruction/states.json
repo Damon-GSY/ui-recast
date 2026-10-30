@@ -1,0 +1,64 @@
+[
+  {
+    "name": "question-1",
+    "rect": {
+      "x": 310,
+      "y": 239,
+      "width": 340,
+      "height": 242
+    },
+    "text": "Launch assistant\n1 of 3\nMove the launch to Thursday?\n\nTwo reviewers are out on Wednesday. Thursday keeps the whole team on the release call.\n\nTomas and Nina are out Wednesday\nKeep Wednesday\nMove it",
+    "focus": "Move it"
+  },
+  {
+    "name": "question-2",
+    "rect": {
+      "x": 310,
+      "y": 249,
+      "width": 340,
+      "height": 222
+    },
+    "text": "Launch assistant\n2 of 3\nAdd Priya to the review?\n\nShe wrote the pricing copy and can answer questions on it fast.\n\nPriya Shah · Pricing\nNot now\nAdd Priya",
+    "focus": "Add Priya"
+  },
+  {
+    "name": "question-3",
+    "rect": {
+      "x": 310,
+      "y": 249,
+      "width": 340,
+      "height": 222
+    },
+    "text": "Launch assistant\n3 of 3\nTell you when QA signs off?\n\nI'll watch the release checklist and post in #launch the moment it turns green.\n\n+1\nQA · 4 people\nNot now\nTurn on",
+    "focus": "Turn on"
+  },
+  {
+    "name": "completion",
+    "rect": {
+      "x": 310,
+      "y": 259,
+      "width": 340,
+      "height": 202
+    },
+    "text": "Launch assistant\nYou're all caught up\n\nNothing else needs you before the launch.\n\n+2\nPriya, Tomas and 3 more\nStart over",
+    "focus": "Start over"
+  },
+  {
+    "name": "narrow",
+    "rect": {
+      "x": 17.5,
+      "y": 285,
+      "width": 340,
+      "height": 242
+    }
+  },
+  {
+    "name": "mode-wide",
+    "rect": {
+      "x": 248,
+      "y": 145,
+      "width": 400,
+      "height": 222
+    }
+  }
+]

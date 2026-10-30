@@ -1,0 +1,180 @@
+{
+  "video": "evidence/reference/lifecycle.webm",
+  "samples": [
+    {
+      "requested": 7.0,
+      "selectedNativeMediaTime": 7,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 7.6,
+      "selectedNativeMediaTime": 7.6,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 8.2,
+      "selectedNativeMediaTime": 8.2,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 8.799999999999999,
+      "selectedNativeMediaTime": 8.8,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 9.399999999999999,
+      "selectedNativeMediaTime": 9.4,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 9.999999999999998,
+      "selectedNativeMediaTime": 10,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 10.599999999999998,
+      "selectedNativeMediaTime": 10.6,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 11.199999999999998,
+      "selectedNativeMediaTime": 11.2,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 11.799999999999997,
+      "selectedNativeMediaTime": 11.8,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 12.399999999999997,
+      "selectedNativeMediaTime": 12.4,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 12.999999999999996,
+      "selectedNativeMediaTime": 13,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 13.599999999999996,
+      "selectedNativeMediaTime": 13.6,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 14.199999999999996,
+      "selectedNativeMediaTime": 14.2,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 14.799999999999995,
+      "selectedNativeMediaTime": 14.8,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 15.399999999999995,
+      "selectedNativeMediaTime": 15.4,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 15.999999999999995,
+      "selectedNativeMediaTime": 16,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 16.599999999999994,
+      "selectedNativeMediaTime": 16.6,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 17.199999999999996,
+      "selectedNativeMediaTime": 17.2,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 17.799999999999997,
+      "selectedNativeMediaTime": 17.8,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 18.4,
+      "selectedNativeMediaTime": 18.4,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 19.0,
+      "selectedNativeMediaTime": 19,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 19.6,
+      "selectedNativeMediaTime": 19.6,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 20.200000000000003,
+      "selectedNativeMediaTime": 20.2,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 20.800000000000004,
+      "selectedNativeMediaTime": 20.8,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 21.400000000000006,
+      "selectedNativeMediaTime": 21.4,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 22.000000000000007,
+      "selectedNativeMediaTime": 22,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 22.60000000000001,
+      "selectedNativeMediaTime": 22.6,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 23.20000000000001,
+      "selectedNativeMediaTime": 23.2,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 23.80000000000001,
+      "selectedNativeMediaTime": 23.8,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 24.400000000000013,
+      "selectedNativeMediaTime": 24.4,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 25.000000000000014,
+      "selectedNativeMediaTime": 25,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 25.600000000000016,
+      "selectedNativeMediaTime": 25.6,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 26.200000000000017,
+      "selectedNativeMediaTime": 26.2,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 26.80000000000002,
+      "selectedNativeMediaTime": 26.8,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    },
+    {
+      "requested": 27.40000000000002,
+      "selectedNativeMediaTime": 27.4,
+      "method": "nearest recorded requestVideoFrameCallback mediaTime, FFmpeg seek and native frame extraction; no interpolation"
+    }
+  ]
+}

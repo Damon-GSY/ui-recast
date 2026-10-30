@@ -19,7 +19,7 @@ The skill preserves caller-owned business state and user-requested product adapt
 
 ## Real cases
 
-> **Model used:** The reconstruction cases shown here were produced with `gpt6-astra`. Other models have not been tested.
+> **Model used:** The original showcased collection was produced with `gpt6-astra`. An additional independent `gpt-6.1-sol` trial has completed for the paid Fluid Notch component; see the [single-case result](docs/model-trials/gpt-6.1-sol.md). Other models remain untested.
 
 Reference on the left; reconstruction on the right. These stills show captured states; full motion comparisons are available in the case lab.
 
@@ -86,6 +86,16 @@ Application shell, tool execution, status pulse, reading pane.
 [Source](cases/ui-lab/src/components/agent-run.tsx) · [Review](docs/affectui-review/shells.md)
 
 [The case catalog](cases/README.md) contains **44 component entries and 2 composition examples**, including **15 MenuFold components**. Cases include independent visual reconstructions and attributed public-source adaptations. Detailed review notes currently retain their original language.
+
+## GPT-6.1 Sol: paid Pro component trial
+
+A fresh agent using `gpt-6.1-sol` (`high` reasoning) reconstructed **Aceternity UI Fluid Notch**, whose Code access requires All-Access. It received the English skill and public URL, with no prior implementation or case analysis. Source, full recordings, intermediate-frame comparisons, and remaining differences are included in the [trial](cases/model-trials/gpt-6.1-sol/fluid-notch/).
+
+| Reference | GPT-6.1 Sol reconstruction |
+| --- | --- |
+| <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reference.png" width="420" alt="Paid Fluid Notch public preview, question one"> | <img src="assets/readme/comparisons/gpt-6.1-fluid-notch-reconstruction.png" width="420" alt="Independent GPT-6.1 Sol reconstruction, question one"> |
+
+Fresh standalone installation/build and seven parent runtime checks passed. Static geometry and core interaction are close; motion remains fitted with visible intermediate-frame differences. This single trial is **not** a full-suite rerun or a controlled ranking against Astra. [Review and run instructions](docs/model-trials/gpt-6.1-sol.md).
 
 ## Install
 

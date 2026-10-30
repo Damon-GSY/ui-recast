@@ -1,0 +1,92 @@
+[
+  {
+    "state": "question-1",
+    "reference": {
+      "x": 310,
+      "y": 239,
+      "width": 340,
+      "height": 242
+    },
+    "reconstruction": {
+      "x": 310,
+      "y": 239,
+      "width": 340,
+      "height": 242
+    }
+  },
+  {
+    "state": "question-2",
+    "reference": {
+      "x": 310,
+      "y": 249,
+      "width": 340,
+      "height": 222
+    },
+    "reconstruction": {
+      "x": 310,
+      "y": 249,
+      "width": 340,
+      "height": 222
+    }
+  },
+  {
+    "state": "question-3",
+    "reference": {
+      "x": 310,
+      "y": 249,
+      "width": 340,
+      "height": 222
+    },
+    "reconstruction": {
+      "x": 310,
+      "y": 249,
+      "width": 340,
+      "height": 222
+    }
+  },
+  {
+    "state": "completion",
+    "reference": {
+      "x": 310,
+      "y": 259,
+      "width": 340,
+      "height": 202
+    },
+    "reconstruction": {
+      "x": 310,
+      "y": 259,
+      "width": 340,
+      "height": 202
+    }
+  },
+  {
+    "state": "narrow",
+    "reference": {
+      "x": 17.5,
+      "y": 285,
+      "width": 340,
+      "height": 242
+    },
+    "reconstruction": {
+      "x": 17.5,
+      "y": 285,
+      "width": 340,
+      "height": 242
+    }
+  },
+  {
+    "state": "mode-wide",
+    "reference": {
+      "x": 280,
+      "y": 144,
+      "width": 400,
+      "height": 222
+    },
+    "reconstruction": {
+      "x": 248,
+      "y": 145,
+      "width": 400,
+      "height": 222
+    }
+  }
+]
