@@ -1,0 +1,36 @@
+.usage-study { max-width: 1120px; margin: 0 auto; padding: 40px 24px; color: #252527; font-family: 'Inter Variable', Inter, ui-sans-serif, system-ui, sans-serif; font-size: 13px; line-height: 1.5; }
+.usage-study, .usage-study *, .usage-study *::before, .usage-study *::after { box-sizing: border-box; }
+.usage-study__heading { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px 24px; margin-bottom: 24px; }
+.usage-study__eyebrow { margin: 0 0 8px; color: #88888b; font-size: 10px; letter-spacing: .12em; }
+.usage-study__heading h2 { margin: 0; color: inherit; font-size: 28px; font-weight: 500; letter-spacing: -.8px; }
+.usage-study__heading > p { margin: 0; color: #77777b; }
+.usage-study__comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 18px; }
+.usage-study__panel { min-width: 0; margin: 0; overflow: hidden; border: 1px solid #e4e4e6; border-radius: 12px; background: #fff; }
+.usage-study__panel figcaption, .usage-study__panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 46px; padding: 12px 16px; border-bottom: 1px solid #ededee; font-size: 12px; }
+.usage-study__panel figcaption span, .usage-study__panel-heading span { color: #88888c; font-size: 11px; }
+/* Keep the browser capture at one CSS pixel per source pixel; narrow panels scroll it. */
+.usage-study__reference { overflow: auto; min-height: 532px; padding: 24px 20px; background: #fafafa; }
+.usage-study__reference img { display: block; width: 460px; max-width: none; height: 484px; margin: 0 auto; }
+.usage-study__scene { display: flex; justify-content: center; align-items: flex-start; min-height: 532px; padding: 24px 20px; background: #fafafa; }
+.usage-study__scene[data-theme='dark'] { background: #151517; }
+.usage-study__container { flex: 0 1 auto; max-width: 100%; min-width: 0; }
+.usage-study__feedback { min-height: 46px; padding: 12px 16px; border-top: 1px solid #ededee; color: #77777b; font-size: 11px; }
+.usage-study__controls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 24px 0 16px; padding: 18px; border: 1px solid #e4e4e6; border-radius: 10px; background: #fff; }
+.usage-study__controls > label { display: flex; flex-direction: column; gap: 6px; min-width: 0; color: #77777b; font-size: 11px; }
+.usage-study__controls select { width: 100%; min-width: 0; padding: 8px; border: 1px solid #dedee1; border-radius: 6px; background: #fafafa; color: #303033; font: inherit; font-size: 12px; }
+.usage-study__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; grid-column: 1 / -1; }
+.usage-study__actions label { display: inline-flex; align-items: center; gap: 6px; color: #67676d; font-size: 12px; }
+.usage-study__actions input { margin: 0; accent-color: #3269f5; }
+.usage-study__actions button { margin: 0 0 0 auto; padding: 7px 11px; border: 1px solid #dedee1; border-radius: 6px; background: #fff; color: #45454b; font: inherit; font-size: 12px; cursor: pointer; }
+.usage-study__actions button:hover { background: #f5f5f7; }
+.usage-study__controls :is(button, input, select):focus-visible { outline: 2px solid #3269f5; outline-offset: 3px; }
+.usage-study__hint { margin: 0; color: #88888c; font-size: 11px; line-height: 1.8; }
+@media (max-width: 1060px) {
+  .usage-study__comparison { grid-template-columns: minmax(0, 1fr); }
+  .usage-study__controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 440px) {
+  .usage-study { padding: 28px 12px; }
+  .usage-study__scene, .usage-study__reference { padding: 22px 10px; }
+  .usage-study__controls { padding: 14px; gap: 12px; }
+}

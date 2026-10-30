@@ -1,0 +1,126 @@
+.thinking-loader {
+  --tl-background: #fff;
+  --tl-text: #6b6b6b;
+  --tl-done-text: #171717;
+  --tl-ink: #171717;
+  --tl-shine: rgba(255, 255, 255, .82);
+  --tl-shadow: inset 0 0 0 1px #e7e7e7, 0 1px 2px #0000000a;
+  --tl-icon-size: 15px;
+  --tl-ray-width: 1.6px;
+  --tl-check-width: 1.8px;
+  --tl-ray-floor: .18;
+  --tl-label-height: 18.2px;
+  --tl-shimmer-duration: 1.8s;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: max-content;
+  height: 34px;
+  padding: 0 15px 0 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--tl-background);
+  box-shadow: var(--tl-shadow);
+  color: var(--tl-text);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 1;
+  letter-spacing: -.006em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.thinking-loader[data-appearance="clean"] {
+  --tl-text: rgba(0, 0, 0, .61);
+  --tl-done-text: rgba(0, 0, 0, .88);
+  --tl-ink: rgba(0, 96, 226, .765);
+  --tl-shadow: 0 0 0 .5px #0000000f, 0 1px 1px -1px #0000001a, 0 1px 2px #0000000d;
+  --tl-icon-size: 16px;
+  --tl-ray-width: 1.1px;
+  --tl-check-width: 1.2px;
+  --tl-ray-floor: .2;
+  --tl-label-height: 20px;
+  --tl-shimmer-duration: 1.6s;
+  height: 32px;
+  padding: 0 10px 0 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -.003em;
+}
+:where(.dark, [data-theme="dark"]) .thinking-loader {
+  --tl-background: #242424;
+  --tl-text: #a1a1a1;
+  --tl-done-text: #ededed;
+  --tl-ink: #ededed;
+  --tl-shine: rgba(255, 255, 255, .72);
+  --tl-shadow: inset 0 0 0 1px #383838, 0 1px 2px #00000026;
+}
+:where(.dark, [data-theme="dark"]) .thinking-loader[data-appearance="clean"] { --tl-ink: #70a7ff; }
+.thinking-loader[data-size="sm"] {
+  --tl-icon-size: 13px;
+  --tl-label-height: 15.6px;
+  height: 28px;
+  padding: 0 11px 0 9px;
+  font-size: 12px;
+}
+.thinking-loader[data-appearance="clean"][data-size="sm"] {
+  --tl-icon-size: 14px;
+  --tl-label-height: 18px;
+  height: 26px;
+  padding: 0 8px 0 6px;
+  line-height: 18px;
+}
+.thinking-loader[data-variant="plain"] { padding-inline: 0; background: transparent; box-shadow: none; }
+.thinking-loader__visual { display: inline-flex; align-items: center; gap: 8px; }
+.thinking-loader[data-appearance="clean"] .thinking-loader__visual,
+.thinking-loader[data-size="sm"] .thinking-loader__visual { gap: 6px; }
+.thinking-loader__icon { position: relative; flex: 0 0 var(--tl-icon-size); width: var(--tl-icon-size); height: var(--tl-icon-size); }
+.thinking-loader__icon svg { position: absolute; inset: 0; display: block; width: 100%; height: 100%; overflow: visible; transition: opacity .24s ease, transform .42s cubic-bezier(.22,1,.36,1); }
+.thinking-loader__spinner { opacity: 1; transform: scale(1) rotate(0deg); }
+.thinking-loader__spinner line { stroke: var(--tl-ink); stroke-width: var(--tl-ray-width); animation: thinking-loader-ray .8s linear infinite; }
+.thinking-loader__check { opacity: 0; transform: scale(.6); stroke: var(--tl-ink); stroke-width: var(--tl-check-width); }
+.thinking-loader__check path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.thinking-loader[data-done] .thinking-loader__spinner { opacity: 0; transform: scale(.6) rotate(-45deg); }
+.thinking-loader[data-done] .thinking-loader__check { opacity: 1; transform: scale(1); }
+.thinking-loader[data-done] .thinking-loader__check path { animation: thinking-loader-check .36s .12s cubic-bezier(.22,1,.36,1) both; }
+.thinking-loader__window { position: relative; display: block; flex: 0 0 auto; overflow: hidden; height: var(--tl-label-height); line-height: var(--tl-label-height); transition: width .46s cubic-bezier(.22,1,.36,1); }
+.thinking-loader__measure { display: block; width: max-content; visibility: hidden; line-height: inherit; }
+.thinking-loader__label { position: absolute; top: 0; left: 0; display: block; width: max-content; line-height: inherit; }
+.thinking-loader[data-done] .thinking-loader__label { color: var(--tl-done-text); }
+/* A separate light sweep preserves the original gray glyph beneath it. */
+.thinking-loader__label--working::after {
+  content: attr(data-label) / "";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background: linear-gradient(90deg, transparent 38%, var(--tl-shine) 50%, transparent 62%);
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: thinking-loader-shimmer var(--tl-shimmer-duration) linear infinite;
+  pointer-events: none;
+}
+.thinking-loader__status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@keyframes thinking-loader-ray { from { opacity: 1; } to { opacity: var(--tl-ray-floor); } }
+@keyframes thinking-loader-shimmer { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+@keyframes thinking-loader-check { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+.thinking-loader[data-reduce-motion] .thinking-loader__icon svg { transition: none; }
+.thinking-loader[data-reduce-motion] .thinking-loader__window { transition: none; }
+.thinking-loader[data-reduce-motion] .thinking-loader__spinner line { animation: none; opacity: .6; }
+.thinking-loader[data-reduce-motion] .thinking-loader__label--working::after { animation: none; content: none; }
+.thinking-loader[data-reduce-motion] .thinking-loader__check path { animation: none; }
+.thinking-loader[data-reduce-motion][data-done] .thinking-loader__check path { stroke-dashoffset: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .thinking-loader__window { transition: none; }
+  .thinking-loader__icon svg { transition: none; }
+  .thinking-loader__spinner line { animation: none; opacity: .6; }
+  .thinking-loader__label--working::after { animation: none; content: none; }
+  .thinking-loader__check path { animation: none !important; }
+  .thinking-loader[data-done] .thinking-loader__check path { stroke-dashoffset: 0; }
+}

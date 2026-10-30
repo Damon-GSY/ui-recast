@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "block-stats-card4",
+  "type": "registry:ui",
+  "title": "Stats Card 4",
+  "dependencies": [
+    "motion@^14.7.1"
+  ],
+  "files": [
+    {
+      "path": "src/components/block-stats-card4.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/block-stats-card4.tsx",
+      "content": "import { useId } from 'react';\nimport './block-stats-card4.css';\nexport interface BlockStatsCard4Props {\n  title: string;\n  current: number;\n  previous: number;\n  currentLabel: string;\n  previousLabel: string;\n  formatValue?: (value: number) => string;\n  className?: string;\n}\nexport function BlockStatsCard4({title, current, previous, currentLabel, previousLabel, formatValue = n => n.toLocaleString('en-US'), className = ''}: BlockStatsCard4Props) {\n  const titleId = useId();\n  return <section data-capture-root className={`block-stats-card4 ${className}`} aria-labelledby={titleId}>\n    <h3 id={titleId}>{title}</h3>\n    <dl><div><dd>{formatValue(current)}</dd><dt>{currentLabel}</dt></div><div><dd>{formatValue(previous)}</dd><dt>{previousLabel}</dt></div></dl>\n  </section>;\n}\nexport default BlockStatsCard4;\n"
+    },
+    {
+      "path": "src/components/block-stats-card4.css",
+      "type": "registry:file",
+      "target": "components/ui/block-stats-card4.css",
+      "content": ".block-stats-card4{box-sizing:border-box;width:100%;max-width:320px;display:flex;flex-direction:column;gap:24px;padding:24px 0;background:#fff;color:#0a0a0a;border-radius:12px;box-shadow:0 0 0 1px #0000001a,0 1px 2px #0000000d;overflow:hidden;font:14px/20px Inter,ui-sans-serif,system-ui,sans-serif;text-align:left}.block-stats-card4 *{box-sizing:border-box}.block-stats-card4 h3{font:500 14px/20px Inter,ui-sans-serif,system-ui,sans-serif;color:#737373;margin:0;padding:0 24px 8px}.block-stats-card4 dl{margin:0;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px}.block-stats-card4 dl>div+div{padding-left:16px;border-left:1px solid #e5e5e5;color:#737373}.block-stats-card4 dd{margin:0;font-size:24px;font-weight:700;line-height:32px}.block-stats-card4 dt{color:#737373}\n"
+    }
+  ]
+}

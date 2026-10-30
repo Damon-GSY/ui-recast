@@ -1,0 +1,18 @@
+.mf-partitions-study { max-width:650px; padding:30px 24px; margin:0 auto; background:#fff; border-radius:18px; font:13px/1.5 Inter,system-ui,sans-serif; color:#0a0a0a; }
+.mf-partitions-study * { box-sizing:border-box; }
+.mf-partitions-study header>span { font-size:10px; color:#737373; letter-spacing:.12em; }
+.mf-partitions-study h2 { font-size:25px; font-weight:550; letter-spacing:-.04em; margin:7px 0; }
+.mf-partitions-study header p { color:#737373; font-size:12px; margin:6px 0 23px; }
+.mf-partitions-study__server { padding-top:16px; margin-top:24px; border-top:1px solid #e5e5e5; }
+.mf-partitions-study__server>div:first-child { display:flex; justify-content:space-between; font-size:11px; font-weight:550; color:#737373; }
+.mf-partitions-study__server>p { font-size:11px; color:#737373; min-height:17px; }
+.mf-partitions-study__controls { display:flex; flex-wrap:wrap; gap:6px; }
+.mf-partitions-study__controls button { border:1px solid #e5e5e5; background:#fff; padding:7px 10px; border-radius:7px; color:#525252; font:inherit; font-size:11px; cursor:pointer; transition:background 140ms; }
+.mf-partitions-study__controls button:hover:not(:disabled) { background:#f5f5f5; }
+.mf-partitions-study__controls button:disabled { color:#6b6b6b; background:#f5f5f5; cursor:not-allowed; }
+.mf-partitions-study button:focus-visible,.mf-partitions-study input:focus-visible { outline:2px solid #525252; outline-offset:3px; }
+.mf-partitions-study__server label { display:flex; align-items:center; gap:7px; font-size:11px; color:#737373; margin-top:14px; }
+@media(max-width:480px) { .mf-partitions-study { padding:22px 16px; } }
+@media(prefers-reduced-motion:reduce) { .mf-partitions-study__controls button { transition:none; } }
+
+.mf-partitions-study input[type=checkbox] { accent-color:#262626; }

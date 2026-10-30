@@ -1,0 +1,212 @@
+[
+  {
+    "id": "directory-01",
+    "name": "Allison Goldstein",
+    "email": "allison.goldstein@example.com",
+    "availability": "Away",
+    "role": "Admin",
+    "teamCodes": [
+      "GROWTH",
+      "PARTNER",
+      "OPS"
+    ],
+    "joined": "Aug 2023",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar7.webp"
+  },
+  {
+    "id": "directory-02",
+    "name": "Charmaine Bellows",
+    "email": "charmaine.bellows@example.com",
+    "availability": "Offline",
+    "role": "Guest",
+    "teamCodes": [
+      "CX",
+      "PROGRAM"
+    ],
+    "joined": "Jan 2025",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar9.webp"
+  },
+  {
+    "id": "directory-03",
+    "name": "Dewi Lestari",
+    "email": "dewi.lestari@example.com",
+    "availability": "Available",
+    "role": "Member",
+    "teamCodes": [
+      "MOBILE"
+    ],
+    "joined": "May 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar13.webp"
+  },
+  {
+    "id": "directory-04",
+    "name": "Ilze Pērkone",
+    "email": "iperkone@example.com",
+    "availability": "Available",
+    "role": "Admin",
+    "teamCodes": [
+      "OPS",
+      "GROWTH"
+    ],
+    "joined": "Nov 2023",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar2.webp"
+  },
+  {
+    "id": "directory-05",
+    "name": "Ilze Pērkone",
+    "email": "iperkone@example.com",
+    "availability": "Offline",
+    "role": "Member",
+    "teamCodes": [
+      "OPS",
+      "TALENT"
+    ],
+    "joined": "Oct 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar2.webp"
+  },
+  {
+    "id": "directory-06",
+    "name": "Jack Walsh",
+    "email": "jack.walsh@example.com",
+    "availability": "Available",
+    "role": "Admin",
+    "teamCodes": [
+      "OPS",
+      "PROGRAM",
+      "TALENT"
+    ],
+    "joined": "Mar 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar1.webp"
+  },
+  {
+    "id": "directory-07",
+    "name": "Jack Walsh",
+    "email": "jack.walsh@example.com",
+    "availability": "Available",
+    "role": "Member",
+    "teamCodes": [
+      "MOBILE",
+      "CX"
+    ],
+    "joined": "Aug 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar1.webp"
+  },
+  {
+    "id": "directory-08",
+    "name": "Jessica Cannon",
+    "email": "jessica.cannon@example.com",
+    "availability": "Available",
+    "role": "Member",
+    "teamCodes": [
+      "CX",
+      "GROWTH"
+    ],
+    "joined": "Sep 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar6.webp"
+  },
+  {
+    "id": "directory-09",
+    "name": "Kim Jihoon",
+    "email": "kim.jihoon@example.com",
+    "availability": "Available",
+    "role": "Member",
+    "teamCodes": [
+      "CX",
+      "PARTNER"
+    ],
+    "joined": "Jun 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar8.webp"
+  },
+  {
+    "id": "directory-10",
+    "name": "Lín Wàngshū",
+    "email": "linwang4@example.com",
+    "availability": "Away",
+    "role": "Member",
+    "teamCodes": [
+      "GROWTH",
+      "PROGRAM"
+    ],
+    "joined": "Jan 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar4.webp"
+  },
+  {
+    "id": "directory-11",
+    "name": "Mariana Reyes",
+    "email": "mariana.reyes@example.com",
+    "availability": "Available",
+    "role": "Member",
+    "teamCodes": [
+      "MOBILE",
+      "FIELD"
+    ],
+    "joined": "Jul 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar10.webp"
+  },
+  {
+    "id": "directory-12",
+    "name": "Rafael Almeida",
+    "email": "rafael.almeida@example.com",
+    "availability": "Away",
+    "role": "Admin",
+    "teamCodes": [
+      "OPS",
+      "TALENT"
+    ],
+    "joined": "Dec 2023",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar11.webp"
+  },
+  {
+    "id": "directory-13",
+    "name": "Rajesh Bhatt",
+    "email": "rajesh.bhatt@example.com",
+    "availability": "Offline",
+    "role": "Member",
+    "teamCodes": [
+      "GROWTH",
+      "PARTNER"
+    ],
+    "joined": "Feb 2025",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar5.webp"
+  },
+  {
+    "id": "directory-14",
+    "name": "Tariq Mansour",
+    "email": "tariq.mansour@example.com",
+    "availability": "Away",
+    "role": "Guest",
+    "teamCodes": [
+      "MOBILE",
+      "FIELD"
+    ],
+    "joined": "Feb 2025",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar14.webp"
+  },
+  {
+    "id": "directory-15",
+    "name": "Vernon Desilets",
+    "email": "vernod@example.com",
+    "availability": "Available",
+    "role": "Member",
+    "teamCodes": [
+      "OPS",
+      "CX",
+      "PROGRAM"
+    ],
+    "joined": "Apr 2024",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar3.webp"
+  },
+  {
+    "id": "directory-16",
+    "name": "Yuki Tanaka",
+    "email": "yuki.tanaka@example.com",
+    "availability": "Offline",
+    "role": "Member",
+    "teamCodes": [
+      "FIELD",
+      "OPS"
+    ],
+    "joined": "Mar 2025",
+    "avatarUrl": "https://www.shadcnblocks.com/image-set/modern/avatars/avatar12.webp"
+  }
+]

@@ -1,0 +1,47 @@
+/* Public Standard preview neutral typography and green-500 action accent. */
+.mf-expandable{--mf-expandable-title:oklch(0.269 0 0);--mf-expandable-text:oklch(0.439 0 0);--mf-expandable-border:oklch(0.922 0 0);--mf-expandable-accent:oklch(0.723 0.219 149.579)}
+.mf-expandable{width:100%;color:var(--mf-expandable-title);font:14px/1.5 Inter,ui-sans-serif,system-ui,sans-serif}
+.mf-expandable *{box-sizing:border-box}
+.mf-expandable__list{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.mf-expandable__trigger{appearance:none;width:100%;display:flex;align-items:center;gap:16px;border:1px solid transparent;border-radius:14px;padding:15px 16px;background:transparent;text-align:left;color:inherit;font:inherit;cursor:pointer;transition:background-color .18s,border-color .18s}
+.mf-expandable__trigger:hover:not(:disabled){background:oklch(0.985 0 0)}
+.mf-expandable__trigger[aria-expanded=true]{background:oklch(0.97 0 0);border-color:#d4d4d4}
+.mf-expandable__trigger:disabled{opacity:.65;cursor:not-allowed}
+.mf-expandable__trigger:focus-visible,.mf-expandable__close:focus-visible{outline:3px solid var(--mf-expandable-text);outline-offset:3px}
+.mf-expandable__icon{display:grid;place-items:center;flex:0 0 48px;height:48px;border:1px solid var(--mf-expandable-border);background:linear-gradient(145deg,#fff,oklch(0.97 0 0));border-radius:12px;color:var(--mf-expandable-text);box-shadow:0 2px 3px #00000010}
+.mf-expandable__icon svg{width:26px;height:26px}
+.mf-expandable__copy{display:grid;gap:3px;min-width:0;flex:1}
+.mf-expandable__title{font-weight:600;overflow-wrap:anywhere}
+.mf-expandable__description{font-size:12px;color:var(--mf-expandable-text)}
+.mf-expandable__meta{font-size:11px;color:var(--mf-expandable-text)}
+.mf-expandable__arrow{width:28px;height:28px;display:grid;place-items:center;border-radius:50%;background:oklch(0.967 0.003 264.542);color:#000;flex-shrink:0}
+.mf-expandable__arrow svg{width:18px;height:18px}
+.mf-expandable__dialog{position:fixed;inset:0;width:100%;height:100dvh;max-width:none;max-height:none;margin:0;border:0;padding:24px;background:transparent;overflow:auto;color:var(--mf-expandable-title);font:14px/1.5 Inter,ui-sans-serif,system-ui,sans-serif}
+.mf-expandable__dialog[open]{display:grid;place-items:center}
+.mf-expandable__dialog:not([open]){display:none}
+.mf-expandable__dialog::backdrop{background:transparent}
+.mf-expandable__scrim{position:fixed;inset:0;background:#0003;pointer-events:auto}
+.mf-expandable__dialog *{box-sizing:border-box}
+.mf-expandable__panel{position:relative;z-index:1;width:min(560px,100%);max-height:calc(100dvh - 48px);overflow:auto;padding:32px;border:1px solid var(--mf-expandable-border);border-radius:22px;background:#fff;box-shadow:0 24px 90px #00000026;transform-origin:center}
+.mf-expandable__close{position:absolute;right:16px;top:16px;width:32px;height:32px;padding:7px;display:grid;place-items:center;border:0;border-radius:50%;background:#fff;color:#000;cursor:pointer}
+.mf-expandable__close:hover{background:oklch(0.97 0 0)}
+.mf-expandable__close svg{width:18px;height:18px}
+.mf-expandable__detail-icon{width:72px;height:72px;border:1px solid var(--mf-expandable-border);border-radius:18px;display:grid;place-items:center;color:var(--mf-expandable-text);background:linear-gradient(140deg,oklch(0.97 0 0),oklch(0.922 0 0));box-shadow:inset 0 1px #fff,0 4px 12px #00000009;margin-bottom:24px}
+.mf-expandable__detail-icon svg{width:36px;height:36px;flex-shrink:0}
+.mf-expandable__detail-icon img,.mf-expandable__icon img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.mf-expandable__heading h2{color:oklch(0.371 0 0);font-size:22px;font-weight:600;letter-spacing:-.6px;margin:0 0 5px}
+.mf-expandable__heading p{font-size:13px;color:var(--mf-expandable-text);margin:0}
+.mf-expandable__content{color:var(--mf-expandable-text);border-top:1px solid var(--mf-expandable-border);margin-top:24px;padding-top:20px}
+.mf-expandable__dialog[data-closing] .mf-expandable__panel{pointer-events:none}
+@media(max-width:520px){.mf-expandable__trigger{padding:12px 8px;gap:11px}
+.mf-expandable__meta{display:none}
+.mf-expandable__dialog{padding:12px}
+.mf-expandable__panel{padding:26px 22px;max-height:calc(100dvh - 24px)}
+.mf-expandable__icon{flex-basis:44px;height:44px}
+}
+@media(prefers-reduced-motion:reduce){.mf-expandable__trigger{transition:none}
+.mf-expandable__dialog::backdrop{backdrop-filter:none}
+}
+
+/* The source list action changes to green on hover; the local arrow shares its trigger. */
+.mf-expandable__trigger:hover:not(:disabled) .mf-expandable__arrow{background:var(--mf-expandable-accent);color:#fff}

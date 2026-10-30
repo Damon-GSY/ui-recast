@@ -1,0 +1,42 @@
+# Forms fidelity audit — 2026-10-30
+
+Scope: **combobox, model-picker, integration-settings**, official public **Clean / light** previews. This report covers these three components only. Source is frozen after the changes below; shared entry points, dependencies, registry/build scripts and other groups were not edited.
+
+## Findings and direct fixes
+
+| Component | Actual reference / baseline difference | Applied change |
+| --- | --- | --- |
+| Combobox | Chip initials are white disks with a 0.5px neutral border and 7px type. Baseline reused the gray row avatar and 6px initials. | Correct chip-only background, border, size and line height; row avatars stay neutral gray. |
+| Combobox | Backspace arm is rgba(0,0,0,.10), with a .5px inset rgba(0,0,0,.27) border. Baseline made it pale blue with a blue border. | Restore the observed neutral arm palette. |
+| Combobox | Focus is a 2px rgba(0,96,226,.35) outline with 1px offset, independent of the thin field shadow. Baseline replaced that shadow with a blue ring. | Separate outline from the three shadow layers, restoring its visible gap. |
+| Combobox | Reference separately expands the chip shell over 260ms and pops the body .6 → 1.05 → 1 over 340ms. Baseline scaled the whole shell .6 → 1 without overshoot. | Separate width/margin and body scale/opacity tracks; preserve intrinsic text width during clipping. Exit shell folds after a 160ms delay rather than immediately shrinking all content. |
+| Combobox / Model Picker | Their font stacks omitted the actual locally installed `Inter Variable` family; fallback produced different widths and letter shapes. | Add the existing family to the owned component and Study CSS. Maya Chen's chip label now measures 64.71875px on both sides. No new font/dependency installed. |
+| Integration Settings | Reference copy feedback changes the green helper text to `Copied to clipboard.`; baseline changed only the button icon. | Replace the status text on successful copy, preserve the reference condition (new and revealed key), and restore the fresh-key reminder after the confirmation hold. Caller-supplied key and copy callback semantics remain intact. |
+
+## Actual four-track observations
+
+**Combobox.** White 420px field, 32px height, 10px white popup, black .88 main text / .45 hints and group headings, neutral .06 hover fill, blue rgba(0,96,226,.765) selected check. Avatar initials are static; check scales in, 260ms chevron reverses. Focus outline is the only blue field halo; there is no moving ambient glow. Inter 13/20 body, 12/16 chips and hints, 10/16 uppercase groups. Popup offset 6px; open y=-4/scale=.98, 240ms; search height transition 300ms. Count rolls and the independent chip shell/body tracks are present. Current aligned screenshots explicitly set both list scroll positions to zero; the older comparison's missing DESIGN heading was a scroll mismatch.
+
+**Model Picker.** White 360×86 composer and 320×337 open popup, neutral three-layer shadow, .06 active row background, inactive rows .45 opacity. O/S/H tile glyphs, Auto star, bulb, globe and check paths match the existing public-rendered SVG evidence. Blue rgba(0,96,226,.765) segments and switches remain blue; no ambient glow was observed. Each segment pulses 1 → 1.6 → 1 over 360ms, with 45ms segment and 70ms column staggering. Name/footer crossfade with blur, footer metrics interpolate; the 420ms numeric interpolation remains a fit. Open opacity 200ms and transform 320ms from y=-4/scale=.96; thinking effort unfolds over 420ms. No source score or business policy was moved into the reusable picker.
+
+**Integration Settings.** Live source and local initial card both measure 560×404.84375 at 1.12 zoom. White card and fields, three-layer .5px shadow border, .88 primary / .45 secondary text; blue switch rgba(0,96,226,.765); valid/check/new-key feedback #1a9a52; fresh key rgba(26,154,82,.08); invalid field rgba(229,72,77,.08), #e5484d text and corresponding .35 outline. Shopify, solid key, clock, eye and copy paths are retained. First generation has a 1.4s white text sweep; regeneration uses a distinct 700ms ring; no ambient glow. Key text enters with a 2px rise/320ms fade, helper text 240ms. Save uses 360ms grid unfolding, full form 420ms plus 260ms opacity, menu 200ms y=-4/scale=.98. No measured palette or geometry defect was found in the initial, invalid or generated surfaces; the missing copy text was the concrete defect corrected.
+
+## Evidence and verification
+
+- Baseline for each component: `evidence/affectui-review/<component>/baseline/` contains pre-edit component code, Study, prior complete local videos and this audit's pre-edit screenshots/computed styles.
+- Official pages: https://www.affectui.com/components/combobox, https://www.affectui.com/components/model-picker, https://www.affectui.com/components/integration-settings.
+- Live snapshots and rendered DOM/computed properties: `reference/current.png`, `reference/current-rendered.json`, `reference/detail.json`; final local equivalents in `replica/`. Only public rendered output and animation effects were inspected. No gated source, bundles, registry bodies or React internals were read.
+- Existing original full lifecycle and midframe sheets were reviewed before edits. A fresh matching full chain is also recorded on both sides in this audit. Raw videos and action timestamps remain in each side's `full-lifecycle.webm` and `video-timeline.json`; crops, overview sheets and native midframes remain beside them.
+- Preview: `node scripts/affectui-review/forms-server.mjs` → http://127.0.0.1:4225/batch/combobox?capture=1 (replace slug for the other two). Independent cache directory, React dedupe, file watching/HMR disabled; one study mounted at a time, no comparison players decoding during recording.
+- Strict TypeScript passed for the six owned component/Study TSX entry points. **44 interaction assertions passed with zero page errors**: 21 Combobox, 14 Model Picker, 9 Integration Settings. Includes single/multiple selection, search, keyboard, focus return, reset, native disabled/empty, caller-owned save/discard, invalid disabling, actual clipboard contents and confirmation text, pending reset cancellation, 320/390px overflow and reduced motion.
+- **5 additional visual regression checks passed** in `combobox/visual-regression.json`: chip avatar, neutral armed palette, separated focus outline, sampled overshoot/settle, and third-chip overflow folding with intrinsic-width bodies.
+- Commands: `forms-combobox-verify.mjs`, `forms-integration-settings-verify.mjs`, `forms-regression.mjs` under `scripts/affectui-review/`. Capture/video scripts with the same prefix are isolated copies of the prior reproducible action chains. No root build was run by this group.
+
+## Limits and remaining deltas
+
+- No 1:1 claim. Clean/light is the verified visual scope; Dark/Classic, unexposed loading states, gated examples and physical touch are not verified.
+- Combobox's body pop is now present, with measured endpoints/durations, but Motion's interpolation and the original Web Animations curve are not established identical. Removal flash and overflow-count choreography remain fitted rather than proven identical. Marketing autoplay is not reproduced.
+- Model Picker footer interpolation/rounding and blur timing remain fitted. Model names and scores are caller-owned demonstration fixtures, not model evaluations.
+- Integration Settings retains the explicit nonfunctional demo key string, 1400ms fitted confirmation hold, and keyboard focus return (the reference may drop focus to the body). Its official 520px stage clips the lowest menu rows and fresh-key/save region; the full card exists in the component, and stage clipping is documented rather than mistaken for missing markup.
+- Native recording is 25fps; the refreshed Combobox reference `keyboard-next` cell and some Model Picker transition cells contain visible screencast corruption. Those cells are not clean comparison evidence; stable PNGs, other transitions and separate rendered trajectories supply the comparison. Repeated frames cannot prove sub-40ms equivalence. Action timestamps are scheduling evidence, not exact first-render phase alignment. No extraction runs alongside recording. Dense rendered measurements supplement short transitions.
+- Shared registry generation, independent-consumer install and full-gallery integration are owned by the parent task. This group's interaction tests are local browser tests, not proof of backend integration or persistence.

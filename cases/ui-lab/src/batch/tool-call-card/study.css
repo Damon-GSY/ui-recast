@@ -1,0 +1,21 @@
+.tool-tabs-study { color: #252529; background: #fafafa; border-radius: 14px; padding: 32px; font-family: Inter, system-ui, sans-serif; max-width: 940px; margin: 0 auto; }
+.tool-tabs-study *, .reading-study * { box-sizing: border-box; }
+.tool-tabs-study header { margin-bottom: 28px; }
+.tool-tabs-study h2 { margin: 8px 0; font-size: 26px; font-weight: 550; letter-spacing: -.7px; }
+.tool-tabs-study header p { color: #737377; font-size: 13px; }
+.tool-tabs-study .tool-tabs-study__eyebrow { font-size: 10px; letter-spacing: 1.4px; }
+.tool-tabs-study__controls { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; font-size: 12px; margin-bottom: 30px; }
+.tool-tabs-study__controls label { display: flex; align-items: center; gap: 6px; }
+.tool-tabs-study__controls select, .tool-tabs-study__controls button, .tool-tabs-study__custom button { font: inherit; padding: 5px 8px; border: 1px solid #ddd; border-radius: 6px; background: white; color: #333; }
+.tool-tabs-study__stage { display: grid; gap: 20px; min-height: 280px; align-content: start; max-width: 700px; margin: 0 auto; }
+.tool-tabs-study__custom { font-size: 13px; padding: 4px 0 10px; }
+.tool-tabs-study__custom h3 { margin-top: 0; font-size: 17px; color: var(--ui-tcc-ink); }
+.tool-tabs-study__custom table { width: 100%; margin: 12px 0; border-collapse: collapse; }
+.tool-tabs-study__custom th, .tool-tabs-study__custom td { padding: 8px; text-align: left; border-bottom: 1px solid var(--ui-tcc-line); }
+.tool-tabs-study__custom output { margin-left: 10px; }
+.tool-tabs-study__events { display: block; margin-top: 22px; font: 11px/1.6 ui-monospace, monospace; white-space: pre-wrap; overflow-wrap: anywhere; color: #85858c; }
+.tool-tabs-study[data-theme=dark] { background: #121214; color: #ececf0; }
+@media(max-width: 600px) { .tool-tabs-study { padding: 18px; } .tool-tabs-study h2 { font-size: 23px; } }
+
+.tool-source-study__frame { width: 460px; max-width: 100%; margin: 32px auto; }
+.tool-source-study__caption { color: #777; font: 12px/20px Inter, sans-serif; }

@@ -1,0 +1,22 @@
+.mf-cards-study{width:100%;font-family:Inter,'Inter Variable',sans-serif;color:#0a0a0a;background:#fff}
+.mf-cards-study *{box-sizing:border-box}
+.mf-cards-study__stage{display:flex;flex-direction:column;align-items:center;min-height:600px;padding:60px 24px 36px}
+.mf-cards-study__stage header{text-align:center;margin-bottom:42px}
+.mf-cards-study__stage header>span{font-size:10px;letter-spacing:1.7px;color:#737373;font-weight:600}
+.mf-cards-study__stage h2{font-size:26px;font-weight:550;letter-spacing:-.8px;margin:12px 0 10px}
+.mf-cards-study__stage header p{font-size:13px;color:#737373;margin:0;line-height:1.6}
+.mf-cards-study__surface{width:min(100%,586px);border:1px solid #e5e5e5;background:#fff;border-radius:17px;padding:24px 20px 17px;box-shadow:0 4px 16px #0000000d}
+.mf-cards-study__label{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:0 5px;margin-bottom:16px;font-size:13px;font-weight:550}
+.mf-cards-study__label small{font-size:10px;font-weight:400;color:#737373}
+.mf-cards-study__shape-label{margin-top:24px;padding-top:20px;border-top:1px solid #e5e5e5}
+.mf-cards-study__selection{display:flex;gap:6px;align-items:center;justify-content:center;font-size:10px;color:#737373;margin-top:18px}
+.mf-cards-study__selection svg{width:13px;height:13px}
+.mf-cards-study__fixtures{margin-top:42px;color:#737373;font-size:10px;text-align:center}
+.mf-cards-study__fixtures>div{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.mf-cards-study__fixtures label{display:flex;gap:5px;align-items:center}
+.mf-cards-study__fixtures input{accent-color:#525252;width:14px;height:14px;cursor:pointer}
+.mf-cards-study__fixtures button{border:1px solid #e5e5e5;border-radius:6px;background:#fff;color:#525252;padding:7px 10px;cursor:pointer;font:inherit}
+.mf-cards-study__fixtures button:hover{background:#f4f4f5}
+.mf-cards-study__fixtures button:focus-visible,.mf-cards-study__fixtures input:focus-visible{outline:2px solid #525252;outline-offset:3px}
+.mf-cards-study__fixtures output{display:block;color:#737373;font-size:10px}
+@media(max-width:480px){.mf-cards-study__stage{padding:36px 16px;min-height:700px}.mf-cards-study__stage h2{font-size:24px}.mf-cards-study__stage header{margin-bottom:30px}.mf-cards-study__surface{padding:18px 10px 16px}.mf-cards-study__label{flex-direction:column;gap:5px}}

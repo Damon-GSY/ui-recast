@@ -1,0 +1,9 @@
+import {useState} from 'react';
+import {Combobox,type ComboboxOption} from '../../components/combobox';
+import './study.css';
+const people:ComboboxOption[]=[
+ ['maya','Maya Chen','Product Designer','Design'],['jonas','Jonas Weber','Design Lead','Design'],['priya','Priya Raman','Brand Designer','Design'],['sara','Sara Okafor','Staff Engineer','Engineering'],['leo','Leo Martins','Frontend','Engineering'],['nina','Nina Petrova','Backend','Engineering'],['tom','Tom Becker','iOS','Engineering'],['elif','Elif Yilmaz','Head of Product','Product'],['daniel','Daniel Kim','Product Manager','Product'],['lucas','Lucas Moreau','Product Analyst','Product']
+].map(([value,label,hint,group])=>({value,label,hint,group,avatar:true}));
+export default function Study(){const [reset,setReset]=useState(0),[value,setValue]=useState<string[]>([]),[mode,setMode]=useState('reference');const capture=new URLSearchParams(location.search).has('capture');
+ return <div className="cbx-study"><div className="cbx-study__controls"><button onClick={()=>{setValue([]);setReset(v=>v+1)}} aria-label="Reset preview">Reset preview</button>{!capture&&<><label>Example <select value={mode} onChange={e=>{setMode(e.target.value);setValue([]);setReset(v=>v+1)}}><option value="reference">Reviewers · source demo</option><option value="single">Single choice · noncreatable</option><option value="empty">Empty options</option><option value="disabled">Disabled</option></select></label><output>{value.length?value.join(', '):'No selection'}</output></>}</div><div className="cbx-study__stage"><div data-capture-root className="cbx-study__root"><Combobox key={reset} options={mode==='empty'?[]:people} value={value} onChange={setValue} label="Reviewers" placeholder="Add reviewers…" multiple={mode==='reference'} creatable={mode==='reference'} createLabel={t=>`Invite “${t}”`} defaultOpen disabled={mode==='disabled'}/></div></div></div>;
+}

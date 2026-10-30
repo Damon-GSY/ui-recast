@@ -1,0 +1,36 @@
+.mf-height-study{font-family:Inter,'Inter Variable',sans-serif;color:#0a0a0a;background:#ffffff;width:100%}
+.mf-height-study *{box-sizing:border-box}
+.mf-height-study__stage{padding:48px 24px 32px;min-height:650px;display:flex;flex-direction:column;align-items:center}
+.mf-height-study__stage header{text-align:center;margin-bottom:36px}
+.mf-height-study__eyebrow{font-size:10px;font-weight:600;letter-spacing:1.7px;color:#737373}
+.mf-height-study__stage h2{font-size:26px;font-weight:550;letter-spacing:-.8px;margin:12px 0 10px}
+.mf-height-study__stage header p{font-size:13px;color:#737373;margin:0;line-height:1.6}
+.mf-height-study__example{width:100%}
+.mf-height-study__card{border:1px solid #e5e5e5;border-radius:15px;background:#ffffff;box-shadow:none}
+.mf-height-study__body{padding:22px;font-size:13px;line-height:1.65}
+.mf-height-study__title{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.mf-height-study__title strong{font-size:14px;font-weight:550}
+.mf-height-study__mark{display:grid;place-items:center;background:#f5f5f5;border:1px solid #e5e5e5;border-radius:9px;width:31px;height:31px;color:#525252}
+.mf-height-study__mark svg{width:21px;height:21px}
+.mf-height-study__body p{margin:0 0 12px;color:#0a0a0a}
+.mf-height-study__details label{display:block;font-size:11px;color:#737373}
+.mf-height-study__details textarea{display:block;width:100%;margin-top:7px;border:1px solid #e5e5e5;border-radius:7px;resize:vertical;min-height:55px;max-height:220px;padding:9px;background:#ffffff;color:#0a0a0a;font:inherit;font-size:12px}
+.mf-height-study__details textarea:focus-visible{outline:2px solid #737373;outline-offset:2px}
+.mf-height-study__note{margin-top:12px;padding:10px;border-top:1px solid #e5e5e5;color:#525252;font-size:12px;display:flex;gap:10px}
+.mf-height-study__note span{color:#737373}
+.mf-height-study__help{position:relative;margin-top:12px}
+.mf-height-study__help>button{background:none;border:0;padding:0;color:#737373;font:inherit;font-size:10px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.mf-height-study__tooltip{position:absolute;top:calc(100% + 12px);left:0;width:min(270px,100%);z-index:3;background:#171717;color:#fff;padding:12px 14px;border-radius:9px;box-shadow:0 6px 16px #00000029;font-size:11px;line-height:1.5}
+.mf-height-study__actions{display:flex;align-items:center;gap:16px;margin-top:16px;position:relative;z-index:0}
+.mf-height-study__actions>button{display:flex;gap:12px;align-items:center;border:1px solid #e5e5e5;border-radius:8px;background:#ffffff;padding:8px 11px;color:#0a0a0a;font:inherit;font-size:11px;cursor:pointer}
+.mf-height-study__actions svg{width:14px;height:14px;transition:transform 250ms ease}
+.mf-height-study__neighbor{font-size:10px;color:#737373}
+.mf-height-study__fixtures{margin-top:64px;text-align:center;color:#737373;font-size:10px}
+.mf-height-study__fixtures>div{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+.mf-height-study__fixtures button{border:1px solid #e5e5e5;background:#ffffff;padding:7px 10px;border-radius:6px;font:inherit;font-size:10px;color:#525252;cursor:pointer}
+.mf-height-study button:focus-visible{outline:2px solid #737373;outline-offset:3px}
+.mf-height-study button:hover:not(:disabled){background:#f5f5f5}
+.mf-height-study__help>button:hover{color:#525252}
+.mf-height-study button:disabled{opacity:1;color:#737373;cursor:not-allowed}
+@media(max-width:480px){.mf-height-study__stage{padding:36px 17px;min-height:650px}.mf-height-study__stage h2{font-size:23px}.mf-height-study__body{padding:18px}.mf-height-study__neighbor{max-width:90px}}
+@media(prefers-reduced-motion:reduce){.mf-height-study__actions svg{transition:none}}

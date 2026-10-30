@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "number-ticker",
+  "type": "registry:ui",
+  "title": "Number Ticker",
+  "dependencies": [
+    "motion@^14.7.1"
+  ],
+  "files": [
+    {
+      "path": "src/components/number-ticker.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/number-ticker.tsx",
+      "content": "import { useEffect, useRef, useState } from 'react';\nimport { animate, useReducedMotion } from 'motion/react';\nimport './number-ticker.css';\n\nexport interface NumberTickerProps {\n  /** Current finite value. The initial value is rendered immediately. */\n  value: number;\n  /** Use for search results and other values that must not interpolate. */\n  immediate?: boolean;\n  duration?: number;\n  decimalPlaces?: number;\n  locale?: string;\n  formatValue?: (value: number) => string;\n  label?: string;\n  className?: string;\n}\n\n/** Interpolates later, low-frequency value changes; never flips individual digits. */\nexport function NumberTicker({ value, immediate = false, duration = .65, decimalPlaces = 0,\n  locale = 'en-US', formatValue, label, className = '' }: NumberTickerProps) {\n  const reducedMotion = useReducedMotion();\n  const [display, setDisplay] = useState(value);\n  const current = useRef(value);\n  const instant = immediate || reducedMotion || duration <= 0;\n  useEffect(() => {\n    if (instant) { current.current = value; setDisplay(value); return; }\n    if (current.current === value) return;\n    const playback = animate(current.current, value, {\n      duration, ease: [.22, 1, .36, 1],\n      onUpdate: next => { current.current = next; setDisplay(next); },\n      onComplete: () => { current.current = value; setDisplay(value); },\n    });\n    return () => playback.stop();\n  }, [value, instant, duration]);\n  const format = formatValue ?? ((number: number) => number.toLocaleString(locale, {\n    minimumFractionDigits: decimalPlaces, maximumFractionDigits: decimalPlaces,\n  }));\n  return <span className={`mf-number-ticker ${className}`} data-number-target={value}>\n    <span aria-hidden=\"true\" data-ticker-value>{format(instant ? value : display)}</span>\n    <span className=\"mf-number-ticker__accessible\">{label ? `${label}: ` : ''}{format(value)}</span>\n  </span>;\n}\n"
+    },
+    {
+      "path": "src/components/number-ticker.css",
+      "type": "registry:file",
+      "target": "components/ui/number-ticker.css",
+      "content": ".mf-number-ticker { display:inline-block; font-variant-numeric:tabular-nums; white-space:nowrap; letter-spacing:-.035em; }\n.mf-number-ticker__accessible { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }\n"
+    }
+  ]
+}

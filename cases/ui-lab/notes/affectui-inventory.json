@@ -1,0 +1,1023 @@
+{
+  "source": "https://www.affectui.com/components",
+  "observedDate": "2026-10-29",
+  "scope": "Full visible library catalogue; categories retained separately",
+  "items": [
+    {
+      "name": "AI Answer",
+      "section": "components",
+      "slug": "ai-answer",
+      "url": "https://www.affectui.com/components/ai-answer",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Chat Composer",
+      "section": "components",
+      "slug": "chat-composer",
+      "url": "https://www.affectui.com/components/chat-composer",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Thinking State",
+      "section": "components",
+      "slug": "thinking-state",
+      "url": "https://www.affectui.com/components/thinking-state",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Writing Assistant",
+      "section": "components",
+      "slug": "writing-assistant",
+      "url": "https://www.affectui.com/components/writing-assistant",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Thinking Loader",
+      "section": "components",
+      "slug": "thinking-loader",
+      "url": "https://www.affectui.com/components/thinking-loader",
+      "status": "partial",
+      "notes": "图像主导试验：八射线、微光、阶段滚动、完成与重启；静态图与公开接口驱动，尚未浏览器验收。"
+    },
+    {
+      "name": "Combobox",
+      "section": "components",
+      "slug": "combobox",
+      "url": "https://www.affectui.com/components/combobox",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Command Menu",
+      "section": "components",
+      "slug": "command-menu",
+      "url": "https://www.affectui.com/components/command-menu",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Date Range Picker",
+      "section": "components",
+      "slug": "date-range-picker",
+      "url": "https://www.affectui.com/components/date-range-picker",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Dropzone",
+      "section": "components",
+      "slug": "dropzone",
+      "url": "https://www.affectui.com/components/dropzone",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "OTP Input",
+      "section": "components",
+      "slug": "otp-input",
+      "url": "https://www.affectui.com/components/otp-input",
+      "status": "partial",
+      "notes": "两套皮肤、错误清空与成功形变；已实测输入/粘贴/键盘/窄屏，Classic 与暗色运动仍待原版对照。"
+    },
+    {
+      "name": "Segmented Control",
+      "section": "components",
+      "slug": "segmented-control",
+      "url": "https://www.affectui.com/components/segmented-control",
+      "status": "partial",
+      "notes": "Clean / Classic 三种形态、明暗主题与同序列采集；扩展接口和完整状态对照尚在进行。"
+    },
+    {
+      "name": "Stepper Form",
+      "section": "components",
+      "slug": "stepper-form",
+      "url": "https://www.affectui.com/components/stepper-form",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Toaster",
+      "section": "components",
+      "slug": "toaster",
+      "url": "https://www.affectui.com/components/toaster",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Usage Meter",
+      "section": "components",
+      "slug": "usage-meter",
+      "url": "https://www.affectui.com/components/usage-meter",
+      "status": "partial",
+      "notes": "官方静态预览与公开API驱动，分类用量、周期、每日图与额度交互；待浏览器和动效对照。"
+    },
+    {
+      "name": "Agent Cursors",
+      "section": "components",
+      "slug": "agent-cursors",
+      "url": "https://www.affectui.com/components/agent-cursors",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Findings",
+      "section": "components",
+      "slug": "agent-findings",
+      "url": "https://www.affectui.com/components/agent-findings",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Graph",
+      "section": "components",
+      "slug": "agent-graph",
+      "url": "https://www.affectui.com/components/agent-graph",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Handoff",
+      "section": "components",
+      "slug": "agent-handoff",
+      "url": "https://www.affectui.com/components/agent-handoff",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Inbox",
+      "section": "components",
+      "slug": "agent-inbox",
+      "url": "https://www.affectui.com/components/agent-inbox",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Lanes",
+      "section": "components",
+      "slug": "agent-lanes",
+      "url": "https://www.affectui.com/components/agent-lanes",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Ledger",
+      "section": "components",
+      "slug": "agent-ledger",
+      "url": "https://www.affectui.com/components/agent-ledger",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Queue",
+      "section": "components",
+      "slug": "agent-queue",
+      "url": "https://www.affectui.com/components/agent-queue",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Steering",
+      "section": "components",
+      "slug": "agent-steering",
+      "url": "https://www.affectui.com/components/agent-steering",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Tree",
+      "section": "components",
+      "slug": "agent-tree",
+      "url": "https://www.affectui.com/components/agent-tree",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Autonomy Dial",
+      "section": "components",
+      "slug": "autonomy-dial",
+      "url": "https://www.affectui.com/components/autonomy-dial",
+      "status": "partial",
+      "notes": "官方静态预览与公开API驱动，三档选择、动作跨组与锁定；图标独立近似，待浏览器和动效对照。"
+    },
+    {
+      "name": "Cited Answer",
+      "section": "components",
+      "slug": "cited-answer",
+      "url": "https://www.affectui.com/components/cited-answer",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Compact Breakdown",
+      "section": "components",
+      "slug": "compact-breakdown",
+      "url": "https://www.affectui.com/components/compact-breakdown",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Conflict Radar",
+      "section": "components",
+      "slug": "conflict-radar",
+      "url": "https://www.affectui.com/components/conflict-radar",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Context Map",
+      "section": "components",
+      "slug": "context-map",
+      "url": "https://www.affectui.com/components/context-map",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Context Window",
+      "section": "components",
+      "slug": "context-window",
+      "url": "https://www.affectui.com/components/context-window",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Decision Tree",
+      "section": "components",
+      "slug": "decision-tree",
+      "url": "https://www.affectui.com/components/decision-tree",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Delegate Board",
+      "section": "components",
+      "slug": "delegate-board",
+      "url": "https://www.affectui.com/components/delegate-board",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Experiment Card",
+      "section": "components",
+      "slug": "experiment-card",
+      "url": "https://www.affectui.com/components/experiment-card",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Fallback Chain",
+      "section": "components",
+      "slug": "fallback-chain",
+      "url": "https://www.affectui.com/components/fallback-chain",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Fan-out Grid",
+      "section": "components",
+      "slug": "fan-out-grid",
+      "url": "https://www.affectui.com/components/fan-out-grid",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Integration Picker",
+      "section": "components",
+      "slug": "integration-picker",
+      "url": "https://www.affectui.com/components/integration-picker",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Integration Settings",
+      "section": "components",
+      "slug": "integration-settings",
+      "url": "https://www.affectui.com/components/integration-settings",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "KPI Chart",
+      "section": "components",
+      "slug": "kpi-chart",
+      "url": "https://www.affectui.com/components/kpi-chart",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Memory Panel",
+      "section": "components",
+      "slug": "memory-panel",
+      "url": "https://www.affectui.com/components/memory-panel",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Message Actions",
+      "section": "components",
+      "slug": "message-actions",
+      "url": "https://www.affectui.com/components/message-actions",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Model Picker",
+      "section": "components",
+      "slug": "model-picker",
+      "url": "https://www.affectui.com/components/model-picker",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Parallel Attempts",
+      "section": "components",
+      "slug": "parallel-attempts",
+      "url": "https://www.affectui.com/components/parallel-attempts",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Permission Request",
+      "section": "components",
+      "slug": "permission-request",
+      "url": "https://www.affectui.com/components/permission-request",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Plan vs Actual",
+      "section": "components",
+      "slug": "plan-vs-actual",
+      "url": "https://www.affectui.com/components/plan-vs-actual",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Profile Menu",
+      "section": "components",
+      "slug": "profile-menu",
+      "url": "https://www.affectui.com/components/profile-menu",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Project Card",
+      "section": "components",
+      "slug": "project-card",
+      "url": "https://www.affectui.com/components/project-card",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Prompt Library",
+      "section": "components",
+      "slug": "prompt-library",
+      "url": "https://www.affectui.com/components/prompt-library",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Review Center",
+      "section": "components",
+      "slug": "review-center",
+      "url": "https://www.affectui.com/components/review-center",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Tips Panel",
+      "section": "components",
+      "slug": "tips-panel",
+      "url": "https://www.affectui.com/components/tips-panel",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Tool Call Card",
+      "section": "components",
+      "slug": "tool-call-card",
+      "url": "https://www.affectui.com/components/tool-call-card",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Trace Waterfall",
+      "section": "components",
+      "slug": "trace-waterfall",
+      "url": "https://www.affectui.com/components/trace-waterfall",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Approval Card",
+      "section": "components",
+      "slug": "approval-card",
+      "url": "https://www.affectui.com/components/approval-card",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Breakdown Chart",
+      "section": "components",
+      "slug": "breakdown-chart",
+      "url": "https://www.affectui.com/components/breakdown-chart",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Button",
+      "section": "components",
+      "slug": "button",
+      "url": "https://www.affectui.com/components/button",
+      "status": "partial",
+      "notes": "两套皮肤、四变体、三尺寸、复制/加载；尺寸已测量，hover/focus 与完整运动仍待对照。"
+    },
+    {
+      "name": "Data Table",
+      "section": "components",
+      "slug": "data-table",
+      "url": "https://www.affectui.com/components/data-table",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Filter Menu",
+      "section": "components",
+      "slug": "filter-menu",
+      "url": "https://www.affectui.com/components/filter-menu",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Reaction Bar",
+      "section": "components",
+      "slug": "reaction-bar",
+      "url": "https://www.affectui.com/components/reaction-bar",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Smart Recommendation",
+      "section": "components",
+      "slug": "smart-recommendation",
+      "url": "https://www.affectui.com/components/smart-recommendation",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Plan",
+      "section": "components",
+      "slug": "agent-plan",
+      "url": "https://www.affectui.com/components/agent-plan",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Billing Schedule",
+      "section": "components",
+      "slug": "billing-schedule",
+      "url": "https://www.affectui.com/components/billing-schedule",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Change Summary",
+      "section": "components",
+      "slug": "change-summary",
+      "url": "https://www.affectui.com/components/change-summary",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Comments Panel",
+      "section": "components",
+      "slug": "comments-panel",
+      "url": "https://www.affectui.com/components/comments-panel",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Email Draft",
+      "section": "components",
+      "slug": "email-draft",
+      "url": "https://www.affectui.com/components/email-draft",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Progress Tracker",
+      "section": "components",
+      "slug": "progress-tracker",
+      "url": "https://www.affectui.com/components/progress-tracker",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Comment Thread",
+      "section": "components",
+      "slug": "comment-thread",
+      "url": "https://www.affectui.com/components/comment-thread",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Inline Diff",
+      "section": "components",
+      "slug": "inline-diff",
+      "url": "https://www.affectui.com/components/inline-diff",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Setup Guide",
+      "section": "components",
+      "slug": "setup-guide",
+      "url": "https://www.affectui.com/components/setup-guide",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Decision Inbox",
+      "section": "components",
+      "slug": "decision-inbox",
+      "url": "https://www.affectui.com/components/decision-inbox",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Notification Stack",
+      "section": "components",
+      "slug": "notification-stack",
+      "url": "https://www.affectui.com/components/notification-stack",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "App Shell Flat",
+      "section": "screens",
+      "slug": "app-shell-flat",
+      "url": "https://www.affectui.com/screens/app-shell-flat",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "App Shell Inset",
+      "section": "screens",
+      "slug": "app-shell",
+      "url": "https://www.affectui.com/screens/app-shell",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "App Shell Workspace Flat",
+      "section": "screens",
+      "slug": "app-shell-workspace-flat",
+      "url": "https://www.affectui.com/screens/app-shell-workspace-flat",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "App Shell Workspace Inset",
+      "section": "screens",
+      "slug": "app-shell-workspace",
+      "url": "https://www.affectui.com/screens/app-shell-workspace",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Assistant Home",
+      "section": "screens",
+      "slug": "assistant-home",
+      "url": "https://www.affectui.com/screens/assistant-home",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Folders",
+      "section": "screens",
+      "slug": "files",
+      "url": "https://www.affectui.com/screens/files",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Folder",
+      "section": "screens",
+      "slug": "folder",
+      "url": "https://www.affectui.com/screens/folder",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Integrations",
+      "section": "screens",
+      "slug": "integrations",
+      "url": "https://www.affectui.com/screens/integrations",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Chat",
+      "section": "screens",
+      "slug": "agent-chat",
+      "url": "https://www.affectui.com/screens/agent-chat",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "CRM",
+      "section": "screens",
+      "slug": "crm",
+      "url": "https://www.affectui.com/screens/crm",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Analytics",
+      "section": "screens",
+      "slug": "analytics",
+      "url": "https://www.affectui.com/screens/analytics",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Run",
+      "section": "screens",
+      "slug": "agent-run",
+      "url": "https://www.affectui.com/screens/agent-run",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Settings & Billing",
+      "section": "screens",
+      "slug": "settings-billing",
+      "url": "https://www.affectui.com/screens/settings-billing",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Onboarding",
+      "section": "screens",
+      "slug": "onboarding",
+      "url": "https://www.affectui.com/screens/onboarding",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Evals",
+      "section": "screens",
+      "slug": "evals",
+      "url": "https://www.affectui.com/screens/evals",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Client Context",
+      "section": "blocks",
+      "slug": "client-context",
+      "url": "https://www.affectui.com/blocks/client-context",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Invoice & Credit Note",
+      "section": "blocks",
+      "slug": "invoice-credit",
+      "url": "https://www.affectui.com/blocks/invoice-credit",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Logo Marquee",
+      "section": "blocks",
+      "slug": "logo-marquee",
+      "url": "https://www.affectui.com/blocks/logo-marquee",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Metrics Dashboard",
+      "section": "blocks",
+      "slug": "metrics-dashboard",
+      "url": "https://www.affectui.com/blocks/metrics-dashboard",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Pricing Plans",
+      "section": "blocks",
+      "slug": "pricing-plans",
+      "url": "https://www.affectui.com/blocks/pricing-plans",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Task Board",
+      "section": "blocks",
+      "slug": "task-board",
+      "url": "https://www.affectui.com/blocks/task-board",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Testimonial Wall",
+      "section": "blocks",
+      "slug": "testimonial-wall",
+      "url": "https://www.affectui.com/blocks/testimonial-wall",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "AI Workspace",
+      "section": "blocks",
+      "slug": "ai-workspace",
+      "url": "https://www.affectui.com/blocks/ai-workspace",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "App Directory",
+      "section": "blocks",
+      "slug": "app-directory",
+      "url": "https://www.affectui.com/blocks/app-directory",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "KPI Board",
+      "section": "blocks",
+      "slug": "kpi-board",
+      "url": "https://www.affectui.com/blocks/kpi-board",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Gallery",
+      "section": "blocks",
+      "slug": "agent-gallery",
+      "url": "https://www.affectui.com/blocks/agent-gallery",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Cover Flow",
+      "section": "illustrations",
+      "slug": "cover-flow",
+      "url": "https://www.affectui.com/illustrations/cover-flow",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Frost Cloud",
+      "section": "illustrations",
+      "slug": "frost-cloud",
+      "url": "https://www.affectui.com/illustrations/frost-cloud",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Glow Cloud",
+      "section": "illustrations",
+      "slug": "glow-cloud",
+      "url": "https://www.affectui.com/illustrations/glow-cloud",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Glow Keyboard",
+      "section": "illustrations",
+      "slug": "glow-keyboard",
+      "url": "https://www.affectui.com/illustrations/glow-keyboard",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Integration Beam",
+      "section": "illustrations",
+      "slug": "integration-beam",
+      "url": "https://www.affectui.com/illustrations/integration-beam",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Logo Cluster",
+      "section": "illustrations",
+      "slug": "logo-cluster",
+      "url": "https://www.affectui.com/illustrations/logo-cluster",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Model Wheel",
+      "section": "illustrations",
+      "slug": "model-wheel",
+      "url": "https://www.affectui.com/illustrations/model-wheel",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Project Flow",
+      "section": "illustrations",
+      "slug": "project-flow",
+      "url": "https://www.affectui.com/illustrations/project-flow",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "DACH Region",
+      "section": "illustrations",
+      "slug": "region-dach",
+      "url": "https://www.affectui.com/illustrations/region-dach",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Empty Calendar",
+      "section": "illustrations",
+      "slug": "empty-calendar",
+      "url": "https://www.affectui.com/illustrations/empty-calendar",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Integration Flow",
+      "section": "illustrations",
+      "slug": "integration-flow",
+      "url": "https://www.affectui.com/illustrations/integration-flow",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Voice Orb",
+      "section": "illustrations",
+      "slug": "voice-orb",
+      "url": "https://www.affectui.com/illustrations/voice-orb",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Tab Overload",
+      "section": "illustrations",
+      "slug": "tab-overload",
+      "url": "https://www.affectui.com/illustrations/tab-overload",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "World Map Continental",
+      "section": "illustrations",
+      "slug": "world-map",
+      "url": "https://www.affectui.com/illustrations/world-map",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Ghosted Chat",
+      "section": "illustrations",
+      "slug": "ghosted-chat",
+      "url": "https://www.affectui.com/illustrations/ghosted-chat",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Lead Sourcing",
+      "section": "illustrations",
+      "slug": "lead-sourcing",
+      "url": "https://www.affectui.com/illustrations/lead-sourcing",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Enrichment Orbit",
+      "section": "illustrations",
+      "slug": "enrichment-orbit",
+      "url": "https://www.affectui.com/illustrations/enrichment-orbit",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Outreach Branches",
+      "section": "illustrations",
+      "slug": "outreach-branches",
+      "url": "https://www.affectui.com/illustrations/outreach-branches",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Glass Folder",
+      "section": "illustrations",
+      "slug": "glass-folder",
+      "url": "https://www.affectui.com/illustrations/glass-folder",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Side Folder",
+      "section": "illustrations",
+      "slug": "side-folder",
+      "url": "https://www.affectui.com/illustrations/side-folder",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Team Invite",
+      "section": "illustrations",
+      "slug": "team-invite",
+      "url": "https://www.affectui.com/illustrations/team-invite",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Layer Stack",
+      "section": "illustrations",
+      "slug": "layer-stack",
+      "url": "https://www.affectui.com/illustrations/layer-stack",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Agent Team",
+      "section": "illustrations",
+      "slug": "agent-team",
+      "url": "https://www.affectui.com/illustrations/agent-team",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Integration Grid",
+      "section": "illustrations",
+      "slug": "integration-grid",
+      "url": "https://www.affectui.com/illustrations/integration-grid",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Blur Crossfade",
+      "section": "motion",
+      "slug": "blur-crossfade",
+      "url": "https://www.affectui.com/motion/blur-crossfade",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Gradient Floor",
+      "section": "motion",
+      "slug": "gradient-floor",
+      "url": "https://www.affectui.com/motion/gradient-floor",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Gradient Text",
+      "section": "motion",
+      "slug": "gradient-text",
+      "url": "https://www.affectui.com/motion/gradient-text",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Grid Background",
+      "section": "motion",
+      "slug": "grid-background",
+      "url": "https://www.affectui.com/motion/grid-background",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Number Ticker",
+      "section": "motion",
+      "slug": "number-ticker",
+      "url": "https://www.affectui.com/motion/number-ticker",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Shimmer Loader",
+      "section": "motion",
+      "slug": "shimmer-loader",
+      "url": "https://www.affectui.com/motion/shimmer-loader",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Text Reveal",
+      "section": "motion",
+      "slug": "text-reveal",
+      "url": "https://www.affectui.com/motion/text-reveal",
+      "status": "not-started",
+      "notes": ""
+    },
+    {
+      "name": "Tilt Card",
+      "section": "motion",
+      "slug": "tilt-card",
+      "url": "https://www.affectui.com/motion/tilt-card",
+      "status": "not-started",
+      "notes": ""
+    }
+  ]
+}

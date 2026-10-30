@@ -1,0 +1,63 @@
+.agent-graph-study {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  color: #242424;
+  font-family: 'Inter Variable', Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.agent-graph-study__heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+.agent-graph-study__eyebrow { margin: 0 0 8px; font-size: 10px; letter-spacing: .12em; color: #81817c; }
+.agent-graph-study__heading h2 { margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -.8px; }
+.agent-graph-study__heading > p { margin: 0; color: #777; }
+.agent-graph-study__toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+.agent-graph-study__switch { display: flex; flex-wrap: wrap; gap: 3px; padding: 3px; border: 1px solid #e3e3df; border-radius: 8px; background: #f5f5f3; }
+.agent-graph-study__button { padding: 7px 11px; border: 1px solid #dcdcd7; border-radius: 6px; background: #fff; color: #393936; font: inherit; font-size: 12px; cursor: pointer; }
+.agent-graph-study__switch .agent-graph-study__button { border-color: transparent; background: transparent; }
+.agent-graph-study__switch .agent-graph-study__button[aria-pressed="true"] { border-color: #dcdcd7; background: #fff; color: #202020; }
+.agent-graph-study__toolbar > .agent-graph-study__replay { margin-left: auto; }
+.agent-graph-study__button:disabled { opacity: .4; cursor: default; }
+.agent-graph-study__button:not(:disabled):hover { background: #f2f2ef; }
+.agent-graph-study__button:focus-visible, .agent-graph-study__transport select:focus-visible, .agent-graph-study__scrubber input:focus-visible { outline: 2px solid #718664; outline-offset: 3px; }
+.agent-graph-study__panel { min-width: 0; margin: 0; border: 1px solid #e3e3df; border-radius: 12px; background: #fff; }
+.agent-graph-study__panel figcaption, .agent-graph-study__panel-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 12px; min-height: 46px; padding: 12px 16px; border-bottom: 1px solid #ededeb; }
+.agent-graph-study__panel figcaption span, .agent-graph-study__panel-heading span { color: #777770; font-size: 11px; }
+.agent-graph-study__scene { padding: 28px 24px; background: #fafafa; border-radius: 0 0 12px 12px; }
+/* Preserve the component's natural scale; narrow containers reflow its layout. */
+.agent-graph-study__live { width: 756px; max-width: 100%; margin: 0 auto; }
+.agent-graph-study__recordings { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; align-items: start; }
+.agent-graph-study__view { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: #777770; font-size: 12px; }
+.agent-graph-study__recordings[data-compare] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.agent-graph-study__video-scene { position: relative; min-height: 240px; padding: 16px; background: #fafafa; border-radius: 0 0 12px 12px; }
+.agent-graph-study__video-scene video { display: block; width: 756px; max-width: 100%; height: auto; object-fit: contain; object-position: left top; }
+.agent-graph-study__video-message { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 24px; background: #fafafa; border-radius: 0 0 12px 12px; color: #777; font-size: 12px; text-align: center; }
+.agent-graph-study__transport { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding: 16px 0; }
+.agent-graph-study__transport label { display: flex; align-items: center; gap: 8px; color: #6f6f69; font-size: 12px; }
+.agent-graph-study__transport select { padding: 6px 8px; border: 1px solid #dcdcd7; border-radius: 6px; background: #fff; color: #393936; font: inherit; }
+.agent-graph-study__transport output { margin-left: auto; color: #777770; font-size: 12px; font-variant-numeric: tabular-nums; }
+.agent-graph-study__scrubber { padding: 16px; border: 1px solid #e3e3df; border-radius: 10px; background: #fff; }
+.agent-graph-study__scrubber > label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; font-size: 12px; }
+.agent-graph-study__scrubber > label span { color: #777770; }
+.agent-graph-study__scrubber > input { display: block; width: 100%; margin: 16px 0; accent-color: #718664; }
+.agent-graph-study__bookmarks { display: flex; flex-wrap: wrap; gap: 8px; }
+.agent-graph-study__bookmarks .agent-graph-study__button { display: flex; gap: 8px; text-align: left; }
+.agent-graph-study__bookmarks span { color: #777770; font-variant-numeric: tabular-nums; }
+.agent-graph-study__observations { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; padding-top: 24px; border-top: 1px solid #e3e3df; }
+.agent-graph-study__observations article > span { color: #81817c; font-size: 10px; letter-spacing: .08em; }
+.agent-graph-study__observations h3 { margin: 10px 0 8px; font-size: 13px; font-weight: 500; }
+.agent-graph-study__observations p { margin: 0; color: #777770; font-size: 12px; line-height: 1.8; }
+.agent-graph-study__note { margin: 20px 0 0; color: #777770; font-size: 12px; line-height: 1.8; }
+.agent-graph-study--capture { width: 756px; max-width: 100%; padding: 0; }
+.agent-graph-study__capture-controls { margin-top: 20px; }
+@media (max-width: 760px) {
+  .agent-graph-study__heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .agent-graph-study__recordings[data-compare], .agent-graph-study__observations { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .agent-graph-study { padding: 24px 16px; }
+  .agent-graph-study__scene { padding: 20px 12px; }
+  .agent-graph-study__toolbar > .agent-graph-study__replay { margin-left: 0; }
+  .agent-graph-study__panel figcaption, .agent-graph-study__panel-heading { padding-inline: 12px; }
+  .agent-graph-study--capture { padding: 0; }
+}

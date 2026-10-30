@@ -1,0 +1,10 @@
+.integration-study{width:100%;color:#222;background:#fcfcfc;font-family:Inter,'Inter Variable',sans-serif}
+.integration-study__stage{box-sizing:border-box;width:min(894px,100%);height:520px;margin:0 auto;padding:44px;display:grid;place-items:center;align-content:normal;border:1px solid #e1e1e1;border-radius:18px;background:#f9f9f9;overflow:hidden}
+.integration-study__stage>.integration-settings{zoom:1.12}
+.integration-study__controls{max-width:780px;margin:285px auto 32px;padding:20px;border-top:1px solid #ddd;font-size:13px;line-height:1.6}
+.integration-study__controls>button{padding:8px 12px;background:white;border:1px solid #ddd;border-radius:8px;cursor:pointer}
+.integration-study__controls label{display:flex;align-items:center;gap:12px;margin-top:16px}
+.integration-study__controls input{flex:1;min-width:0;padding:7px 10px;border:1px solid #ddd;border-radius:6px;font-family:monospace}
+.integration-study__controls p{color:#666;margin-bottom:6px}
+.integration-study__controls output{font-size:12px;color:#666}
+@media(max-width:650px){.integration-study__stage{width:calc(100% - 32px);height:450px;padding:51px 15px}.integration-study__stage>.integration-settings{zoom:1;width:100%}.integration-study__controls{padding:12px}}

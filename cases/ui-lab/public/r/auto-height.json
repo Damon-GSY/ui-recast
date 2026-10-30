@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "auto-height",
+  "type": "registry:ui",
+  "title": "Auto Height",
+  "dependencies": [
+    "motion@^14.7.1"
+  ],
+  "files": [
+    {
+      "path": "src/components/auto-height.tsx",
+      "type": "registry:ui",
+      "target": "components/ui/auto-height.tsx",
+      "content": "'use client';\n\nimport { useLayoutEffect, useRef, type HTMLAttributes, type ReactNode } from 'react';\nimport { animate, useReducedMotion, type AnimationPlaybackControls } from 'motion/react';\nimport './auto-height.css';\n\nexport interface AutoHeightProps extends HTMLAttributes<HTMLDivElement> {\n  children: ReactNode;\n  /** Optional disclosure mode. Children stay mounted; the caller owns aria-hidden/inert. */\n  collapsed?: boolean;\n  contentClassName?: string;\n}\n\n/** Observes natural content size, including font, image and width changes.\n * Height and overflow on the outer element are owned by this component.\n * Idle expanded content is unclipped; initial content does not animate from zero.\n */\nexport function AutoHeight({ children, collapsed = false, className = '', contentClassName = '', ...props }: AutoHeightProps) {\n  const outer = useRef<HTMLDivElement>(null);\n  const inner = useRef<HTMLDivElement>(null);\n  const animation = useRef<AnimationPlaybackControls | null>(null);\n  const previous = useRef<number | null>(null);\n  const measure = useRef<() => void>(() => {});\n  const reduced = useReducedMotion();\n  const latest = useRef({ collapsed, reduced });\n  latest.current = { collapsed, reduced };\n\n  useLayoutEffect(() => {\n    const element = outer.current!;\n    const content = inner.current!;\n    let generation = 0;\n    const settle = (isCollapsed: boolean) => {\n      element.style.height = isCollapsed ? '0px' : 'auto';\n      element.style.overflow = isCollapsed ? 'hidden' : 'visible';\n      element.dataset.animating = 'false';\n      animation.current = null;\n    };\n    measure.current = () => {\n      const { collapsed: isCollapsed, reduced: reduce } = latest.current;\n      const style = getComputedStyle(element);\n      const chrome = ['paddingTop', 'paddingBottom', 'borderTopWidth', 'borderBottomWidth']\n        .reduce((sum, key) => sum + (parseFloat(style[key as keyof CSSStyleDeclaration] as string) || 0), 0);\n      const contentHeight = content.getBoundingClientRect().height;\n      const target = isCollapsed ? 0 : contentHeight + chrome;\n      // The disclosure's mask follows natural content height, not its animated\n      // clipping box. At full height its fade reaches beyond the last pixel.\n      element.style.setProperty('--mf-auto-height-content', `${contentHeight}px`);\n      if (previous.current === target && !reduce) return;\n      const from = animation.current ? element.getBoundingClientRect().height : previous.current;\n      const token = ++generation;\n      animation.current?.stop();\n      previous.current = target;\n      if (from === null || reduce || Math.abs(from - target) < 0.1) {\n        settle(isCollapsed);\n        return;\n      }\n      element.style.height = `${from}px`;\n      element.style.overflow = 'hidden';\n      element.dataset.animating = 'true';\n      animation.current = animate(element, { height: target }, {\n        type: 'spring', stiffness: 300, damping: 30, restDelta: 0.1,\n        onComplete: () => { if (token === generation) settle(isCollapsed); },\n      });\n    };\n    measure.current();\n    const observer = new ResizeObserver(() => measure.current());\n    observer.observe(content);\n    return () => {\n      generation++;\n      observer.disconnect();\n      animation.current?.stop();\n      animation.current = null;\n      previous.current = null;\n      measure.current = () => {};\n    };\n  }, []);\n\n  // React-driven updates are measured before paint; ResizeObserver covers all others.\n  useLayoutEffect(() => { measure.current(); });\n\n  return <div {...props} ref={outer} className={`mf-auto-height ${className}`} data-collapsed={collapsed || undefined}>\n    <div ref={inner} className={`mf-auto-height__content ${contentClassName}`}>{children}</div>\n  </div>;\n}\n"
+    },
+    {
+      "path": "src/components/auto-height.css",
+      "type": "registry:file",
+      "target": "components/ui/auto-height.css",
+      "content": ".mf-auto-height{color:var(--mf-auto-height-ink,#0a0a0a);box-sizing:border-box;min-width:0;overflow:visible}\n.mf-auto-height__content{display:flow-root;min-width:0}\n.mf-auto-height[data-collapsed=\"true\"]{height:0;overflow:hidden}\n@media(prefers-reduced-motion:reduce){.mf-auto-height{scroll-behavior:auto}}\n"
+    }
+  ]
+}

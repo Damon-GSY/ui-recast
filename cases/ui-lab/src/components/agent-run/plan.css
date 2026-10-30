@@ -1,0 +1,87 @@
+.ar-plan {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  padding: 4px;
+  border-radius: 20px;
+  background: #f4f4f4;
+  color: #6b6b6b;
+  font-family: Inter, 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: -.006em;
+  container-type: inline-size;
+}
+.ar-plan *, .ar-plan *::before, .ar-plan *::after { box-sizing: border-box; }
+.ar-plan__card { min-width: 0; border-radius: 16px; background: #fff; box-shadow: 0 0 0 1px #ececec, 0 1px 2px #0000000a; }
+.ar-plan__head { display: grid; gap: 4px; padding: 16px 18px 8px; }
+.ar-plan__meta { display: flex; gap: 10px; color: #8a8a8a; font-size: 12.5px; line-height: 18px; }
+.ar-plan__state { display: inline-flex; align-items: center; gap: 7px; }
+.ar-plan__state-icon { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.ar-plan__title { margin: 0; color: #171717; font-size: 14px; font-weight: 600; line-height: 20px; letter-spacing: -.012em; overflow-wrap: anywhere; }
+.ar-plan__list { list-style: none; margin: 0; padding: 2px 6px 6px; outline: none; }
+.ar-plan__step { position: relative; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; align-items: start; column-gap: 12px; padding: 10px 10px 10px 14px; border-radius: 10px; outline: none; transition: background-color .16s, box-shadow .2s; }
+.ar-plan__marker { position: relative; z-index: 1; justify-self: center; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 999px; background: #fff; color: #8a8a8a; box-shadow: inset 0 0 0 1px #ececec; font-size: 11px; font-weight: 500; line-height: 11px; transition: background-color .32s, color .32s, box-shadow .32s; }
+.ar-plan__step[data-step='active'] .ar-plan__marker { color: #171717; box-shadow: none; }
+.ar-plan__step[data-step='done'] .ar-plan__marker { color: #171717; background: #f4f4f4; box-shadow: none; }
+.ar-plan__step[data-step='error'] .ar-plan__marker { color: #c2331f; background: #fdf3f1; box-shadow: inset 0 0 0 1px #c2331f52; }
+.ar-plan__step[data-step='skipped'] .ar-plan__marker { box-shadow: none; background: #f4f4f4; }
+.ar-plan__spinner { display: block; width: 13px; height: 13px; animation: ar-plan-pop .36s cubic-bezier(.22, 1, .36, 1) both; }
+.ar-plan__spinner line { stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; animation: ar-plan-ray .8s linear infinite; }
+.ar-plan__mark { width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; animation: ar-plan-pop .36s cubic-bezier(.22, 1, .36, 1) both; }
+.ar-plan__draw { stroke-dasharray: 1; stroke-dashoffset: 1; animation: ar-plan-draw .42s cubic-bezier(.22, 1, .36, 1) .08s forwards; }
+.ar-plan__main { min-width: 0; display: grid; gap: 2px; }
+.ar-plan__name { min-width: 0; font-weight: 500; overflow-wrap: anywhere; transition: color .3s; }
+.ar-plan__step[data-step='active'] .ar-plan__name, .ar-plan__step[data-step='done'] .ar-plan__name, .ar-plan__step[data-step='error'] .ar-plan__name { color: #171717; }
+.ar-plan__sub { display: flex; flex-wrap: wrap; align-items: center; gap: 3px 8px; color: #8a8a8a; font-size: 12.5px; line-height: 18px; }
+.ar-plan__detail { overflow-wrap: anywhere; }
+.ar-plan__tool { max-width: 100%; padding: 1px 6px; border-radius: 6px; background: #f3f3f3; color: #555; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 11px; font-weight: 400; line-height: 16px; letter-spacing: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ar-plan__fail { display: grid; justify-items: start; gap: 8px; margin-top: 4px; animation: ar-plan-fade .36s cubic-bezier(.22, 1, .36, 1) both; }
+.ar-plan__error { color: #c2331f; font-size: 12.5px; line-height: 18px; overflow-wrap: anywhere; }
+.ar-plan__retry { display: flex; align-items: center; justify-content: center; gap: 6px; height: 28px; padding: 0 10px 0 9px; border: 0; border-radius: 8px; background: #fff; color: #171717; box-shadow: inset 0 0 0 1px #ececec, 0 1px 2px #0000000a; font: inherit; font-size: 12.5px; font-weight: 500; line-height: 19px; letter-spacing: inherit; cursor: pointer; transition: background-color .16s, transform .16s cubic-bezier(.22, 1, .36, 1); }
+.ar-plan__retry svg { display: block; width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.ar-plan__retry:hover:not(:disabled) { background: #f7f7f7; }
+.ar-plan__retry:active:not(:disabled) { transform: scale(.97); }
+.ar-plan__retry:focus-visible { outline: 2px solid #85858f; outline-offset: 2px; }
+.ar-plan__retry:disabled { opacity: .45; cursor: default; }
+.ar-plan__aside { min-height: 20px; display: flex; align-items: center; color: #8a8a8a; font-size: 12.5px; }
+.ar-plan__time { color: #171717; white-space: nowrap; font-variant-numeric: tabular-nums; animation: ar-plan-fade .3s both; }
+.ar-plan__time--done { color: #8a8a8a; }
+.ar-plan__rail { position: absolute; top: 35px; bottom: -5px; left: 24.5px; width: 1px; background: #ececec; pointer-events: none; transition: opacity .3s .24s; }
+.ar-plan__rail::after { content: ''; position: absolute; inset: 0; background: #c4c4c8; transform: scaleY(0); transform-origin: top; transition: transform .56s cubic-bezier(.22, 1, .36, 1); }
+.ar-plan__step[data-step='done'] .ar-plan__rail::after { transform: scaleY(1); }
+.ar-plan__foot { min-height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 6px 0 12px; color: #8a8a8a; font-size: 12.5px; animation: ar-plan-fade .32s cubic-bezier(.22, 1, .36, 1) both; }
+.ar-plan__status { display: inline-flex; align-items: center; gap: 8px; color: #171717; }
+.ar-plan__status-icon, .ar-plan__status-icon > svg { display: block; flex: 0 0 13px; width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.ar-plan__foot[data-phase='error'] .ar-plan__status, .ar-plan__foot[data-phase='denied'] .ar-plan__status, .ar-plan__foot[data-phase='stopped'] .ar-plan__status { color: #c2331f; }
+.ar-plan__elapsed { margin-left: auto; padding-right: 6px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ar-plan__edit { display: block; min-width: 0; width: calc(100% + 14px); height: 28px; padding: 0 6px; border: 0; border-radius: 6px; margin: -4.5px -7px; outline: none; box-shadow: 0 0 0 .5px #0060e259, 0 0 0 3px #0060e21a; background: #fff; color: #171717; font: inherit; font-weight: 500; letter-spacing: inherit; line-height: 19px; }
+.ar-plan__remove { display: grid; place-items: center; width: 24px; height: 24px; margin: -2px 0; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #8a8a8a; cursor: pointer; opacity: 0; transition: opacity .16s, background-color .16s, color .16s; }
+.ar-plan__remove svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+.ar-plan__remove:hover { color: #171717; background: #eaeaea; }
+.ar-plan__grip { position: absolute; top: 12px; left: 3px; width: 13px; height: 16px; opacity: 0; color: #8a8a8a; cursor: grab; transition: opacity .16s; }
+.ar-plan__grip:active { cursor: grabbing; }
+.ar-plan__grip svg { display: block; width: 13px; height: 16px; fill: currentColor; }
+.ar-plan[data-editable] .ar-plan__step:hover { background: #f7f7f7; }
+.ar-plan[data-editable] .ar-plan__step:hover .ar-plan__remove, .ar-plan[data-editable] .ar-plan__step:focus-within .ar-plan__remove,
+.ar-plan[data-editable] .ar-plan__step:hover .ar-plan__grip, .ar-plan[data-editable] .ar-plan__step:focus-within .ar-plan__grip { opacity: 1; }
+.ar-plan__step:focus-visible, .ar-plan__remove:focus-visible, .ar-plan__list:focus-visible { outline: 2px solid #85858f; outline-offset: 2px; }
+.ar-plan__sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@keyframes ar-plan-ray { from { opacity: 1; } to { opacity: .18; } }
+@keyframes ar-plan-pop { from { opacity: 0; transform: scale(.5); } to { opacity: 1; transform: none; } }
+@keyframes ar-plan-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes ar-plan-fade { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+@container (max-width: 332px) {
+  .ar-plan__head { padding-inline: 12px; }
+  .ar-plan__step { column-gap: 8px; padding-left: 8px; padding-right: 6px; }
+  .ar-plan__rail { left: 18.5px; }
+  .ar-plan__grip { left: -1px; }
+}
+@media (hover: none) { .ar-plan__remove, .ar-plan__grip { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .ar-plan *, .ar-plan *::before, .ar-plan *::after { animation: none !important; transition: none !important; }
+  .ar-plan__draw { stroke-dashoffset: 0; }
+  .ar-plan__spinner line { opacity: .6; }
+}

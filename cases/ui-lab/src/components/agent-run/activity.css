@@ -1,0 +1,116 @@
+.ar-activity {
+  width: 100%;
+  margin-top: 28px;
+  min-width: 0;
+  color: #404040;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18.571px;
+}
+.ar-activity *, .ar-activity *::before, .ar-activity *::after { box-sizing: border-box; }
+.ar-activity-heading { display: block; margin: 0; padding: 0 0 14px; color: #a3a3a3; font-size: 12.5px; font-weight: 500; line-height: 16px; }
+.ar-activity-entry { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 0 0 20px 34px; animation: ar-activity-rise .42s cubic-bezier(.22,1,.36,1) both; }
+.ar-activity-entry::before { content: ''; position: absolute; left: 11px; top: 26px; bottom: 4px; width: 1px; background: #ebebeb; }
+.ar-activity-entry-head { display: flex; align-items: center; min-height: 22px; color: #171717; font-size: 13.5px; font-weight: 500; }
+.ar-activity-number { position: absolute; top: 0; left: 0; display: grid; place-items: center; width: 23px; height: 23px; border-radius: 50%; box-shadow: inset 0 0 0 1px #ebebeb; background: #fff; color: #737373; font-size: 11.5px; font-weight: 500; transition: background-color .2s, color .2s; }
+.ar-activity-number[data-done] { color: #171717; background: #f5f5f5; box-shadow: none; }
+.ar-activity-note { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #737373; }
+.ar-activity-note[data-state="waiting"] { color: #b45309; }
+.ar-activity-note[data-state="error"] { color: #b91c1c; }
+.ar-activity-note[data-state="approved"] { color: #15803d; }
+.ar-activity-note[data-state="approved"] .ar-tool-check { stroke: currentColor; }
+.ar-activity-stopped { display: flex; align-items: center; gap: 7px; margin-left: 34px; color: #737373; font-size: 13px; }
+.ar-tool-glyph { display: block; width: 14px; height: 14px; flex: none; }
+.ar-tool-group { min-width: 0; font-size: 13.5px; line-height: 1.4; letter-spacing: -.006em; }
+.ar-activity button { appearance: none; -webkit-tap-highlight-color: transparent; cursor: pointer; font-family: inherit; letter-spacing: inherit; text-align: left; }
+.ar-activity button:focus-visible { outline: 2px solid #a3a3a3; outline-offset: 3px; }
+.ar-tool-group-head { display: flex; align-items: center; gap: 9px; max-width: 100%; min-height: 36px; border: 0; border-radius: 10px; padding: 4px 10px 4px 5px; background: transparent; color: #6b6b6b; font-size: 13.5px; font-weight: 400; line-height: 1.4; transition: background-color .16s, color .16s; }
+.ar-tool-group-head:hover { color: #171717; background: #f5f5f5; }
+.ar-tool-stack { display: flex; align-items: center; flex: none; }
+.ar-tool-icon { display: grid; place-items: center; flex: none; width: 26px; height: 26px; border-radius: 7px; background: #f5f5f5; color: #171717; box-shadow: inset 0 0 0 1px #e7e7e7; }
+.ar-tool-icon > svg { display: block; width: 14px; height: 14px; }
+.ar-tool-stack .ar-tool-icon { width: 24px; height: 24px; box-shadow: inset 0 0 0 1px #e7e7e7, 0 0 0 2px #fff; animation: ar-tool-pop .42s cubic-bezier(.22,1,.36,1) both; }
+.ar-tool-stack .ar-tool-icon + .ar-tool-icon { margin-left: -5px; }
+.ar-tool-group-title { display: flex; align-items: center; gap: 5px; min-width: 0; animation: ar-tool-in .36s cubic-bezier(.22,1,.36,1) both; }
+.ar-tool-group-label { position: relative; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ar-tool-group[data-working] .ar-tool-group-label { font-weight: 500; }
+.ar-tool-group-fail { color: #b91c1c; white-space: nowrap; }
+.ar-tool-group-time { color: #8a8a8a; flex: none; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ar-tool-chevron { flex: none; width: 14px; height: 14px; fill: none; stroke: #8a8a8a; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: transform .36s cubic-bezier(.22,1,.36,1); }
+.ar-tool-group-head[aria-expanded="true"] > .ar-tool-chevron, .ar-tool-head[aria-expanded="true"] > .ar-tool-chevron { transform: rotate(180deg); }
+.ar-tool-body { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .38s cubic-bezier(.22,1,.36,1), opacity .24s; }
+.ar-tool-body[data-open] { grid-template-rows: 1fr; opacity: 1; }
+.ar-tool-clip { min-height: 0; overflow: hidden; }
+.ar-tool-list { display: grid; gap: 8px; padding-top: 8px; }
+.ar-tool { position: relative; min-width: 0; color: #6b6b6b; background: #fff; border-radius: 12px; box-shadow: inset 0 0 0 1px #e7e7e7, 0 1px 2px #0000000a; font-size: 13px; line-height: 1.4; letter-spacing: -.006em; }
+.ar-tool-head { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px; padding: 6px 10px 6px 9px; border: 0; border-radius: 12px; background: transparent; color: inherit; font-size: 13px; font-weight: 400; line-height: 1.4; transition: background-color .16s; }
+.ar-tool-head:hover { background: #fafafa; }
+.ar-tool[data-open] > .ar-tool-head { border-radius: 12px 12px 0 0; background: #fafafa; }
+.ar-tool-main { display: flex; align-items: baseline; gap: 8px; min-width: 0; flex: 1; }
+.ar-tool-name { min-width: 0; flex: 0 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #171717; font: 500 12.5px/1.4 ui-monospace, "SF Mono", Menlo, monospace; }
+.ar-tool-summary { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ar-tool-status { display: flex; align-items: center; gap: 6px; flex: none; color: #8a8a8a; font-size: 12.5px; line-height: 1.4; animation: ar-tool-in .36s cubic-bezier(.22,1,.36,1) both; }
+.ar-tool-time { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ar-tool-ring, .ar-tool-check, .ar-tool-error { display: block; flex: none; width: 14px; height: 14px; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ar-tool-ring { animation: ar-tool-spin .8s linear infinite; }
+.ar-tool-ring circle { stroke: #8a8a8a; stroke-width: 1.6; opacity: .2; }
+.ar-tool-ring path { stroke: #171717; stroke-width: 1.6; }
+.ar-tool-check { stroke: #171717; stroke-width: 1.8; }
+.ar-tool-check path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: ar-tool-draw .36s .08s cubic-bezier(.22,1,.36,1) forwards; }
+.ar-tool-error { stroke: #b91c1c; stroke-width: 1.5; }
+.ar-tool-pending-dot { width: 6px; height: 6px; margin: 4px; border-radius: 50%; background: #a3a3a3; }
+.ar-tool-sections { display: grid; gap: 12px; padding: 12px; border-top: 1px solid #e7e7e7; }
+.ar-tool-error-notice { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; border-radius: 8px; color: #b91c1c; background: #fef2f2; font-size: 12.5px; }
+.ar-tool-error-notice p { margin: 0; }
+.ar-tool-error-notice > svg { margin-top: 2px; }
+.ar-tool[data-status="error"] .ar-tool-status { color: #b91c1c; }
+.ar-tool-section { display: grid; gap: 6px; min-width: 0; }
+.ar-tool-section-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 24px; }
+.ar-tool-label { color: #8a8a8a; font-size: 12px; }
+.ar-tool-code { position: relative; min-width: 0; margin: 0; padding: 10px 12px; overflow: hidden; border-radius: 8px; background: #fafafa; color: #8a8a8a; box-shadow: inset 0 0 0 1px #e7e7e7; font: 400 12px/1.6 ui-monospace, "SF Mono", Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; transition: max-height .42s cubic-bezier(.22,1,.36,1); }
+.ar-tool-code code { font: inherit; }
+.ar-tool-token-key { color: #171717; }
+.ar-tool-token-str { color: #0f7b6c; }
+.ar-tool-token-num { color: #b25b0c; }
+.ar-tool-token-lit { color: #6e56cf; }
+.ar-tool-pending { margin: 0; color: #8a8a8a; font-size: 12.5px; line-height: 1.4; }
+.ar-tool[data-status="error"] .ar-tool-section:last-child .ar-tool-code { color: #b91c1c; }
+.ar-tool-copy { display: grid; position: relative; place-items: center; width: 24px; height: 24px; flex: none; padding: 0; border: 0; border-radius: 6px; background: transparent; color: #8a8a8a; transition: background-color .16s, color .16s; }
+.ar-tool-copy:hover { background: #f0f0f0; color: #171717; }
+.ar-tool-copy svg { position: absolute; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; transition: opacity .2s, transform .32s cubic-bezier(.22,1,.36,1), filter .2s; }
+.ar-tool-copy-done { opacity: 0; transform: scale(.6); filter: blur(2px); }
+.ar-tool-copy[data-copied] .ar-tool-copy-icon { opacity: 0; transform: scale(.6); filter: blur(2px); }
+.ar-tool-copy[data-copied] .ar-tool-copy-done { opacity: 1; transform: scale(1); filter: none; }
+.ar-tool-copy[data-copied] { color: #171717; }
+.ar-activity-loader { display: flex; width: max-content; max-width: calc(100% - 34px); height: 28px; margin-left: 34px; padding: 0 12px 0 10px; align-items: center; border-radius: 999px; background: #fff; color: #6b6b6b; box-shadow: inset 0 0 0 1px #e7e7e7, 0 1px 2px #0000000a; font-size: 13px; font-weight: 450; line-height: 1; letter-spacing: -.006em; }
+.ar-activity-loader-visual { display: flex; min-width: 0; align-items: center; gap: 7px; }
+.ar-activity-loader-icon { position: relative; display: block; flex: none; width: 13px; height: 13px; }
+.ar-activity-spinner, .ar-activity-loader-check { position: absolute; display: block; width: 13px; height: 13px; overflow: visible; transition: opacity .24s, transform .42s cubic-bezier(.22,1,.36,1); }
+.ar-activity-spinner line { stroke: #171717; stroke-width: 1.6; stroke-linecap: round; animation: ar-activity-ray .8s linear infinite; }
+.ar-activity-loader-check { opacity: 0; transform: scale(.6); stroke: #171717; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ar-activity-loader-check path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.ar-activity-loader[data-done] { color: #171717; }
+.ar-activity-loader[data-done] .ar-activity-spinner { opacity: 0; transform: scale(.6) rotate(-45deg); }
+.ar-activity-loader[data-done] .ar-activity-loader-check { opacity: 1; transform: scale(1); }
+.ar-activity-loader[data-done] .ar-activity-loader-check path { animation: ar-tool-draw .36s .12s cubic-bezier(.22,1,.36,1) forwards; }
+.ar-activity-loader[data-done] .ar-activity-loader-shine::after { display: none; }
+.ar-activity-loader-window { position: relative; display: block; min-width: 0; height: 16.9px; overflow: hidden; transition: width .46s cubic-bezier(.22,1,.36,1); }
+.ar-activity-loader-measure { display: block; width: max-content; visibility: hidden; white-space: nowrap; line-height: 16.9px; }
+.ar-activity-loader-label { display: block; position: absolute; top: 0; left: 0; width: max-content; white-space: nowrap; line-height: 16.9px; }
+.ar-activity-loader-shine::after, .ar-tool-group[data-working] .ar-tool-group-label::after { content: attr(data-text) / ""; position: absolute; inset: 0; pointer-events: none; color: transparent; background: linear-gradient(90deg, transparent 38%, #ffffffd1 50%, transparent 62%) no-repeat; background-size: 300% 100%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: ar-activity-sweep 1.8s linear infinite; }
+.ar-activity-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@keyframes ar-activity-rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes ar-tool-in { from { opacity: 0; transform: translateY(3px); filter: blur(2px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes ar-tool-pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes ar-tool-spin { to { transform: rotate(360deg); } }
+@keyframes ar-tool-draw { to { stroke-dashoffset: 0; } }
+@keyframes ar-activity-ray { from { opacity: 1; } to { opacity: .18; } }
+@keyframes ar-activity-sweep { from { background-position: 100% 0; } to { background-position: 0% 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .ar-activity *, .ar-activity *::before, .ar-activity *::after { animation: none !important; transition: none !important; }
+  .ar-tool-check path, .ar-activity-loader-check path { stroke-dashoffset: 0; }
+  .ar-activity-spinner line { opacity: .48; }
+  .ar-activity-spinner line:first-child { opacity: 1; }
+  .ar-activity-loader-shine::after, .ar-tool-group[data-working] .ar-tool-group-label::after { display: none; }
+}

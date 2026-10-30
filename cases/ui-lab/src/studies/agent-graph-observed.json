@@ -1,0 +1,7129 @@
+{
+  "calls": [
+    {
+      "at": 0,
+      "fromId": "you",
+      "toId": "orchestrator"
+    },
+    {
+      "at": 2010,
+      "fromId": "orchestrator",
+      "toId": "researcher"
+    },
+    {
+      "at": 2310,
+      "fromId": "orchestrator",
+      "toId": "coder"
+    },
+    {
+      "at": 2610,
+      "fromId": "orchestrator",
+      "toId": "analyst"
+    },
+    {
+      "at": 2710,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 2910,
+      "fromId": "orchestrator",
+      "toId": "writer"
+    },
+    {
+      "at": 3010,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 3210,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 3410,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 3610,
+      "fromId": "analyst",
+      "toId": "hubspot"
+    },
+    {
+      "at": 3910,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 4110,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 4110,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 4310,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 4810,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 4910,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 5110,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 5510,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 5510,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 5610,
+      "fromId": "analyst",
+      "toId": "hubspot"
+    },
+    {
+      "at": 6210,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 6310,
+      "fromId": "researcher",
+      "toId": "notion"
+    },
+    {
+      "at": 6510,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 6810,
+      "fromId": "coder",
+      "toId": "stripe"
+    },
+    {
+      "at": 7010,
+      "fromId": "researcher",
+      "toId": "notion"
+    },
+    {
+      "at": 7610,
+      "fromId": "coder",
+      "toId": "stripe"
+    },
+    {
+      "at": 7610,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 7710,
+      "fromId": "analyst",
+      "toId": "hubspot"
+    },
+    {
+      "at": 8510,
+      "fromId": "coder",
+      "toId": "stripe"
+    },
+    {
+      "at": 8510,
+      "fromId": "writer",
+      "toId": "you"
+    },
+    {
+      "at": 9510,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 11110,
+      "fromId": "writer",
+      "toId": "slack"
+    },
+    {
+      "at": 11910,
+      "fromId": "writer",
+      "toId": "slack"
+    },
+    {
+      "at": 12110,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 13010,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 13810,
+      "fromId": "orchestrator",
+      "toId": "slack"
+    },
+    {
+      "at": 14310,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 14710,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 15510,
+      "fromId": "you",
+      "toId": "orchestrator"
+    },
+    {
+      "at": 16010,
+      "fromId": "orchestrator",
+      "toId": "researcher"
+    },
+    {
+      "at": 16310,
+      "fromId": "orchestrator",
+      "toId": "coder"
+    },
+    {
+      "at": 16610,
+      "fromId": "orchestrator",
+      "toId": "analyst"
+    },
+    {
+      "at": 16710,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 16910,
+      "fromId": "orchestrator",
+      "toId": "writer"
+    },
+    {
+      "at": 17010,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 17210,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 17410,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 17610,
+      "fromId": "analyst",
+      "toId": "hubspot"
+    },
+    {
+      "at": 17910,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 18110,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 18110,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 18310,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 18810,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 18910,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 19110,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 19510,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 19510,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 19610,
+      "fromId": "analyst",
+      "toId": "hubspot"
+    },
+    {
+      "at": 20210,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 20310,
+      "fromId": "researcher",
+      "toId": "notion"
+    },
+    {
+      "at": 20510,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 20810,
+      "fromId": "coder",
+      "toId": "stripe"
+    },
+    {
+      "at": 21010,
+      "fromId": "researcher",
+      "toId": "notion"
+    },
+    {
+      "at": 21610,
+      "fromId": "coder",
+      "toId": "stripe"
+    },
+    {
+      "at": 21610,
+      "fromId": "writer",
+      "toId": "notion"
+    },
+    {
+      "at": 21710,
+      "fromId": "analyst",
+      "toId": "hubspot"
+    },
+    {
+      "at": 22510,
+      "fromId": "coder",
+      "toId": "stripe"
+    },
+    {
+      "at": 22510,
+      "fromId": "writer",
+      "toId": "you"
+    },
+    {
+      "at": 23510,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 25120,
+      "fromId": "writer",
+      "toId": "slack"
+    },
+    {
+      "at": 25910,
+      "fromId": "writer",
+      "toId": "slack"
+    },
+    {
+      "at": 26110,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 27010,
+      "fromId": "coder",
+      "toId": "github"
+    },
+    {
+      "at": 27810,
+      "fromId": "orchestrator",
+      "toId": "slack"
+    },
+    {
+      "at": 28310,
+      "fromId": "analyst",
+      "toId": "database"
+    },
+    {
+      "at": 28710,
+      "fromId": "researcher",
+      "toId": "web-search"
+    },
+    {
+      "at": 29510,
+      "fromId": "you",
+      "toId": "orchestrator"
+    },
+    {
+      "at": 30010,
+      "fromId": "orchestrator",
+      "toId": "researcher"
+    },
+    {
+      "at": 30310,
+      "fromId": "orchestrator",
+      "toId": "coder"
+    },
+    {
+      "at": 30610,
+      "fromId": "orchestrator",
+      "toId": "analyst"
+    },
+    {
+      "at": 30710,
+      "fromId": "researcher",
+      "toId": "web-search"
+    }
+  ],
+  "tracks": [
+    {
+      "at": 0,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.0
+    },
+    {
+      "at": 2010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.02
+    },
+    {
+      "at": 2310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.04
+    },
+    {
+      "at": 2510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.04
+    },
+    {
+      "at": 2610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.06
+    },
+    {
+      "at": 2710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.07
+    },
+    {
+      "at": 2810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.07
+    },
+    {
+      "at": 2910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.09
+    },
+    {
+      "at": 3010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.1
+    },
+    {
+      "at": 3210,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.11
+    },
+    {
+      "at": 3410,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.11
+    },
+    {
+      "at": 3510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.11
+    },
+    {
+      "at": 3610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.12
+    },
+    {
+      "at": 3910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.13
+    },
+    {
+      "at": 4110,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.14
+    },
+    {
+      "at": 4310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.14
+    },
+    {
+      "at": 4810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.15
+    },
+    {
+      "at": 4910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.16
+    },
+    {
+      "at": 5110,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.16
+    },
+    {
+      "at": 5510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.17
+    },
+    {
+      "at": 5610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.18
+    },
+    {
+      "at": 6210,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.19
+    },
+    {
+      "at": 6310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.2
+    },
+    {
+      "at": 6510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.21
+    },
+    {
+      "at": 6810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.22
+    },
+    {
+      "at": 7010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.22
+    },
+    {
+      "at": 7610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.24
+    },
+    {
+      "at": 7710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.24
+    },
+    {
+      "at": 8510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.26
+    },
+    {
+      "at": 9410,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Running the checkout tests."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.26
+    },
+    {
+      "at": 9510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Running the checkout tests."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.26
+    },
+    {
+      "at": 10510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.26
+    },
+    {
+      "at": 10710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.26
+    },
+    {
+      "at": 11110,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.27
+    },
+    {
+      "at": 11910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.28
+    },
+    {
+      "at": 12110,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Fixing the coupon and running the tests again."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.29
+    },
+    {
+      "at": 12510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Fixing the coupon and running the tests again."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.29
+    },
+    {
+      "at": 13010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Fixing the coupon and running the tests again."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.3
+    },
+    {
+      "at": 13710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.3
+    },
+    {
+      "at": 13810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.32
+    },
+    {
+      "at": 13910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.32
+    },
+    {
+      "at": 14310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.32
+    },
+    {
+      "at": 14710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.33
+    },
+    {
+      "at": 14910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.33
+    },
+    {
+      "at": 15370,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.33
+    },
+    {
+      "at": 15510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.33
+    },
+    {
+      "at": 16010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.35
+    },
+    {
+      "at": 16310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.37
+    },
+    {
+      "at": 16510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.37
+    },
+    {
+      "at": 16610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.39
+    },
+    {
+      "at": 16710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.4
+    },
+    {
+      "at": 16810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.4
+    },
+    {
+      "at": 16910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.42
+    },
+    {
+      "at": 17010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.43
+    },
+    {
+      "at": 17210,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.44
+    },
+    {
+      "at": 17410,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.45
+    },
+    {
+      "at": 17510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.45
+    },
+    {
+      "at": 17610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.45
+    },
+    {
+      "at": 17910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.46
+    },
+    {
+      "at": 18110,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.47
+    },
+    {
+      "at": 18310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.48
+    },
+    {
+      "at": 18810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.48
+    },
+    {
+      "at": 18910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.49
+    },
+    {
+      "at": 19110,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Counting seats and upgrades per plan."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.49
+    },
+    {
+      "at": 19510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.51
+    },
+    {
+      "at": 19610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.51
+    },
+    {
+      "at": 20210,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.52
+    },
+    {
+      "at": 20310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.53
+    },
+    {
+      "at": 20510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.54
+    },
+    {
+      "at": 20810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.55
+    },
+    {
+      "at": 21010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.55
+    },
+    {
+      "at": 21610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Saving the comparison to Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.57
+    },
+    {
+      "at": 21710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "working",
+          "doing": "Reading lost deals in HubSpot."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Drafting the copy for the three plans."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.57
+    },
+    {
+      "at": 22510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Setting up prices and a coupon in Stripe."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.59
+    },
+    {
+      "at": 23410,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Running the checkout tests."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.59
+    },
+    {
+      "at": 23510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Running the checkout tests."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.59
+    },
+    {
+      "at": 24510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "waiting",
+          "doing": "Asks you: post the announcement to #launch?."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.59
+    },
+    {
+      "at": 24710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.59
+    },
+    {
+      "at": 25120,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.6
+    },
+    {
+      "at": 25910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "error",
+          "doing": "2 of 14 checkout tests fail \u2013 the coupon isn't applied."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.61
+    },
+    {
+      "at": 26110,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Fixing the coupon and running the tests again."
+        },
+        {
+          "id": "writer",
+          "status": "working",
+          "doing": "Posting the announcement."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.62
+    },
+    {
+      "at": 26510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Fixing the coupon and running the tests again."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.62
+    },
+    {
+      "at": 27010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Fixing the coupon and running the tests again."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.63
+    },
+    {
+      "at": 27710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.63
+    },
+    {
+      "at": 27810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Waiting on four agents."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.65
+    },
+    {
+      "at": 27910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.65
+    },
+    {
+      "at": 28310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.65
+    },
+    {
+      "at": 28710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "stripe",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.66
+    },
+    {
+      "at": 28910,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.66
+    },
+    {
+      "at": 29370,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "done",
+          "doing": "Sent you the summary."
+        },
+        {
+          "id": "researcher",
+          "status": "done",
+          "doing": "The comparison is in Notion."
+        },
+        {
+          "id": "analyst",
+          "status": "done",
+          "doing": "Sent the usage summary to the Orchestrator."
+        },
+        {
+          "id": "coder",
+          "status": "done",
+          "doing": "Opened PR #482."
+        },
+        {
+          "id": "writer",
+          "status": "done",
+          "doing": "The announcement is live in #launch."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.66
+    },
+    {
+      "at": 29510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.66
+    },
+    {
+      "at": 30010,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.68
+    },
+    {
+      "at": 30310,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.7
+    },
+    {
+      "at": 30510,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.7
+    },
+    {
+      "at": 30610,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.72
+    },
+    {
+      "at": 30710,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.73
+    },
+    {
+      "at": 30810,
+      "nodes": [
+        {
+          "id": "orchestrator",
+          "status": "working",
+          "doing": "Splitting the launch into four jobs."
+        },
+        {
+          "id": "researcher",
+          "status": "working",
+          "doing": "Reading the pricing pages of five competitors."
+        },
+        {
+          "id": "analyst",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "coder",
+          "status": "working",
+          "doing": "Building the pricing page on a new branch."
+        },
+        {
+          "id": "writer",
+          "status": "idle",
+          "doing": "Waiting for a job."
+        },
+        {
+          "id": "web-search",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "notion",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "hubspot",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "database",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "github",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "slack",
+          "status": "idle",
+          "doing": ""
+        },
+        {
+          "id": "you",
+          "status": "idle",
+          "doing": "Asked for the pricing launch."
+        }
+      ],
+      "totalCost": 0.73
+    }
+  ],
+  "layouts": {
+    "base": {
+      "orchestrator": [
+        378.0,
+        243.0
+      ],
+      "researcher": [
+        474.0,
+        171.9
+      ],
+      "analyst": [
+        474.0,
+        314.1
+      ],
+      "coder": [
+        282.0,
+        314.1
+      ],
+      "writer": [
+        282.0,
+        171.9
+      ],
+      "web-search": [
+        639.9,
+        171.9
+      ],
+      "notion": [
+        474.0,
+        65.7
+      ],
+      "hubspot": [
+        642.7,
+        314.1
+      ],
+      "database": [
+        474.0,
+        419.9
+      ],
+      "github": [
+        213.8,
+        396.3
+      ],
+      "slack": [
+        65.0,
+        171.9
+      ],
+      "you": [
+        210.3,
+        91.0
+      ]
+    },
+    "stripe": {
+      "orchestrator": [
+        378.0,
+        243.0
+      ],
+      "researcher": [
+        474.0,
+        171.9
+      ],
+      "analyst": [
+        474.0,
+        314.1
+      ],
+      "coder": [
+        282.0,
+        314.1
+      ],
+      "writer": [
+        282.0,
+        171.9
+      ],
+      "web-search": [
+        632.3,
+        171.9
+      ],
+      "notion": [
+        474.0,
+        67.9
+      ],
+      "hubspot": [
+        668.0,
+        314.1
+      ],
+      "database": [
+        474.0,
+        408.4
+      ],
+      "github": [
+        282.0,
+        418.1
+      ],
+      "stripe": [
+        123.7,
+        314.1
+      ],
+      "slack": [
+        88.0,
+        171.9
+      ],
+      "you": [
+        282.0,
+        77.6
+      ]
+    }
+  }
+}

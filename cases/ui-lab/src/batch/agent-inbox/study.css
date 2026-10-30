@@ -1,0 +1,6 @@
+.agent-inbox-study{width:100%;min-height:1060px;padding:28px 24px 60px;background:#fafafa;font-family:Inter,'Inter Variable',sans-serif}
+.agent-inbox-study__controls{max-width:718px;min-height:34px;margin:0 auto 28px;display:flex;align-items:center;gap:8px;color:#8e8e96;font-size:12px}
+.agent-inbox-study__controls button{border:1px solid #e9e9ec;padding:6px 10px;background:#fff;color:#55555c;border-radius:8px;font:inherit;cursor:pointer}
+.agent-inbox-study__controls span{margin-left:auto}
+.agent-inbox-study__canvas{width:min(718px,100%);margin:0 auto}
+@media(max-width:500px){.agent-inbox-study{padding:20px 32px}.agent-inbox-study__controls{flex-wrap:wrap}}

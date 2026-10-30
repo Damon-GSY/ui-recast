@@ -1,0 +1,21 @@
+.reading-study { padding: 32px; background: #fafafa; color: #262629; font-family: Inter,system-ui,sans-serif; max-width: 940px; margin: 0 auto; border-radius: 14px; }
+.reading-study header { margin-bottom: 26px; }
+.reading-study h2 { font-size: 26px; font-weight: 550; letter-spacing: -.7px; margin: 8px 0; }
+.reading-study header p { font-size: 13px; color: #737377; }
+.reading-study .reading-study__eyebrow { font-size: 10px; letter-spacing: 1.3px; color: #88888c; }
+.reading-study__controls { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; font-size: 12px; }
+.reading-study__controls label { display: flex; gap: 5px; align-items: center; }
+.reading-study__controls select,.reading-study__controls button { font: inherit; border: 1px solid #ddd; border-radius: 6px; padding: 5px 8px; background: white; color: #333; }
+.reading-study__stage { background: white; padding: 28px; border-radius: 12px; border: 1px solid #eaeaea; }
+.reading-study__article { max-width: 580px; padding: 12px 0; }
+.reading-study__article h3 { font-size: 24px; font-weight: 500; letter-spacing: -.5px; margin: 16px 0; }
+.reading-study__article p { font-size: 14px; line-height: 1.9; color: #66666c; }
+.reading-study__article label { display: grid; gap: 9px; font-size: 11px; color: #929299; margin-top: 25px; }
+.reading-study textarea { resize: vertical; min-height: 70px; width: 100%; border: 1px solid #e5e5e8; border-radius: 7px; padding: 12px; font: 13px/1.5 inherit; color: inherit; background: transparent; }
+.reading-study__metrics { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 15px 0; font: 11px/1.6 ui-monospace,monospace; color: #86868d; }
+.reading-study__radio { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; padding: 18px 0; font-size: 12px; color: #777; }
+.reading-study__secondary { padding-top: 18px; border-top: 1px solid #e7e7e7; font-size: 12px; color: #777; }
+.reading-study[data-theme=dark] { background: #111113; color: #eeeef0; }
+.reading-study[data-theme=dark] .reading-study__stage { background: #18181b; border-color: #303033; }
+.reading-study[data-theme=dark] .reading-study__article p { color: #aaaab2; }
+@media(max-width:600px) { .reading-study { padding:18px; } .reading-study__stage { padding:20px 14px; } }

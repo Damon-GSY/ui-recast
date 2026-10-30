@@ -1,0 +1,156 @@
+.autonomy-dial {
+  --ad-surface: #fff;
+  --ad-base: #f0f0f0;
+  --ad-track: #f0f0f0;
+  --ad-text: #171717;
+  --ad-muted: #8a8a8a;
+  --ad-secondary: #6b6b6b;
+  --ad-unpinned: #b8b8b8;
+  --ad-border: #ececec;
+  --ad-empty: #00000009;
+  --ad-shadow: 0 0 0 1px var(--ad-border), 0 1px 2px #0000000a;
+  --ad-focus: #5485db;
+  --ad-risk: #b85c00;
+  --ad-risk-bg: #fff3e0;
+  --ad-danger: #c2331f;
+  --ad-danger-bg: #fdecea;
+  box-sizing: border-box;
+  container-type: inline-size;
+  width: 100%;
+  max-width: 420px;
+  min-width: 0;
+  padding: 4px;
+  border-radius: 20px;
+  background: var(--ad-base);
+  color: var(--ad-text);
+  font-family: 'Inter Variable', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  text-align: left;
+  color-scheme: light;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+:where(.dark, [data-theme='dark']) .autonomy-dial,
+.autonomy-dial:where(.dark, [data-theme='dark']) {
+  --ad-surface: #272726;
+  --ad-base: #1d1d1c;
+  --ad-track: #20201f;
+  --ad-text: #f1f1ed;
+  --ad-muted: #a3a39c;
+  --ad-secondary: #bcbcb5;
+  --ad-unpinned: #85857e;
+  --ad-border: #383835;
+  --ad-empty: #ffffff09;
+  --ad-focus: #8bb2ff;
+  --ad-risk: #efc080;
+  --ad-risk-bg: #3b3022;
+  --ad-danger: #ffaaa1;
+  --ad-danger-bg: #412a28;
+  color-scheme: dark;
+}
+
+.autonomy-dial *, .autonomy-dial *::before, .autonomy-dial *::after { box-sizing: border-box; }
+.autonomy-dial svg { display: block; width: 100%; height: 100%; }
+.autonomy-dial button {
+  appearance: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.autonomy-dial button:focus-visible { outline: 2px solid var(--ad-focus); outline-offset: 2px; }
+.autonomy-dial__header {
+  position: relative;
+  z-index: 3;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--ad-surface);
+  box-shadow: var(--ad-shadow);
+}
+.autonomy-dial__heading { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.autonomy-dial__sparkle { display: grid; place-items: center; width: 16px; height: 14px; flex: 0 0 16px; color: #2f6bff; }
+.autonomy-dial__heading-copy { min-width: 0; }
+.autonomy-dial .autonomy-dial__title { color: var(--ad-text); margin: 0; font-size: 14px; font-weight: 600; line-height: 20px; overflow-wrap: anywhere; }
+.autonomy-dial .autonomy-dial__subtitle { margin: 0; color: var(--ad-muted); font-size: 12.5px; line-height: 18px; overflow-wrap: anywhere; }
+.autonomy-dial__levels { position: relative; display: flex; min-width: 0; padding: 3px; border-radius: 12px; background: var(--ad-track); }
+.autonomy-dial__selection {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  width: calc((100% - 6px) / 3);
+  border-radius: 9px;
+  background: var(--ad-surface);
+  box-shadow: 0 1px 2px #00000014, 0 0 0 1px #0000000a;
+  pointer-events: none;
+}
+.autonomy-dial .autonomy-dial__level { position: relative; flex: 1 1 0; min-width: 0; min-height: 30px; padding: 0 10px; border-radius: 9px; color: var(--ad-muted); font-size: 13px; font-weight: 500; line-height: 20px; white-space: nowrap; transition: color 200ms ease; }
+.autonomy-dial .autonomy-dial__level[aria-checked='true'] { color: var(--ad-text); }
+.autonomy-dial__actions { display: flex; flex-direction: column; gap: 4px; padding: 14px 4px 4px; }
+.autonomy-dial__group { position: relative; z-index: 0; min-width: 0; padding-bottom: 4px; }
+.autonomy-dial__group:not(:first-child) { margin-top: 10px; }
+.autonomy-dial__group-title { display: flex; align-items: center; gap: 6px; margin: 0 8px; color: var(--ad-muted); font-size: 12.5px; font-weight: 500; line-height: 18px; }
+.autonomy-dial__count { display: grid; place-items: center; min-width: 18px; height: 18px; overflow: hidden; padding: 0 5px; border-radius: 6px; background: var(--ad-surface); box-shadow: var(--ad-shadow); color: var(--ad-secondary); font-size: 11px; line-height: 18px; text-align: center; font-variant-numeric: tabular-nums; }
+.autonomy-dial__group[data-empty] { padding-bottom: 0; }
+.autonomy-dial__empty { display: flex; align-items: center; justify-content: center; min-height: 42px; margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--ad-empty); color: var(--ad-muted); font-size: 12.5px; line-height: 18px; text-align: center; }
+.autonomy-dial__action {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr) 30px;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+  padding: 4px 6px 4px 14px;
+  border-radius: 12px;
+  background: var(--ad-surface);
+  box-shadow: var(--ad-shadow);
+}
+.autonomy-dial__action:focus-within { z-index: 2; }
+.autonomy-dial__action-icon { width: 16px; height: 16px; color: var(--ad-muted); }
+.autonomy-dial__action-copy { min-width: 0; }
+.autonomy-dial__action-line { display: flex; align-items: center; flex-wrap: wrap; gap: 3px 8px; }
+.autonomy-dial__action-label { color: var(--ad-text); min-width: 0; font-size: 13.5px; font-weight: 500; line-height: 20px; overflow-wrap: anywhere; }
+.autonomy-dial__risk { display: inline-flex; align-items: center; gap: 3px; flex: 0 0 auto; height: 20px; padding: 0 8px 0 6px; border-radius: 999px; font-size: 11.5px; font-weight: 500; line-height: 16px; white-space: nowrap; }
+.autonomy-dial__risk svg { width: 12px; height: 12px; }
+.autonomy-dial__risk--risky { background: var(--ad-risk-bg); color: var(--ad-risk); }
+.autonomy-dial__risk--destructive { background: var(--ad-danger-bg); color: var(--ad-danger); }
+.autonomy-dial__detail { display: block; margin-top: 2px; color: var(--ad-muted); font-size: 11px; line-height: 16px; overflow-wrap: anywhere; }
+.autonomy-dial .autonomy-dial__lock { display: grid; place-items: center; width: 30px; height: 30px; padding: 7px; border-radius: 9px; color: var(--ad-unpinned); opacity: 0; transition: opacity 160ms ease, color 160ms ease, background-color 160ms ease; }
+.autonomy-dial__action[data-pinned] .autonomy-dial__lock { color: var(--ad-secondary); }
+.autonomy-dial__action[data-pinned] .autonomy-dial__lock,
+.autonomy-dial__action:hover .autonomy-dial__lock,
+.autonomy-dial__action:focus-within .autonomy-dial__lock { opacity: 1; }
+.autonomy-dial__lock:hover { background: var(--ad-track); }
+.autonomy-dial__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+@container (max-width: 339px) {
+  .autonomy-dial__header { padding: 13px 11px; }
+  .autonomy-dial__heading { gap: 9px; }
+  .autonomy-dial .autonomy-dial__level { padding-inline: 2px; font-size: 11px; }
+  .autonomy-dial__detail { display: none; }
+  .autonomy-dial__action { gap: 6px; padding-left: 9px; }
+  .autonomy-dial__action-line { column-gap: 5px; }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .autonomy-dial__action { min-height: 52px; grid-template-columns: 18px minmax(0, 1fr) 40px; }
+  .autonomy-dial .autonomy-dial__lock { width: 40px; height: 40px; padding: 12px; opacity: 1; }
+  .autonomy-dial .autonomy-dial__level { min-height: 40px; }
+}
+
+.autonomy-dial[data-reduced-motion] :is(.autonomy-dial__lock, .autonomy-dial__level) { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .autonomy-dial :is(.autonomy-dial__lock, .autonomy-dial__level) { transition: none; }
+}
