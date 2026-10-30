@@ -21,7 +21,7 @@ The skill preserves caller-owned business state and user-requested product adapt
 
 ## Case showcase
 
-> **Model used:** The original showcased collection was produced with `gpt6-astra`. An additional independent `gpt-6.1-sol` trial has completed for the paid Fluid Notch component; see the [single-case result](docs/model-trials/gpt-6.1-sol.md). Other models remain untested.
+> **Models used:** `gpt6-astra` for the original collection; `gpt-6.1-sol` (`high`) for the Fluid Notch multi-step flow below. Other models have not been tested.
 
 Reference on the left; reconstruction on the right. Each pair is **one automatically looping GIF**, so both sides play together. These are cropped, phase-aligned excerpts at original speed; full recordings remain linked below. The Fluid Notch excerpt joins opening and closing windows with short reading holds.
 
@@ -89,15 +89,15 @@ Application shell, tool execution, status pulse, reading pane.
 
 [The case catalog](cases/README.md) contains **44 component entries and 2 composition examples**, including **15 MenuFold components**. Cases include independent visual reconstructions and attributed public-source adaptations. Detailed review notes currently retain their original language.
 
-## GPT-6.1 Sol: paid Pro component trial
+### Fluid Notch — multi-step flow
 
-A fresh agent using `gpt-6.1-sol` (`high` reasoning) reconstructed **Aceternity UI Fluid Notch**, whose Code access requires All-Access. It received the English skill and public URL, with no prior implementation or case analysis. Source, full recordings, intermediate-frame comparisons, and remaining differences are included in the [trial](cases/model-trials/gpt-6.1-sol/fluid-notch/).
+Three questions, progress updates, completion, reset, and interruptible expansion/collapse. Model: `gpt-6.1-sol` (`high`).
 
-![gpt 6.1 fluid notch — reference and reconstruction playing together](assets/readme/showcase/gpt-6.1-fluid-notch.gif)
+![Fluid Notch multi-step flow — reference and reconstruction playing together](assets/readme/showcase/gpt-6.1-fluid-notch.gif)
 
 [Full reference recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reference/lifecycle.webm) · [Full reconstruction recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm)
 
-Fresh standalone installation/build and seven parent runtime checks passed. Static geometry and core interaction are close; motion remains fitted with visible intermediate-frame differences. This single trial is **not** a full-suite rerun or a controlled ranking against Astra. [Review and run instructions](docs/model-trials/gpt-6.1-sol.md).
+Standalone installation, build, and interaction checks passed. Remaining timing differences are documented in the [source and review](docs/model-trials/gpt-6.1-sol.md).
 
 ## Install
 

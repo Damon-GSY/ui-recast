@@ -1,4 +1,4 @@
-# Fluid Notch — GPT-6.1 Sol independent trial
+# Fluid Notch
 
 > **Tested model:** `gpt-6.1-sol` (GPT-6.1 Sol), reasoning effort `high`. Primary evaluation: light theme, 340px, full three-question lifecycle. Dark mode has representative state comparisons, not a complete dark-lifecycle acceptance.
 

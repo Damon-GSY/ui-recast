@@ -10,7 +10,7 @@
 
 ## 案例展示
 
-> **使用模型：**这里展示的复刻案例使用 `gpt6-astra` 完成，另外已完成 `gpt-6.1-sol` 的 Fluid Notch 付费 Pro 单项测试，见[结果](docs/model-trials/gpt-6.1-sol.md)；其他模型仍未测试。
+> **使用模型：**原案例集使用 `gpt6-astra`；下方 Fluid Notch 多步骤流程使用 `gpt-6.1-sol`（`high`）。其他模型尚未测试。
 
 左侧为参考，右侧为复刻。每组对照合成在**同一张自动循环 GIF** 中，两侧一起播放。动图取自原速录屏并对齐相关阶段；下方保留完整录像。Fluid Notch 摘取展开、收回两个窗口，中间留短暂停顿方便观察。
 
@@ -88,15 +88,15 @@
 
 Skill 的指导内容自包含。动效引擎和基础控件由项目与参考决定，可采用 CSS、Motion 或 GSAP。
 
-## GPT-6.1 Sol：付费 Pro 单项试跑
+### Fluid Notch — 多步骤流程
 
-使用 `gpt-6.1-sol`、`high` 推理档位的新代理，仅给英文 skill 和原版 URL，独立重建 **Aceternity UI Fluid Notch**。原版公开预览可操作，Code 需要 All-Access；试跑未读取付费实现，也未读取已有复刻源码。
+展示三道问题、进度更新、完成、重置，以及可打断的展开／收回。使用模型：`gpt-6.1-sol`（`high`）。
 
-![gpt 6.1 fluid notch — reference and reconstruction playing together](assets/readme/showcase/gpt-6.1-fluid-notch.gif)
+![Fluid Notch 多步骤流程：原版与复刻同步播放](assets/readme/showcase/gpt-6.1-fluid-notch.gif)
 
 [完整原版录像](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reference/lifecycle.webm) · [完整复刻录像](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm)
 
-独立安装、构建和7项父代理运行检查通过。静态尺寸与核心交互接近，动效参数仍有拟合和可见中间帧差异；这不代表全库验证，也不是与 Astra 的受控排名。[源码、录屏与结论](docs/model-trials/gpt-6.1-sol.md)。
+独立安装、构建与交互检查通过。剩余的细微时序差异见[源码与复查记录](docs/model-trials/gpt-6.1-sol.md)。
 
 Skill 现已要求分别分析明暗主题的角色色板、图标可见性、光效／纹理合成与主题切换。6.1 本次主验收为浅色完整流程，dark mode 仅做代表性状态对照，不能据此宣称暗色完整流程一致。
 
