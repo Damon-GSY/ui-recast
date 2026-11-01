@@ -21,7 +21,7 @@ The skill preserves caller-owned business state and user-requested product adapt
 
 ## Case showcase
 
-> **Models used:** `gpt6-astra` for the original collection; `gpt-6.1-sol` (`high`) for the Fluid Notch multi-step flow below. Other models have not been tested.
+> **Models used:** `gpt6-astra` for the original collection; `gpt-6.1-sol` (`high`) for the Fluid Notch multi-step flow; `claude` for the bklit chart reproductions. Other models have not been tested.
 
 Reference on the left; reconstruction on the right. Each pair is **one automatically looping GIF**, so both sides play together. These are cropped, phase-aligned excerpts at original speed; full recordings remain linked below. The Fluid Notch excerpt joins opening and closing windows with short reading holds.
 
@@ -98,6 +98,14 @@ Three questions, progress updates, completion, reset, and interruptible expansio
 [Full reference recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reference/lifecycle.webm) · [Full reconstruction recording](cases/model-trials/gpt-6.1-sol/fluid-notch/evidence/reconstruction/lifecycle.webm)
 
 Standalone installation, build, and interaction checks passed. Remaining timing differences are documented in the [source and review](docs/model-trials/gpt-6.1-sol.md).
+
+### bklit charts — 1:1 vanilla reproductions
+
+Four bklit (ui.ole.dev) chart components rebuilt as dependency-free single-file HTML pages with hand-ported geometry and motion. Model: `claude`.
+
+Measured fidelity: 66/66 SVG paths bit-identical (Gauge); 28/28 polyline vertices at 0.0000px deviation, with the 1100ms `cubic-bezier(0.85, 0, 0.15, 1)` left-to-right clip reveal verified against source (Profit/Loss Line); spring stiffness 300 / damping 30 hover crosshair (Stat Card). Each case ships an interactive `index.html`, a five-part `record.md`, and shot evidence.
+
+[Gauge](cases/model-trials/claude/bklit-gauge/index.html) · [Heatmap](cases/model-trials/claude/bklit-heatmap/index.html) · [Profit/Loss Line](cases/model-trials/claude/bklit-profit-loss/index.html) · [Stat Card](cases/model-trials/claude/bklit-stat-card/index.html) · [Three-layer comparison: upstream → reproduction → integration](cases/model-trials/claude/bklit-compare/index.html)
 
 ## Target platforms
 
