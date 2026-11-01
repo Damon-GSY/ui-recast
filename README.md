@@ -103,6 +103,30 @@ Standalone installation, build, and interaction checks passed. Remaining timing 
 
 Four bklit (ui.ole.dev) chart components rebuilt as dependency-free single-file HTML pages with hand-ported geometry and motion. Model: `claude`.
 
+#### Gauge
+
+Staggered notch springs sweep the arc in, then the centre counts 0 → 428,000.
+
+![bklit gauge — 1:1 reproduction: staggered notch springs and the 0→428,000 count-up](assets/readme/showcase/bklit-gauge.gif)
+
+#### Heatmap
+
+1600ms uniform cell fade-in; hovering a cell dims and shrinks the rest while its tooltip opens; hovering a legend swatch keeps that level lit.
+
+![bklit heatmap — 1:1 reproduction: entrance fade, hover dim/scale with tooltip, legend-synced level highlight](assets/readme/showcase/bklit-heatmap.gif)
+
+#### Profit/Loss Line
+
+1100ms left-to-right clip reveal; the halo dot rides the pointer with the tooltip card; hovering a legend entry dims the opposite sign.
+
+![bklit profit/loss line — 1:1 reproduction: clip reveal, halo dot with tooltip, legend dimming](assets/readme/showcase/bklit-profit-loss.gif)
+
+#### Stat Card
+
+The area wipes in while the line card draws; the spring crosshair tracks the pointer and the KPI swaps to the hovered month with a trend badge.
+
+![bklit stat card — 1:1 reproduction: area wipe entrance, spring crosshair, KPI swap with trend badge](assets/readme/showcase/bklit-stat-card.gif)
+
 Measured fidelity: 66/66 SVG paths bit-identical (Gauge); 28/28 polyline vertices at 0.0000px deviation, with the 1100ms `cubic-bezier(0.85, 0, 0.15, 1)` left-to-right clip reveal verified against source (Profit/Loss Line); spring stiffness 300 / damping 30 hover crosshair (Stat Card). Each case ships an interactive `index.html`, a five-part `record.md`, and shot evidence.
 
 [Gauge](cases/model-trials/claude/bklit-gauge/index.html) · [Heatmap](cases/model-trials/claude/bklit-heatmap/index.html) · [Profit/Loss Line](cases/model-trials/claude/bklit-profit-loss/index.html) · [Stat Card](cases/model-trials/claude/bklit-stat-card/index.html) · [Three-layer comparison: upstream → reproduction → integration](cases/model-trials/claude/bklit-compare/index.html)

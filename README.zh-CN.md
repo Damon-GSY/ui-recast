@@ -104,6 +104,30 @@ Skill 现已要求分别分析明暗主题的角色色板、图标可见性、�
 
 对 bklit（ui.ole.dev）四个图表组件的复刻：Gauge 表盘、Heatmap 贡献热力、Profit/Loss Line 盈亏折线与 Stat Card 指标卡，均为零依赖单文件 HTML，几何与动效手工移植。使用模型：`claude`。
 
+#### Gauge 表盘
+
+刻度 spring 错峰点亮整圈，中心数值从 0 计数至 428,000。
+
+![bklit gauge 复现 — 刻度 spring 错峰入场与中心 0→428,000 计数](assets/readme/showcase/bklit-gauge.gif)
+
+#### Heatmap 贡献热力
+
+1600ms 均匀淡入；悬停格子时其余变暗缩小并弹出 tooltip；悬停图例色点时同层格子保持点亮。
+
+![bklit heatmap 复现 — 入场淡入、悬停 dim/scale 与 tooltip、图例同层联动](assets/readme/showcase/bklit-heatmap.gif)
+
+#### Profit/Loss Line 盈亏折线
+
+1100ms 自左向右揭示；光晕悬浮点随指针游走并带出 tooltip 卡；悬停图例时对侧分段变暗。
+
+![bklit profit/loss line 复现 — clip 揭示、光晕悬浮点与 tooltip、图例变暗](assets/readme/showcase/bklit-profit-loss.gif)
+
+#### Stat Card 指标卡
+
+area 自左擦入、line 沿描边画入；spring 十字线跟随指针，KPI 切到悬停月份并联动趋势徽章。
+
+![bklit stat card 复现 — area 擦入入场、spring 十字线、KPI 切换与趋势徽章](assets/readme/showcase/bklit-stat-card.gif)
+
 实测还原度：Gauge 66/66 条 SVG path 逐位一致；Profit/Loss Line 28/28 个折线顶点偏差 0.0000px，1100ms `cubic-bezier(0.85, 0, 0.15, 1)` 自左向右揭示经源码核实；Stat Card 悬浮十字线 spring 刚度 300／阻尼 30。每例交付可交互 `index.html`、五段 `record.md` 复现记录与截图证据。
 
 [Gauge](cases/model-trials/claude/bklit-gauge/index.html) · [Heatmap](cases/model-trials/claude/bklit-heatmap/index.html) · [Profit/Loss Line](cases/model-trials/claude/bklit-profit-loss/index.html) · [Stat Card](cases/model-trials/claude/bklit-stat-card/index.html) · [三层对照：上游 → 复现 → 集成](cases/model-trials/claude/bklit-compare/index.html)
