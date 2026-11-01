@@ -10,7 +10,7 @@
 
 ## 案例展示
 
-> **使用模型：**原案例集使用 `gpt6-astra`；下方 Fluid Notch 多步骤流程使用 `gpt-6.1-sol`（`high`）。其他模型尚未测试。
+> **使用模型：**原案例集使用 `gpt6-astra`；下方 Fluid Notch 多步骤流程使用 `gpt-6.1-sol`（`high`）；bklit 图表复现使用 `claude`。其他模型尚未测试。
 
 左侧为参考，右侧为复刻。每组对照合成在**同一张自动循环 GIF** 中，两侧一起播放。动图取自原速录屏并对齐相关阶段；下方保留完整录像。Fluid Notch 摘取展开、收回两个窗口，中间留短暂停顿方便观察。
 
@@ -99,6 +99,14 @@ Skill 的指导内容自包含。动效引擎和基础控件由项目与参考�
 独立安装、构建与交互检查通过。剩余的细微时序差异见[源码与复查记录](docs/model-trials/gpt-6.1-sol.md)。
 
 Skill 现已要求分别分析明暗主题的角色色板、图标可见性、光效／纹理合成与主题切换。6.1 本次主验收为浅色完整流程，dark mode 仅做代表性状态对照，不能据此宣称暗色完整流程一致。
+
+### bklit 图表 — 1:1 vanilla 复现
+
+对 bklit（ui.ole.dev）四个图表组件的复刻：Gauge 表盘、Heatmap 贡献热力、Profit/Loss Line 盈亏折线与 Stat Card 指标卡，均为零依赖单文件 HTML，几何与动效手工移植。使用模型：`claude`。
+
+实测还原度：Gauge 66/66 条 SVG path 逐位一致；Profit/Loss Line 28/28 个折线顶点偏差 0.0000px，1100ms `cubic-bezier(0.85, 0, 0.15, 1)` 自左向右揭示经源码核实；Stat Card 悬浮十字线 spring 刚度 300／阻尼 30。每例交付可交互 `index.html`、五段 `record.md` 复现记录与截图证据。
+
+[Gauge](cases/model-trials/claude/bklit-gauge/index.html) · [Heatmap](cases/model-trials/claude/bklit-heatmap/index.html) · [Profit/Loss Line](cases/model-trials/claude/bklit-profit-loss/index.html) · [Stat Card](cases/model-trials/claude/bklit-stat-card/index.html) · [三层对照：上游 → 复现 → 集成](cases/model-trials/claude/bklit-compare/index.html)
 
 ## 目标平台与技术栈
 
