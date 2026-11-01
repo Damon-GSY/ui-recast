@@ -60,3 +60,16 @@ Task Detail and Task Workbench are compositions and are not counted again among 
 ## Fluid Notch — multi-step flow
 
 [Source and run instructions](model-trials/gpt-6.1-sol/fluid-notch/README.md) include the three-question flow, progress, completion and reset, together with paired recordings and intermediate-frame comparisons. Model: `gpt-6.1-sol` (`high`).
+
+## bklit charts — vanilla 1:1 reproductions
+
+Four bklit (ui.ole.dev, MIT) chart components rebuilt as dependency-free single-file HTML pages, each with a five-part reproduction record and shot evidence. Model: `claude`. Unlike the React cases above, these target plain HTML/SVG with hand-ported geometry and motion.
+
+| Case | Interactive page | Record |
+| --- | --- | --- |
+| Gauge | [HTML](model-trials/claude/bklit-gauge/index.html) | [record.md](model-trials/claude/bklit-gauge/record.md) |
+| Heatmap | [HTML](model-trials/claude/bklit-heatmap/index.html) | [record.md](model-trials/claude/bklit-heatmap/record.md) |
+| Profit/Loss Line | [HTML](model-trials/claude/bklit-profit-loss/index.html) | [record.md](model-trials/claude/bklit-profit-loss/record.md) |
+| Stat Card | [HTML](model-trials/claude/bklit-stat-card/index.html) | [record.md](model-trials/claude/bklit-stat-card/record.md) |
+
+Fidelity highlights: 66/66 SVG paths bit-identical (Gauge), 28/28 polyline vertices at 0.0000px deviation with the 1100ms LTR clip reveal (Profit/Loss Line), spring stiffness 300 / damping 30 hover crosshair verified against source (Stat Card). Three-layer comparison — upstream → reproduction → app integration — lives at [bklit-compare](model-trials/claude/bklit-compare/index.html); upstream reference material and capture/verify scripts are in [bklit-refs](model-trials/claude/bklit-refs/).

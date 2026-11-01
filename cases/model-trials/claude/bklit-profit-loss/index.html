@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profit/Loss Line — Bklit UI reproduction</title>
+<style>
+  :root {
+    --chart-positive: #10b981;      /* oklch(0.696 0.17 162.48) — emerald-500 */
+    --chart-negative: #ef4444;      /* oklch(0.637 0.237 25.331) — red-500 */
+    --chart-grid: #e4e4e4;          /* lab(90.372% 0 0) */
+    --chart-label: #525252;         /* lab(36.17% …) */
+    --foreground: #0a0a0a;          /* lab(15.2% 0 0) — neutral-950 */
+    --chart-foreground-muted: #d4d4d4;
+    --chart-tooltip-background: #ffffff;
+    --chart-tooltip-foreground: #0a0a0a;
+    --chart-tooltip-muted: #71717a;
+    --border: rgba(0, 0, 0, 0.08);
+    --legend-muted: #f4f4f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 48px 32px 80px; background: #ffffff; color: var(--foreground);
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 1010px; margin: 0 auto; }
+  h1 { font-size: 14px; font-weight: 600; margin: 0 0 4px; }
+  .sub { margin: 0 0 16px; color: var(--chart-tooltip-muted); font-size: 13px; }
+  .frame {
+    background: #fff; border: 1px solid #e4e4e7; border-radius: 14px; padding: 24px;
+  }
+  .chart-zone { position: relative; width: 100%; }
+  .chart-zone svg { display: block; width: 100%; height: auto; }
+  .xaxis { position: relative; height: 20px; margin-top: 2px; }
+  .xtick {
+    position: absolute; top: 0; transform: translateX(-50%);
+    font-size: 12px; color: var(--chart-label); white-space: nowrap;
+  }
+  .tooltip {
+    position: absolute; z-index: 5; min-width: 160px; pointer-events: none;
+    background: var(--chart-tooltip-background); border: 1px solid var(--border);
+    border-radius: 14px; box-shadow: 0 12px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.05);
+    overflow: hidden; transition: transform 150ms ease-out;
+  }
+  .tooltip.hidden { display: none; }
+  .tooltip-head {
+    padding: 10px 14px; font-size: 13px; font-weight: 500; text-align: left;
+    border-bottom: 1px solid var(--border); color: var(--chart-tooltip-foreground);
+  }
+  .tooltip-body { padding: 8px 14px 10px; }
+  .tooltip-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .tooltip-label { display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .tooltip-indicator { width: 10px; height: 10px; border-radius: 999px; flex: none; }
+  .tooltip-row .name { font-size: 13px; color: var(--chart-tooltip-muted); }
+  .tooltip-row .value { font-size: 13px; font-weight: 500; font-variant-numeric: tabular-nums; text-align: right; }
+  .legend { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; width: 100%; padding: 8px 4px 0; }
+  .legend-item {
+    display: flex; align-items: center; gap: 8px; border: 0; background: transparent;
+    font: inherit; font-size: 12px; color: var(--foreground);
+    padding: 6px 8px; border-radius: 8px; cursor: pointer;
+    transition: all 150ms ease-out;
+  }
+  .legend-item:hover { background: var(--legend-muted); }
+  .legend-item.faded { opacity: 0.4; }
+  .legend-marker { width: 10px; height: 10px; border-radius: 999px; flex: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Profit/Loss Line</h1>
+  <p class="sub">Sign-colored segments with a highlighted zero baseline and legend hover</p>
+  <div class="frame">
+    <div class="chart-zone" id="chartZone">
+      <svg id="chart" role="img" aria-label="Profit and loss line chart"></svg>
+      <div class="xaxis" id="xaxis"></div>
+      <div class="tooltip hidden" id="tooltip">
+        <div class="tooltip-head" id="tooltipHead"></div>
+        <div class="tooltip-body">
+          <div class="tooltip-row">
+            <div class="tooltip-label"><span class="tooltip-indicator" id="tooltipIndicator"></span><span class="name">Profit/Loss</span></div>
+            <span class="value" id="tooltipValue"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="legend" id="legend">
+      <button type="button" class="legend-item" data-index="0"><span class="legend-marker" style="background: var(--chart-positive)"></span>Profit</button>
+      <button type="button" class="legend-item" data-index="1"><span class="legend-marker" style="background: var(--chart-negative)"></span>Loss</button>
+    </div>
+  </div>
+</main>
+
+<script>
+"use strict";
+
+/* ── Demo data — verbatim from apps/web/components/docs/profit-loss-line-docs-data.ts ── */
+const DATA_KEY = "pnl";
+const data = Array.from({ length: 24 }, (_, index) => {
+  const pnl = Math.round(
+    Math.sin(index / 2.5) * 800 + Math.cos(index / 6) * 400 + (index - 12) * 15
+  );
+  return { date: new Date(2024, 0, index + 1), [DATA_KEY]: pnl };
+});
+
+/* ── Segmentation — verbatim port of packages/ui/src/charts/profit-loss-segments.ts.
+      Faithfully preserves upstream behavior: exact zeros do NOT split segments. ── */
+function resolveSign(value, fallback) {
+  if (value > 0) return "positive";
+  if (value < 0) return "negative";
+  return fallback;
+}
+function findInitialSign(rows) {
+  for (const row of rows) {
+    const value = row[DATA_KEY];
+    if (typeof value !== "number") continue;
+    if (value > 0) return "positive";
+    if (value < 0) return "negative";
+  }
+  return "positive";
+}
+function interpolateZeroCrossing(a, b) {
+  const ya = a[DATA_KEY], yb = b[DATA_KEY];
+  const t = ya / (ya - yb);
+  const start = a.date.getTime(), end = b.date.getTime();
+  return { ...a, date: new Date(start + t * (end - start)), [DATA_KEY]: 0 };
+}
+function splitProfitLossSegments(rows) {
+  if (rows.length === 0) return [];
+  const segments = [];
+  let currentSign = findInitialSign(rows);
+  let currentSegment = [rows[0]];
+  for (let i = 0; i < rows.length - 1; i++) {
+    const a = rows[i], b = rows[i + 1];
+    const ya = a[DATA_KEY], yb = b[DATA_KEY];
+    if (typeof ya === "number" && typeof yb === "number" && ya !== 0 && yb !== 0 && Math.sign(ya) !== Math.sign(yb)) {
+      const cross = interpolateZeroCrossing(a, b);
+      currentSegment.push(cross);
+      segments.push({ data: currentSegment, isPositive: currentSign === "positive" });
+      currentSegment = [cross, b];
+      currentSign = resolveSign(yb, currentSign);
+      continue;
+    }
+    currentSegment.push(b);
+    if (typeof yb === "number" && yb !== 0) currentSign = resolveSign(yb, currentSign);
+  }
+  if (currentSegment.length > 0) segments.push({ data: currentSegment, isPositive: currentSign === "positive" });
+  return segments;
+}
+
+/* ── Scales & ticks ── */
+/* Margins measured from the live demo: inner box 908.406 × 171.094 inside a 924×231 svg */
+const MARGIN = { top: 29.953, right: 7.797, bottom: 29.953, left: 7.797 };
+const CLIP_PAD = 24;                       // bleed so strokes at edges aren't cut (ChartRevealClip padding)
+const SVG_W = 924, SVG_H = 231;            // docs demo frame as captured (924×231)
+const INNER_W = SVG_W - MARGIN.left - MARGIN.right;   // 908
+const INNER_H = SVG_H - MARGIN.top - MARGIN.bottom;   // 171
+
+const xScale = date => ((date.getTime() - data[0].date.getTime()) /
+  (data[data.length - 1].date.getTime() - data[0].date.getTime())) * INNER_W;
+
+function niceTicks(min, max, count) {
+  // d3-scale tickStep algorithm
+  const step0 = Math.abs(max - min) / Math.max(1, count);
+  const mag = Math.pow(10, Math.floor(Math.log10(step0)));
+  const err = step0 / mag;
+  const step = (err >= 7.5 ? 10 : err >= 3 ? 5 : err >= 1.5 ? 2 : 1) * mag;
+  const start = Math.ceil(min / step) * step;
+  const ticks = [];
+  for (let v = start; v <= max + step * 1e-6; v += step) ticks.push(Math.abs(v) < step * 1e-6 ? 0 : v);
+  return ticks;
+}
+
+const values = data.map(d => d[DATA_KEY]);
+const yMin = Math.min(...values), yMax = Math.max(...values);
+// Measured from the live demo DOM: 5 dashed rows at 1/12, 7/24, 1/2, 17/24, 11/12
+// of inner height, zero exactly centered → y domain [-1200, 1200], ticks ±500/±1000.
+// (Upstream nice/padding mechanism not read; output geometry is exact.)
+const domainMin = -1200;
+const domainMax = 1200;
+const ticks = [-1000, -500, 0, 500, 1000];
+const yScale = v => INNER_H - ((v - domainMin) / (domainMax - domainMin)) * INNER_H;
+
+/* ── SVG construction ── */
+const NS = "http://www.w3.org/2000/svg";
+const svg = document.getElementById("chart");
+svg.setAttribute("viewBox", `0 0 ${SVG_W} ${SVG_H}`);
+const el = (name, attrs, parent) => {
+  const node = document.createElementNS(NS, name);
+  for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, v);
+  (parent || svg).appendChild(node);
+  return node;
+};
+
+const inner = el("g", { transform: `translate(${MARGIN.left},${MARGIN.top})` });
+
+// Grid: dashed rows at nice ticks (stroke var(--chart-grid), width 1, dash "4,4")
+for (const t of ticks) {
+  el("line", {
+    x1: 0, x2: INNER_W, y1: yScale(t), y2: yScale(t),
+    stroke: "var(--chart-grid)", "stroke-width": 1, "stroke-dasharray": "4,4",
+  }, inner);
+}
+// Zero baseline: highlightRowValues={[0]} — var(--foreground), solid, opacity 0.35
+el("line", {
+  x1: 0, x2: INNER_W, y1: yScale(0), y2: yScale(0),
+  stroke: "var(--foreground)", "stroke-width": 1, "stroke-opacity": 0.35,
+}, inner);
+// Edge-fade overlay on grid rows (grid-rows-fade gradient rect, upstream default on)
+const defs = el("defs", {}, svg);
+const fadeGrad = el("linearGradient", { id: "grid-rows-fade-gradient" }, defs);
+el("stop", { offset: "0", "stop-color": "#ffffff", "stop-opacity": 1 }, fadeGrad);
+el("stop", { offset: "0.08", "stop-color": "#ffffff", "stop-opacity": 0 }, fadeGrad);
+el("stop", { offset: "0.92", "stop-color": "#ffffff", "stop-opacity": 0 }, fadeGrad);
+el("stop", { offset: "1", "stop-color": "#ffffff", "stop-opacity": 1 }, fadeGrad);
+el("rect", { x: 0, y: -4, width: INNER_W, height: INNER_H + 8, fill: "url(#grid-rows-fade-gradient)" }, inner);
+
+// Reveal clip: ChartRevealClip — width grows 0 → padded full, LTR tween
+const clipDef = el("clipPath", { id: "chart-grow-clip-repro" }, defs);
+const clipRect = el("rect", {
+  x: -CLIP_PAD, y: -CLIP_PAD,
+  width: 0, height: INNER_H + CLIP_PAD * 2,
+}, clipDef);
+
+// Segments — each <g opacity> mirrors ProfitLossLine's per-segment group
+const seriesG = el("g", { "clip-path": "url(#chart-grow-clip-repro)" }, inner);
+const segments = splitProfitLossSegments(data);
+const segmentGroups = segments.map(seg => {
+  const g = el("g", {
+    opacity: 1,
+    style: "transition: opacity 0.2s ease-in-out",
+  }, seriesG);
+  const d = seg.data.map((row, i) =>
+    `${i === 0 ? "M" : "L"}${xScale(row.date).toFixed(3)},${yScale(row[DATA_KEY]).toFixed(3)}`
+  ).join("");
+  el("path", {
+    d,
+    fill: "none",
+    stroke: seg.isPositive ? "var(--chart-positive)" : "var(--chart-negative)",
+    "stroke-width": 2.5,
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round",
+  }, g);
+  return g;
+});
+
+// Tooltip dot — TooltipDot: halo 2.6×r5 @0.3 + core r5
+const dotHalo = el("circle", { r: 13, opacity: 0.3, fill: "var(--chart-positive)", visibility: "hidden" }, inner);
+const dotCore = el("circle", { r: 5, fill: "var(--chart-positive)", stroke: "var(--chart-tooltip-background)", "stroke-width": 2, visibility: "hidden" }, inner);
+
+// Entry reveal — 1100ms tween, cubic-bezier(0.85, 0, 0.15, 1), width 0 → padded full
+const TARGET_W = INNER_W + CLIP_PAD * 2;
+(function reveal() {
+  const start = performance.now();
+  const DURATION = 1100;
+  const bez = t => {  // cubic-bezier(0.85, 0, 0.15, 1) solver
+    if (t <= 0) return 0;
+    if (t >= 1) return 1;
+    const cx = 3 * 0.85, bx = 3 * (1 - 0.85) - cx, ax = 1 - cx - bx;
+    const cy = 3 * 0, by = 3 * (1 - 0) - cy, ay = 1 - cy - by;
+    const sampleX = t2 => ((ax * t2 + bx) * t2 + cx) * t2;
+    const sampleDX = t2 => (3 * ax * t2 + 2 * bx) * t2 + cx;
+    let guess = t;
+    for (let i = 0; i < 6; i++) guess -= (sampleX(guess) - t) / (sampleDX(guess) || 1e-6);
+    return Math.min(1, Math.max(0, ((ay * guess + by) * guess + cy) * guess));
+  };
+  const frame = now => {
+    const t = Math.min(1, (now - start) / DURATION);
+    clipRect.setAttribute("width", (bez(t) * TARGET_W).toFixed(2));
+    if (t < 1) requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
+})();
+
+/* ── X axis — HTML ticker; upstream renders indices 0/8/16/23 (Jan 1/9/17/24) ── */
+const xaxis = document.getElementById("xaxis");
+const step = Math.round((data.length - 1) / 3);            // 8
+const tickIndices = [];
+for (let i = 0; i < data.length - 1; i += step) tickIndices.push(i);
+tickIndices.push(data.length - 1);
+const tickEls = tickIndices.map(i => {
+  const span = document.createElement("span");
+  span.className = "xtick";
+  const px = MARGIN.left + xScale(data[i].date);
+  span.style.left = `${(px / SVG_W) * 100}%`;
+  span.textContent = data[i].date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  xaxis.appendChild(span);
+  return span;
+});
+
+/* ── Tooltip + dot + ticker fade — pointer tracking over the plot ── */
+const zone = document.getElementById("chartZone");
+const tooltip = document.getElementById("tooltip");
+const tooltipHead = document.getElementById("tooltipHead");
+const tooltipIndicator = document.getElementById("tooltipIndicator");
+const tooltipValue = document.getElementById("tooltipValue");
+const intFmt = v => v.toLocaleString("en-US");
+
+function setDot(index) {
+  const row = data[index];
+  const x = xScale(row.date), y = yScale(row[DATA_KEY]);
+  const color = row[DATA_KEY] >= 0 ? "var(--chart-positive)" : "var(--chart-negative)";
+  for (const c of [dotHalo, dotCore]) {
+    c.setAttribute("cx", x); c.setAttribute("cy", y);
+    c.setAttribute("fill", color);
+    c.setAttribute("visibility", "visible");
+  }
+  tooltipIndicator.style.background = color;
+  tooltipHead.textContent = row.date.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+  tooltipValue.textContent = intFmt(row[DATA_KEY]);
+}
+
+zone.addEventListener("pointermove", event => {
+  const rect = svg.getBoundingClientRect();
+  const px = ((event.clientX - rect.left) / rect.width) * SVG_W - MARGIN.left;
+  if (px < -20 || px > INNER_W + 20) { hideTooltip(); return; }
+  let best = 0;
+  for (let i = 1; i < data.length; i++) {
+    if (Math.abs(xScale(data[i].date) - px) < Math.abs(xScale(data[best].date) - px)) best = i;
+  }
+  setDot(best);
+  tooltip.classList.remove("hidden");
+  const pointX = MARGIN.left + xScale(data[best].date);
+  const pointY = MARGIN.top + yScale(data[best][DATA_KEY]);
+  const zoneRect = zone.getBoundingClientRect();
+  const scale = zoneRect.width / SVG_W;
+  const tipW = tooltip.offsetWidth, tipH = tooltip.offsetHeight;
+  let left = pointX * scale + 18;
+  if (left + tipW > zoneRect.width - 8) left = pointX * scale - tipW - 18;
+  let top = pointY * scale - tipH / 2;
+  top = Math.max(4, Math.min(zoneRect.height - tipH - 4, top));
+  tooltip.style.transform = `translate(${left.toFixed(1)}px, ${top.toFixed(1)}px)`;
+  // Ticker fade: labels within 50px of the cursor stay full, fading to the edges
+  const cursorX = (event.clientX - xaxis.getBoundingClientRect().left);
+  for (let i = 0; i < tickEls.length; i++) {
+    const tx = tickEls[i].offsetLeft + tickEls[i].offsetWidth / 2;
+    const dist = Math.abs(tx - cursorX);
+    const op = dist < 50 ? 1 : Math.max(0.35, 1 - (dist - 50) / 100);
+    tickEls[i].style.opacity = op.toFixed(2);
+  }
+});
+function hideTooltip() {
+  tooltip.classList.add("hidden");
+  dotHalo.setAttribute("visibility", "hidden");
+  dotCore.setAttribute("visibility", "hidden");
+  for (const t of tickEls) t.style.opacity = "";
+}
+zone.addEventListener("pointerleave", hideTooltip);
+
+/* ── Legend hover → dim opposite segments (0.25, 0.2s ease-in-out) ── */
+const items = [...document.querySelectorAll(".legend-item")];
+items.forEach(item => {
+  item.addEventListener("mouseenter", () => setLegendHover(Number(item.dataset.index)));
+  item.addEventListener("mouseleave", () => setLegendHover(null));
+  item.addEventListener("focus", () => setLegendHover(Number(item.dataset.index)));
+  item.addEventListener("blur", () => setLegendHover(null));
+});
+function setLegendHover(index) {
+  items.forEach(item => {
+    const i = Number(item.dataset.index);
+    item.classList.toggle("faded", index !== null && index !== i);
+  });
+  segmentGroups.forEach((g, i) => {
+    const segSign = segments[i].isPositive ? 0 : 1;
+    const dimmed = index !== null && index !== segSign;
+    g.setAttribute("opacity", dimmed ? 0.25 : 1);
+  });
+}
+</script>
+</body>
+</html>

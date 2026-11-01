@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Heatmap Chart - Contributions (bklit 1:1 reproduction)</title>
+<style>
+  /* Reproduction of bklit.com/charts/heatmap-chart "Contributions" demo.
+     All values measured from the live render (probe, 2026-10-31):
+     cells 11.8756px, pitch 14.8756px (gap 3), rx 999, quarter separators 20px,
+     svg translate(44,28), margin.right 12, legend pt 20px centered. */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 24px; background: #fff; color: lab(36.1659% -0.483051% -3.71603%);
+    font: 400 14px/1.5 ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+  }
+  .demo-heading { width: 988.4px; max-width: 100%; }
+  .demo-heading h1 { font-size: 15px; font-weight: 700; margin: 0 0 4px; letter-spacing: .1px; }
+  .demo-heading p { margin: 0; font-size: 13px; color: #71717a; }
+  .card {
+    background: #fff; border: 1px solid oklab(0 0 0 / 0.08); border-radius: 14px;
+    padding: 32px; width: fit-content; position: relative;
+  }
+  .replay {
+    position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; border-radius: 50%;
+    border: 1px solid oklab(0 0 0 / 0.08); background: #fff; cursor: pointer;
+    display: grid; place-items: center; color: #52525b; font-size: 13px; opacity: 0;
+    transition: opacity .2s ease;
+  }
+  .card:hover .replay { opacity: 1; }
+  svg { display: block; overflow: visible; }
+  /* Cell groups: scale + opacity hover choreography on the wrapper, like upstream motion.g */
+  .cell {
+    transform-box: fill-box; transform-origin: 50% 50%;
+    opacity: 0; /* enter: uniform 1600ms fade, ease cubic-bezier(.85,0,.916,.282) — stagger decays to 0 at defaults */
+    transition: opacity 1.6s cubic-bezier(.85, 0, .916, .282), transform .22s cubic-bezier(.4, 0, .2, 1);
+  }
+  body.entered .cell, body.settled .cell { opacity: 1; }
+  body.settled .cell { transition: opacity .22s cubic-bezier(.4, 0, .2, 1), transform .22s cubic-bezier(.4, 0, .2, 1); }
+  body.notrans .cell { transition: none !important; }
+  body.reduced-motion .cell { opacity: 1; transition: none; }
+  body.settled.dimming .cell:not(.highlight) { opacity: .8; transform: scale(.94); }  /* inactiveOpacity .8, inactiveScale .94 */
+  @media (prefers-reduced-motion: reduce) {
+    .cell { transition: none !important; }
+  }
+  text { user-select: none; }
+  .t-quarter { fill: oklch(0.667 0.295 322.15); font-size: 12px; }
+  .t-month   { fill: lab(36.1659% -0.483051% -3.71603%); font-size: 12px; }
+  .t-weekday { fill: lab(36.1659% -0.483051% -3.71603%); font-size: 12px; }
+  .legend {
+    display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 8px;
+    font-size: 12px; color: lab(36.1659% -0.483051% -3.71603%);
+  }
+  .legend .cap { margin: 0 4px; }
+  .legend .swatch { width: 11px; height: 11px; border-radius: 50%; cursor: default; }
+  .tooltip {
+    position: absolute; z-index: 5; pointer-events: none; background: #fff;
+    border: 1px solid oklab(0 0 0 / 0.08); border-radius: 10px; padding: 10px 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .12); min-width: 150px;
+    opacity: 0; transform: translateY(3px); transition: opacity .15s ease, transform .15s ease;
+  }
+  .tooltip.show { opacity: 1; transform: translateY(0); }
+  .tooltip .date { font-size: 13px; font-weight: 600; color: #18181b; }
+  .tooltip .weekday { font-size: 12px; color: #71717a; margin-top: 1px; }
+  .tooltip .divider { height: 1px; background: oklab(0 0 0 / 0.06); margin: 8px -12px; }
+  .tooltip .count { font-size: 13px; color: #3f3f46; }
+</style>
+</head>
+<body>
+  <div class="demo-heading">
+    <h1>Heatmap Chart - Contributions</h1>
+    <p>Activity grid with circular cells, calendar quarter separators, compact day labels, and synced legend hover</p>
+  </div>
+  <div class="card" id="card">
+    <button class="replay" id="replay" title="Replay animation">⟳</button>
+    <svg id="chart" aria-hidden="true"></svg>
+    <div class="legend" id="legend"></div>
+    <div class="tooltip" id="tooltip">
+      <div class="date"></div><div class="weekday"></div>
+      <div class="divider"></div><div class="count"></div>
+    </div>
+  </div>
+
+<script>
+"use strict";
+/* ---- exact measured constants ---- */
+const CELL = 11.87558962264151, GAP = 3, PITCH = CELL + GAP;      // 14.8756
+const MARGIN = { left: 44, top: 28, right: 12, bottom: 0 };
+const COLS = 53, ROWS = 7, SEP = 20;                               // quarter separator spacing
+const SEP_AFTER = new Set([8, 21, 34, 47]);                        // before the Jan / Apr / Jul / Oct label columns
+const LEVELS = [
+  "lab(90.952% 0 -0.0000119209)",                                  // --chart-scale-01 empty
+  "color-mix(in oklab, oklch(0.585 0.233 277.117) 35%, lab(100% 0 0))",
+  "color-mix(in oklab, oklch(0.585 0.233 277.117) 55%, lab(100% 0 0))",
+  "color-mix(in oklab, oklch(0.585 0.233 277.117) 78%, lab(100% 0 0))",
+  "oklch(0.585 0.233 277.117)",                                    // --chart-scale-05
+];
+const INACTIVE_OPACITY = 0.8, INACTIVE_SCALE = 0.94;               // demo props
+const COUNTS = [0, 2, 5, 9, 14];                                   // representative count per level
+
+/* ---- data: Nov 1 2025 (Sat) .. Oct 31 2026 — first column holds only the bottom cell,
+   last column is a full week; ghosts outside the range are omitted from the DOM (365 visible) ---- */
+function mulberry32(seed) { let a = seed; return () => { a |= 0; a = (a + 0x6D2B79F5) | 0;
+  let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const rand = mulberry32(20261031);
+const P = [0.553, 0.219, 0.115, 0.063, 0.049];                     // measured level distribution
+const RANGE_START = new Date(2025, 9, 26);                         // Sunday of the first column
+const RANGE_END = new Date(2026, 9, 31);                           // "today" — full last week
+const data = [];
+for (let c = 0; c < COLS; c++) {
+  const bins = [];
+  for (let r = 0; r < ROWS; r++) {
+    const day = new Date(RANGE_START); day.setDate(day.getDate() + c * 7 + r);
+    const ghost = day < new Date(2025, 10, 1) || day > RANGE_END;
+    let level = 0; const roll = rand();
+    for (let i = 0, acc = 0; i < 5; i++) { acc += P[i]; if (roll < acc) { level = i; break; } }
+    bins.push({ date: day, level: ghost ? -1 : level, ghost });
+  }
+  data.push(bins);
+}
+
+/* ---- layout ---- */
+function colX(c) { return c * PITCH + [...SEP_AFTER].filter(i => i < c).length * SEP; }
+const GRID_W = COLS * PITCH + 4 * SEP;
+const SVG_W = MARGIN.left + GRID_W + MARGIN.right;
+const SVG_H = MARGIN.top + ROWS * PITCH;
+
+const svg = document.getElementById("chart");
+svg.setAttribute("width", SVG_W); svg.setAttribute("height", SVG_H);
+const NS = "http://www.w3.org/2000/svg";
+const root = document.createElementNS(NS, "g");
+root.setAttribute("transform", `translate(${MARGIN.left},${MARGIN.top})`);
+svg.appendChild(root);
+const text = (cls, x, y, str, anchor) => {
+  const t = document.createElementNS(NS, "text");
+  t.setAttribute("class", cls); t.setAttribute("x", x); t.setAttribute("y", y);
+  if (anchor) t.setAttribute("text-anchor", anchor); t.textContent = str;
+  return t;
+};
+
+/* labels: quarters (violet) share the x of their first month; month column = ceil(firstDay/7)
+   (measured rule, fits all 12 months); separators sit before cols 9/22/35/48 */
+const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const QTRS = [[0, "Q4"], [9, "Q1"], [22, "Q2"], [35, "Q3"], [48, "Q4"]];
+const MONTH_START = [[0,"Nov"],[5,"Dec"],[9,"Jan"],[14,"Feb"],[18,"Mar"],[22,"Apr"],[26,"May"],[31,"Jun"],[35,"Jul"],[39,"Aug"],[44,"Sep"],[48,"Oct"]];
+for (const [c, label] of QTRS) root.appendChild(text("t-quarter", colX(c), -34, label));
+for (const [c, label] of MONTH_START) root.appendChild(text("t-month", colX(c), -14, label));
+"SMTWTFS".split("").forEach((ch, r) => root.appendChild(text("t-weekday", -12, r * PITCH + CELL / 2 + 4, ch, "end")));
+
+/* cells: wrapper g (hover scale/opacity) + data rect; upstream also has an empty-color
+   shimmer overlay rect at opacity 0 — present only during status="loading", omitted here. */
+const cellEls = [];
+for (let c = 0; c < COLS; c++) {
+  for (let r = 0; r < ROWS; r++) {
+    const bin = data[c][r];
+    if (bin.ghost) continue;
+    const g = document.createElementNS(NS, "g");
+    g.setAttribute("class", "cell");
+    const rect = document.createElementNS(NS, "rect");
+    rect.setAttribute("width", CELL); rect.setAttribute("height", CELL);
+    rect.setAttribute("x", colX(c)); rect.setAttribute("y", GAP + r * PITCH);
+    rect.setAttribute("rx", 999); rect.setAttribute("ry", 999);
+    rect.setAttribute("fill", LEVELS[bin.level]);
+    rect.style.cursor = "pointer";
+    g.appendChild(rect);
+    g.addEventListener("pointerenter", () => setHover(c, r));
+    g.addEventListener("pointerleave", () => setHover(null));
+    root.appendChild(g);
+    cellEls.push({ c, r, bin, g });
+  }
+}
+
+/* legend: Less ●●●●● More, level-hover syncs the grid */
+const legend = document.getElementById("legend");
+legend.appendChild(Object.assign(document.createElement("span"), { className: "cap", textContent: "Less" }));
+LEVELS.forEach((fill, level) => {
+  const sw = document.createElement("span");
+  sw.className = "swatch"; sw.style.background = fill;
+  sw.addEventListener("pointerenter", () => setLevelHover(level));
+  sw.addEventListener("pointerleave", () => setLevelHover(null));
+  legend.appendChild(sw);
+});
+legend.appendChild(Object.assign(document.createElement("span"), { className: "cap", textContent: "More" }));
+
+/* ---- interaction: hovered cell highlighted, all others dim + scale (0.22s tween) ---- */
+const tooltip = document.getElementById("tooltip");
+const card = document.getElementById("card");
+const ordinal = d => d + (d % 10 === 1 && d !== 11 ? "st" : d % 10 === 2 && d !== 12 ? "nd" : d % 10 === 3 && d !== 13 ? "rd" : "th");
+function setHover(hc, hr) {
+  clearClasses();
+  if (hc === null) { tooltip.classList.remove("show"); return; }
+  document.body.classList.add("dimming");
+  for (const cell of cellEls) {
+    if (cell.c === hc && cell.r === hr) cell.g.classList.add("highlight");
+  }
+  const cell = cellEls.find(k => k.c === hc && k.r === hr);
+  const d = cell.bin.date;
+  tooltip.querySelector(".date").textContent = `${MONTHS[d.getMonth()]} ${ordinal(d.getDate())} ${d.getFullYear()}`;
+  tooltip.querySelector(".weekday").textContent = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][d.getDay()];
+  tooltip.querySelector(".count").textContent = `${COUNTS[cell.bin.level]} contribution${COUNTS[cell.bin.level] === 1 ? "" : "s"}`;
+  const gx = colX(hc) + CELL / 2 + MARGIN.left + 32, gy = hr * PITCH + MARGIN.top + 32;
+  tooltip.style.left = Math.min(gx, SVG_W + 64 - 170) + "px";
+  tooltip.style.top = gy + "px";
+  tooltip.classList.add("show");
+}
+function setLevelHover(level) {
+  clearClasses();
+  if (level === null) return;
+  document.body.classList.add("dimming");
+  for (const cell of cellEls) if (cell.bin.level === level) cell.g.classList.add("highlight");
+}
+function clearClasses() {
+  document.body.classList.remove("dimming");
+  for (const cell of cellEls) cell.g.classList.remove("highlight");
+}
+
+/* ---- enter: uniform 1600ms fade (defaults produce zero stagger), reduced-motion snaps;
+   after settle, opacity tweens drop to the 0.22s inactive transition (as upstream does) ---- */
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (reduced) document.body.classList.add("reduced-motion");
+function playEnter() {
+  document.body.classList.remove("entered", "settled");
+  if (reduced) { document.body.classList.add("settled"); return; }
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    document.body.classList.add("entered");
+    setTimeout(() => { document.body.classList.remove("entered"); document.body.classList.add("settled"); }, 1650);
+  }));
+}
+playEnter();
+document.getElementById("replay").addEventListener("click", () => {
+  document.body.classList.add("notrans");
+  void document.body.offsetWidth;
+  document.body.classList.remove("entered", "settled", "notrans");
+  playEnter();
+});
+</script>
+</body>
+</html>

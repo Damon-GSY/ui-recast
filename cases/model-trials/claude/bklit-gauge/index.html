@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gauge — bklit 1:1 复现</title>
+<style>
+  /* ---- bklit 主题变量（自 www.bklit.com 实测 getComputedStyle） ---- */
+  :root {
+    --chart-1: oklch(0.585 0.233 277.117);
+    --border: color-mix(in oklab, #000 8%, transparent);
+    --foreground: lab(15.204% 0 0);
+    --chart-label: lab(36.1659% -0.483051 -3.71603);
+    --background: #fff;
+  }
+  @font-face {
+    font-family: "calSans";
+    src: url("./calsans.woff2") format("woff2");
+    font-weight: 400 800;
+    font-display: swap;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    background: #f7f7f8;
+    font-family: calSans, "calSans Fallback", ui-sans-serif, system-ui, sans-serif;
+  }
+  /* ---- 官方文档卡片（实测：radius 14px / 1px 8% 黑边 / 白底 990×407） ---- */
+  .demo-card {
+    width: min(990px, calc(100vw - 48px));
+    min-height: 407px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    display: grid; place-items: center;
+  }
+  /* ---- 官方 demo 包裹（gauge-chart-demo.tsx：mx-auto w-full min-w-[300px] max-w-lg py-4） ---- */
+  .demo-wrap { width: 100%; min-width: 300px; max-width: 512px; padding: 16px 32px; }
+  /* ---- Gauge 默认容器（gauge.tsx：mx-auto aspect-[21/16] w-full max-w-[560px]） ---- */
+  .gauge-root { margin: 0 auto; width: 100%; max-width: 560px; aspect-ratio: 21 / 16; position: relative; }
+  .gauge-root svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  /* ---- 中心块（GaugeArcInner：absolute inset-0 居中 + paddingTop size*0.08） ---- */
+  .gauge-center {
+    position: absolute; inset: 0; pointer-events: none;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+  .gauge-value {
+    font-size: 24px; font-weight: 700; color: var(--foreground);
+    font-variant-numeric: tabular-nums; line-height: 1.2;
+  }
+  .gauge-label { margin-top: 2px; font-size: 10.85px; font-weight: 400; color: var(--chart-label); }
+  /* ---- 重播按钮（验证用，非组件部分） ---- */
+  .replay {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    font: 12px/1 ui-sans-serif, system-ui; color: #71717a;
+    background: #fff; border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 14px; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+  <div class="demo-card">
+    <div class="demo-wrap">
+      <div class="gauge-root" id="gauge"></div>
+    </div>
+  </div>
+  <button class="replay" id="replay">重播入场（验证用，非组件部分）</button>
+
+<script>
+(() => {
+  "use strict";
+
+  // ===== 上游常量（gauge.tsx + gauge-chart-demo.tsx + notch-gauge-shared.ts，逐字对照） =====
+  const TOTAL_NOTCHES = 40;
+  const SPACING = 25;                 // demo spacing={25}
+  const NOTCH_CORNER_RADIUS = 0;      // 默认 0
+  const UNIFORM_WIDTH = false;        // 默认 false → 刻度向心收窄
+  const START_ANGLE = 135;
+  const END_ANGLE = 405;              // 270° 弧，底部开口
+  const VALUE = 66;                   // demo value={66}
+  const CENTER_VALUE = 428000;        // demo centerValue={428_000}
+  const DEFAULT_LABEL = "ARR run rate";
+  const INACTIVE_OPACITY = 0.4;       // demo inactiveFillOpacity={0.4}（覆盖默认 0.8）
+  const ACTIVE_OPACITY = 1;           // DEFAULT_ACTIVE_FILL_OPACITY
+  const SPRING = { stiffness: 300, damping: 20 };  // DEFAULT_NOTCH_ENTER_TRANSITION
+  const BG_DELAY = i => i * 0.015;                 // 背景刻度错峰
+  const ACTIVE_DELAY = i => (0.3 + i * 0.02) * 1;  // 激活刻度错峰（enterStaggerScale=1）
+  const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const BG_FILL = "var(--border)";
+  const ACTIVE_FILL = "var(--chart-1)";
+
+  // ===== 几何（GaugeArcInner 数学，原样移植） =====
+  const root = document.getElementById("gauge");
+  const W = root.clientWidth, H = root.clientHeight;
+  const size = Math.min(W, H);
+  const centerX = W / 2, centerY = H / 2;
+  const outerRadius = size * 0.42;
+  const innerRadius = size * 0.28;                 // notchLengthPercent=100
+  const notchLength = outerRadius - innerRadius;
+  const activeNotches = Math.round((VALUE / 100) * TOTAL_NOTCHES);
+  const totalAngle = END_ANGLE - START_ANGLE;                       // 270
+  const availableAngle = totalAngle * (1 - SPACING / 100);          // 202.5
+  const notchAngle = availableAngle / TOTAL_NOTCHES;                // 5.0625
+  const gapAngle = (totalAngle * (SPACING / 100)) / (TOTAL_NOTCHES - 1); // 1.7308
+
+  const rad = deg => (deg * Math.PI) / 180;
+  const notches = Array.from({ length: TOTAL_NOTCHES }, (_, i) => {
+    const angle = START_ANGLE + i * (notchAngle + gapAngle) + notchAngle / 2;
+    const arcNotchWidth = notchAngle * 0.8;
+    const halfWidth = rad(arcNotchWidth) / 2;
+    const r = rad(angle);
+    const x1 = centerX + Math.cos(r - halfWidth) * outerRadius;
+    const y1 = centerY + Math.sin(r - halfWidth) * outerRadius;
+    const x2 = centerX + Math.cos(r + halfWidth) * outerRadius;
+    const y2 = centerY + Math.sin(r + halfWidth) * outerRadius;
+    // uniformWidth=false：内侧两点取内半径同角（向心收窄）
+    const x3 = centerX + Math.cos(r + halfWidth) * innerRadius;
+    const y3 = centerY + Math.sin(r + halfWidth) * innerRadius;
+    const x4 = centerX + Math.cos(r - halfWidth) * innerRadius;
+    const y4 = centerY + Math.sin(r - halfWidth) * innerRadius;
+    return { index: i, x1, y1, x2, y2, x3, y3, x4, y4, isActive: i < activeNotches };
+  });
+
+  const SVG_NS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(SVG_NS, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.setAttribute("aria-hidden", "true");
+  root.appendChild(svg);
+
+  const origin = `${centerX}px ${centerY}px`;
+  const makePath = (n, fill, fillOpacity) => {
+    const p = document.createElementNS(SVG_NS, "path");
+    p.setAttribute("d", `M ${n.x1} ${n.y1} L ${n.x2} ${n.y2} L ${n.x3} ${n.y3} L ${n.x4} ${n.y4} Z`);
+    p.setAttribute("fill", fill);
+    p.setAttribute("fill-opacity", String(fillOpacity));
+    p.style.transformOrigin = origin;
+    svg.appendChild(p);
+    return p;
+  };
+
+  // 背景 40 根 → 激活 26 根覆盖层（顺序与 GaugeNotchSvg 相同）
+  const bgPaths = notches.map(n => makePath(n, BG_FILL, INACTIVE_OPACITY));
+  const activePaths = notches.filter(n => n.isActive).map(n => makePath(n, ACTIVE_FILL, ACTIVE_OPACITY));
+
+  // ===== 中心块（PieCenterShell + ChartStatFlow 布局） =====
+  const center = document.createElement("div");
+  center.className = "gauge-center";
+  center.style.paddingTop = `${size * 0.08}px`;
+  const valueEl = document.createElement("div");
+  valueEl.className = "gauge-value";
+  const labelEl = document.createElement("div");
+  labelEl.className = "gauge-label";
+  labelEl.textContent = DEFAULT_LABEL;
+  center.append(valueEl, labelEl);
+  root.appendChild(center);
+
+  const fmt = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+
+  // ===== motion/react spring(300,20) 数值积分（mass=1） =====
+  function springTo(path, delaySec, reduced) {
+    let v = 0, vel = 0, last = null, elapsed = 0, done = false;
+    if (reduced) {
+      // 上游 reduced-motion：transition {duration:0} 但保留 stagger delay——到点直接就位
+      setTimeout(() => { path.style.transform = "scale(1)"; path.style.opacity = "1"; }, delaySec * 1000);
+      return;
+    }
+    function frame(now) {
+      if (last === null) last = now;
+      const dt = Math.min((now - last) / 1000, 1 / 30);
+      last = now;
+      elapsed += dt;
+      if (elapsed < delaySec) { requestAnimationFrame(frame); return; }
+      const step = Math.min(dt, 0.032);
+      const a = SPRING.stiffness * (1 - v) - SPRING.damping * vel;
+      vel += a * step;
+      v += vel * step;
+      path.style.transform = `scale(${v})`;
+      path.style.opacity = String(Math.max(0, Math.min(1, v)));
+      if (Math.abs(1 - v) < 0.001 && Math.abs(vel) < 0.001) {
+        path.style.transform = "scale(1)";
+        path.style.opacity = "1";
+        return;
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // ===== 入场编排 =====
+  let introStarted = false;
+  function playIntro() {
+    if (introStarted) resetAndReplay();
+    introStarted = true;
+    for (let i = 0; i < TOTAL_NOTCHES; i++) springTo(bgPaths[i], BG_DELAY(i), REDUCED);
+    activePaths.forEach((p, k) => {
+      const notchIndex = notches[k].index; // 上游用原始 notch.index（0..25）
+      springTo(p, ACTIVE_DELAY(notchIndex), REDUCED);
+    });
+    // NumberFlow 入场：先画 0，双 rAF 后 0 → 428000 计数（计为拟合实现）
+    valueEl.textContent = fmt.format(0);
+    if (REDUCED) { valueEl.textContent = fmt.format(CENTER_VALUE); return; }
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      const t0 = performance.now(), DUR = 900;
+      (function tick(now) {
+        const t = Math.min(1, (now - t0) / DUR);
+        const eased = 1 - Math.pow(1 - t, 3);
+        valueEl.textContent = fmt.format(Math.round(CENTER_VALUE * eased));
+        if (t < 1) requestAnimationFrame(tick);
+      })(t0);
+    }));
+  }
+
+  function resetAndReplay() {
+    for (const p of [...bgPaths, ...activePaths]) {
+      p.style.transform = "scale(0)";
+      p.style.opacity = "0";
+    }
+    introStarted = false;
+    requestAnimationFrame(playIntro);
+  }
+
+  playIntro();
+  document.getElementById("replay").addEventListener("click", resetAndReplay);
+})();
+</script>
+</body>
+</html>
