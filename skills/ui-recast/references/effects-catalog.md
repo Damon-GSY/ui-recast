@@ -8,7 +8,7 @@ For WebGL/WebGPU, Three.js, Babylon, Spline, CSS 3D, shader/raymarch, or other s
 
 | Target | Mechanisms and constraints | Official references |
 | --- | --- | --- |
-| Web | DOM controls, CSS/WAAPI, or the project's animation framework; Motion references below apply to compatible React projects | [Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API), [Motion](https://motion.dev/docs/react) |
+| Web | DOM controls plus CSS/WAAPI, the project's animation/spring runtime, requestAnimationFrame, Canvas/SVG, or video/media APIs. CSS fits declarative two-state timing; frame-driven controllers suit interruptible springs, gesture velocity, continuous derived properties, and changing canvas/media content | [Web Animations](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API), [Motion](https://motion.dev/docs/react) |
 | SwiftUI | Native views, explicit state/bindings, value-driven animations and view transitions; separate morphing shells from unscaled text/icons | [SwiftUI animations](https://developer.apple.com/documentation/swiftui/animations) |
 | UIKit | Native views, layout and interaction; property animators for interruptible view-property changes, with layer animation where the effect requires it | [UIViewPropertyAnimator](https://developer.apple.com/documentation/uikit/uiviewpropertyanimator) |
 | AppKit | Native views/windows, AppKit animation contexts and layer-backed effects where appropriate; preserve macOS focus/window behavior | [NSAnimationContext](https://developer.apple.com/documentation/appkit/nsanimationcontext) |
