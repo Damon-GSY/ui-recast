@@ -15,7 +15,19 @@ Paired players should support independent starting positions, relative synchroni
 - **Interaction:** values/callbacks, keyboard paths, focus return, repeated triggers, cancellation, and supported interruptions.
 - **Containers:** reference-supported wrapping/scrolling at narrow widths; clipped popups/content. Label responsive behavior that has no reference comparison.
 
-Actually view both outputs and connect concrete differences to fixes. Pixel differences can locate geometry errors; one score cannot establish motion fidelity. Preserve the pre-edit baseline. Recheck affected behavior after changes without repeatedly redoing settled checks.
+Actually view both outputs and connect concrete differences to fixes. Pixel differences can locate geometry, palette, and layering errors, especially when the images are aligned to the same scale and anchor; a diff percentage is not a motion-fidelity or overall-accuracy score. Preserve the pre-edit baseline. Recheck affected behavior after changes without repeatedly redoing settled checks.
+
+For alignment, compare rendered boxes and stationary anchors rather than only source spacing values. Confirm content insets, gaps, intrinsic sizes, text baseline/cap position, icon optical alignment, border-box sizing, number tabularity, and hover/press geometry on the actual canvas. A source implementation that uses different spacing primitives can still be correct when its rendered relationships match; identical padding values can still be wrong when borders, scrollbars, native chrome, or box-sizing differ.
+
+For controls, verify the real input path and all visible state geometry: click/tap hit area, hover, active/press, keyboard focus, focus origin and offset, loading, disabled, error/success, repeated triggers, and pointer leave/reentry. Check that immediate visual feedback matches the reference and that business state changes independently of animation completion.
+
+For overlays, keep the trigger and popup in the same recording at reference-supported sizes. Verify anchor edge/point, offset, collision/flipping, scroll and resize behavior, clipping, portal stacking, shadow/scrim layering, Escape and outside-click close, and focus return. Exercise entrance and exit separately, including interruption while still entering.
+
+## Evidence budget and independent review
+
+Batch fixes and their evidence whenever possible. Once a state, track, theme, or action has passed and later changes cannot affect it, reuse that evidence and name it as established. Recapture only the changed output, shared-token effects, and cases where influence is unclear. Do not turn a full retest into the response to every local tweak; expand again only when the acceptance scope or a shared mechanism changes.
+
+For an interactive reconstruction, source distribution, or explicit batch, use one fresh independent visual review when the host provides isolated subagents. Give the reviewer only the reference contract, platform constraints, and current reference/reconstruction acceptance evidence. Do not provide source code, implementation history, fitted parameters, previous review results, or arguments defending choices. Ask for concrete visual and behavioral differences, severity, and the evidence needed to confirm each one. Apply material fixes, then recheck only affected sequences. If no isolated reviewer is available, say the result was not independently reviewed; do not present self-review as independent.
 
 ## Color and compositing
 

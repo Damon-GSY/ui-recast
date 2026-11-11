@@ -10,6 +10,12 @@ For a reconstruction without source access, inspect the visible output first. Fo
 
 Inspect the full image before close-ups. Leave room for shadows, halos, and popup anchors. Label marketing images separately from actual browser output. One frame leaves timing, curves, and hidden behavior unknown.
 
+Record the image's pixel width, height, and capture scale. A 2880px-wide screenshot may represent a 1440 CSS-pixel viewport; image pixels, CSS pixels, and native logical points are not interchangeable. If the scale is unknown, state the assumption and keep it consistent for both reference and reconstruction. Keep crop coordinates in the source coordinate system.
+
+Measure from clean regions rather than single pixels. Sample a small rectangle in each stable surface for a median color; avoid antialiased text/icon edges, gradients, compression artifacts, and video frames unless the compressed motion itself is the track being measured. Record each sample as role, source rectangle, color, color profile when known, opacity/compositing context, and actual background. For layout, record the box's source coordinates, width/height, distances to stationary anchors, and normalized ratios; ratios guide implementation while absolute coordinates locate errors. For cropped icons, textures, and logos, preserve source bounds, background, licensing/provenance, and transparent-pixel interpretation.
+
+Use visible web measurements to supplement a screenshot when available: element/client/scroll boxes, computed typography, transform matrices, effective stacking context, and active animation/transition declarations. Treat these as rendered evidence, not proof of the reference's internal implementation. A visually identical reconstruction may legitimately use different markup or properties.
+
 Preserve original video timing and frame rate. Watch the sequence, locate change windows, then extract real intermediate frames or timestamped sheets. The included Python helper is independent of the component implementation language. It uses Python 3.9+ standard library and a full FFmpeg installation; no Python packages are required.
 
 ```sh
@@ -27,9 +33,17 @@ If a decoder cannot read the container, such as WebM in some macOS environments,
 
 1. Use an authorized browser tool. Use independent Playwright when permitted; do not reuse a personal browser profile. Existing authorization carries forward.
 2. Locate the real preview and state, observe autoplay, then reset manually. Wait for fonts. Confirm the state visually: hidden text in the DOM does not prove that state appeared.
-3. Record the complete action chain continuously: entrance, loops, phase handoffs, exit/completion, and retrigger. Cover at least one full cycle of each looping track. Exercise reversal, cancellation, and changing targets where supported. Capture static components by state.
+3. For acceptance evidence, record the complete action chain continuously: entrance, loops, phase handoffs, exit/completion, and retrigger. Cover at least one full cycle of each looping track. Exercise reversal, cancellation, and changing targets where supported. Capture static components by state.
 4. Save action request and return times, then identify actual rendered changes separately. Use the correct crop coordinate system. Keep the complete component, popups, and light effects visible at both ends; add margins near viewport edges.
 5. With screenshot-only APIs, preserve capture times, call the result a screenshot sequence, and report its actual sampling rate. If browser interaction is unavailable, implement visible structure and leave dynamic verification pending.
+
+## Working versus acceptance capture
+
+Use two capture modes deliberately. A **working capture** answers one pending implementation question: the current default state, a hovered control, a popup anchor, or a short frame strip around the transition being fitted. Do not repeat the complete lifecycle after every tweak, decode parallel videos while recording, or regenerate settled evidence.
+
+An **acceptance capture** establishes delivery scope. Match theme, viewport/device scale, content, component size, selection/focus history, scroll position, and action chain; include reference and reconstruction under those same conditions. Use it before delivery, after changes whose effects are unclear, and whenever the final claim covers motion or lifecycle. Do not promote a working capture to an acceptance claim.
+
+Capture the properties users feel most precisely. For controls, keep press/hover/focus/loading/disabled states and repeat-trigger behavior visible. For overlays, keep the trigger, anchor edge, popup, shadow, portal stacking, page scroll, and both before/after positions in frame. For motion, preserve a quiet period before the first visible change so onset is measurable; do not trim the first frame to the click timestamp.
 
 ## Capturing native references and cross-platform targets
 
@@ -54,9 +68,15 @@ If the reference supports live switching, capture light→dark and dark→light 
 | Icons | Geometry, stroke, color, subelement motion, state replacement, completion morphs, and small loaders in lists/popups. Use consecutive frames to distinguish whole-icon rotation, sequential ray opacity, and static shapes. Check visibility on the actual background. |
 | Light | Separate persistent halos from state-triggered layers. Record gradients, masks, bounds, paths, tails, cycles, and handoffs. Distinguish expanding shadow radius from element scaling. Preserve the relationship between base geometry and light layers. |
 | Text | Old/new overlap, independent translation, opacity, blur, delays, and duration. Distinguish numeric interpolation from digit rolling. |
-| Layout | Size, position, clipping, stationary anchors, easing/overshoot, content/container sequencing, popups, and exiting nodes. |
+| Layout | Size, position, padding/inset, gaps, optical alignment, clipping, stationary anchors, easing/overshoot, content/container sequencing, popups, and exiting nodes. |
 
 Attach frames/times or rendered measurements to each observed track. Measure subtle transitions by property rather than assigning one duration or spring to everything.
+
+When fitting padding and alignment, record stationary edges as well as distances. The same 16px gap can come from different padding, justification, or grid combinations and produce different wrapping, overflow, hover expansion, and popup placement. Check text baseline/cap alignment, icon visual center versus icon file bounds, number tabularity, box-sizing, and whether the reference reserves space for absent decorations. For buttons and inputs, measure label inset, icon-label gap, minimum and target height, native control chrome, focus-ring offset, and press/disabled geometry.
+
+When fitting motion, describe curves by trajectory rather than only by a named easing. On short UI transitions, capture transform origin/direction, onset, mid-travel, overshoot/undershoot, settling, and exit separately. A cubic-bezier name, spring coefficient, or duration does not transfer between engines; rendered samples over the same distance and content do. Distinguish a single moving property from coupled tracks: a button may scale while its label stays sharp, a panel may expand while text remains constant-size, and a popup may translate while its mask independently fades. Record which properties repeat, reverse, and interrupt cleanly.
+
+For popups and overlays, record the anchor relationship before styling: which edge or point the layer tracks, fixed versus absolute positioning, portal/stacking context, clipping, viewport collision, page scroll and scroll-lock behavior, and where focus goes on open/close. Then capture entrance and exit separately, including arrow/caret motion, shadow growth, scrim/background dimming, content delay, and whether trigger geometry changes while the overlay is open.
 
 ## Insufficient sampling
 

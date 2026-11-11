@@ -2,6 +2,8 @@
 
 Start with the observed behavior. These are implementation references, not target parameters or mandatory dependencies. Derive color, geometry, amplitude, and rhythm from recordings and measurements. Read only relevant official documentation.
 
+For WebGL/WebGPU, Three.js, Babylon, Spline, CSS 3D, shader/raymarch, or other spatial references, first read [3D recast](3d-recast.md). Separate camera motion, scene-graph relationships, object transforms, shader/render passes, input controllers, lifecycle/time coupling, and UI compositing before selecting a mechanism.
+
 ## Select mechanisms for the output platform
 
 | Target | Mechanisms and constraints | Official references |
