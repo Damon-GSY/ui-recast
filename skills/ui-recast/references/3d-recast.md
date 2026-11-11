@@ -45,6 +45,10 @@ Lighting and renderer settings can dominate geometry. Record light direction/col
 
 Match the reference's actual presentation mechanism. A raymarched/fluid/SDF effect or parallax plane should not become a heavy mesh scene merely to call itself 3D; conversely, a real mesh with interactive orbit should not be replaced by a prerendered video if interaction is in scope. Preserve provenance and licensing for models and textures.
 
+Treat Three.js as one implementation option, not as the definition of 3D fidelity. It earns its dependency when the reference needs persistent scene state: an interactive camera/object relationship, real depth/occlusion, mesh geometry, PBR materials/lighting, environment/reflection, skeletal/morph animation, raycasting, or shaders. Do not introduce it for a DOM carousel, 2D canvas drawing, a CSS perspective plane, parallax images, or a video-like loop. If the project already uses React Three Fiber, Babylon, WebGL/WebGPU, Spline, or a native renderer, reuse that stack and its established resource/disposal patterns.
+
+When Three.js is selected, reconstruct the evidence-derived system rather than a generic scene. Prefer quaternions for rotations, parent groups for pivots, one controller owner per transform, delta-time updates, and asset loaders with progress/fallback states. Match renderer color space, tone mapping, exposure, alpha, shadows, antialiasing, pixel ratio, resize strategy, and cleanup on unmount. Use GLTF animations only after confirming the observed clip/tracks; do not replay a bundled animation blindly when the evidence shows gesture, state, or scroll control.
+
 ## Decompose shaders and rendering passes
 
 For shader-driven effects, determine which stage owns each visible change. The same look can come from vertex displacement, fragment material color, UV distortion, noise/time fields, lighting, depth, or screen-space post-processing. Separate geometry, UV/texture motion, material parameters, procedural fields, lighting response, and post-effects before fitting a shader. Record precision hints, units, wrap/repeat behavior, seeding of procedural noise, and whether time is normalized or seconds.
